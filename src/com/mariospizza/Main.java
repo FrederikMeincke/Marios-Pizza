@@ -1,7 +1,7 @@
 package com.mariospizza;
 
 /**
- * Generic menu for command line applications
+ * Marios Pizza Menu POS for command line application
  * @author Frederik M., Jimmy, Kasper, Mads, Philip
  * @version 0.1
  */
