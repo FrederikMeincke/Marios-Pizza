@@ -9,8 +9,8 @@ public class Pizza {
             Scanner input = new Scanner(new File("PizzaMenu.txt"));
 
             while (input.hasNextLine()) {
-                String text = input.nextLine();
-                System.out.println(text);
+                String pizza = input.nextLine();
+                System.out.println(pizza);
             }
         } catch (IOException e){
             System.out.println("File not found.");

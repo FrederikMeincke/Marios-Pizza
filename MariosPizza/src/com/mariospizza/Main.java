@@ -1,7 +1,5 @@
 package com.mariospizza;
 
-import java.io.FileNotFoundException;
-
 /**
  * Generic menu for command line applications
  * @author Frederik M., Jimmy, Kasper, Mads, Philip
