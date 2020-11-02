@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Pizza {
 
+    /**
+     * Prints out a .txt file line for line
+     */
     public static void printPizzaMenu() {
         try {
             Scanner input = new Scanner(new File("PizzaMenu.txt"));
