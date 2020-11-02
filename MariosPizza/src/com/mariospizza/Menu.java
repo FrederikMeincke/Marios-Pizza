@@ -15,8 +15,8 @@ public class Menu {
     public void printMenu() {
         String printString = menuHeader + "\n";
 
-        for (int i = 0; i < menuItems.length; i++)
-            printString += menuItems[i] + "\n";
+        for (int i = 1; i <= menuItems.length; i++)
+            printString += i + ". " + menuItems[i] + "\n";
         System.out.println("\n" + printString);
     }
 
