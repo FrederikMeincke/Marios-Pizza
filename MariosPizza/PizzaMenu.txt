@@ -29,9 +29,10 @@ Classic pizza
 26. Teos, tomat, ost, oksekød, kebab, kylling, paprika, oregano, 50 75 149
 27. Venesa, tomat, ost, oksekød, sucuk, løg, bacon, gorgonzola, oregano, 50 75 149
 28. Din Pizza, tomat, ost, oregano + max. 5 tilbehør efter eget valg, 55 79 159
-30. Efesos, tomat, ost, skinke, oregano, 63
+29. Lones Fromage Fest, tomat, ost, mozzerella, blå ost, cheddar, mancheco 65 85 162
 
 Indbagte Pizzaer
+30. Efesos, tomat, ost, skinke, oregano, 63
 31. Pizza spaghetti, tomat, ost, spaghetti, kødsauce, oregano, 67
 32. Didim, tomat, ost, kebab, champignon, bearnaisesauce, løg, oregano, 67
 33. Miletos, tomat, ost, kebab, champignon, kødsauce, chili, oregano, 67
