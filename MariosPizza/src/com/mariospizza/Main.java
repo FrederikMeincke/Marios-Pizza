@@ -2,7 +2,6 @@ package com.mariospizza;
 
 /**
  * Generic menu for command line applications
- *
  * @author Frederik M., Jimmy, Kasper, Mads, Philip
  * @version 0.1
  */
