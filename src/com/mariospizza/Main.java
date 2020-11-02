@@ -16,7 +16,5 @@ public class Main {
         // test print of printPizzaMenu() method
         Pizza.printPizzaMenu();
 
-        //test
-
     }
 }
