@@ -6,77 +6,37 @@ public class Menu {
     private String leadText;
     private String[] menuItems;
 
-
-    /**
-     * constructor
-     *
-     * @param menuHeader The title for the menu
-     * @param menuItems An String array that contains all the menu options
-     * @param leadText Prompt for user input
-     */
     public Menu(String menuHeader, String leadText, String[] menuItems) {
         this.menuHeader = menuHeader;
         this.leadText = leadText;
         this.menuItems = menuItems;
     }
 
+    public void printMenu() {
+        String printString = menuHeader + "\n";
 
-    /**
-     * reads user input. Validates for positive integers
-     *
-     * @return int < 0 input by user
-     */
-    int readUserInput() {
-        boolean runFlag = true;
-        int tempInput;
-        int input = -1;
+        for (int i = 0; i < menuItems.length; i++)
+            printString += menuItems[i] + "\n";
+        System.out.println("\n" + printString);
+    }
 
-        //Scanner obj
-        Scanner scn = new Scanner(System.in);
+    public int readChoice() {
+        Scanner scanner = new Scanner(System.in);
+        boolean validChoice = false;
+        int choice = -1;
 
-        do {
-            if (scn.hasNextInt()) {
-                tempInput = scn.nextInt();
-
-                if (tempInput >= 0) {
-                    input = tempInput;
-                    runFlag = false;
-                } else {
-                    System.out.println("Please input a non-negative integer");
-                    scn.nextLine();
-                }
+        while (! validChoice) {
+            System.out.print(leadText);
+            if (scanner.hasNextInt()) {
+                choice = scanner.nextInt();
+                validChoice = true;
             } else {
-                System.out.println("Please input an integer");
-                scn.nextLine();
+                scanner.nextLine();
             }
-        } while (runFlag);
-
-        return input;
-    }
-
-
-    /**
-     * Prints menu in the following format:
-     *
-     *      menuHeader
-     *
-     *      Menu item 1:
-     *      Menu item 2:
-     *      Menu item 3:
-     *      .
-     *      .
-     *      .
-     *
-     *      leadText
-     */
-    void printMenu() {
-        System.out.println("\n" + menuHeader + "\n");
-
-        for (String menuItems : menuItems) {
-            System.out.println(menuItems);
         }
-        System.out.println();
-
-        System.out.print(leadText);
+        return choice;
     }
+
 }
+
+
