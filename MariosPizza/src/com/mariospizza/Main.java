@@ -1,4 +1,4 @@
-package com.MariosPizza;
+package com.mariospizza;
 
 public class Main {
 
