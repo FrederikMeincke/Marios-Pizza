@@ -19,6 +19,10 @@ public class Pizza {
         setPriceDeep(priceDeep);
         setPriceFamily(priceFamily);
     }
+
+    public String toString() {
+        return pizzaName;
+    }
     /**
      * Prints out the menu .txt file, line for line.
      */

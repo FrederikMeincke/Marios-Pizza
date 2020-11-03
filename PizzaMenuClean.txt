@@ -16,7 +16,7 @@ Classic pizza
 13. Olimpos, tomat, ost, kylling, majs, paprika, løg, oregano, 45 65 130
 14. Vegatar, tomat, ost, champignon, tomatskiver, oliven, majs, oregano, 45 65 130
 15. Manisa, tomat, ost, oksekød, sucuk, chili, oregano, 45 65 130
-16. Salat Pizza, tomat, ost, salat, dressing, oregano, + 1 valgfrit tilbehør, 49 69 139
+16. Salat Pizza, tomat, ost, salat, dressing, oregano, plus et valgfrit tilbehør, 49 69 139
 17. Kekova, tomat, ost, oksekød, pommes-frites, dressing, chili, oregano, 49 69 139
 18. Kilis, tomat, ost, skinke, champignon, bearnaisesauce, oregano, 49 69 139
 19. Van, tomat, ost, oksekød, cocktail pølser, beanaisesauce, oregano, 49 69 139
@@ -28,7 +28,7 @@ Classic pizza
 25. Nora, tomat, ost, oksekød, bacon, cocktailpølser, ananas, oregano, 50 75 149
 26. Teos, tomat, ost, oksekød, kebab, kylling, paprika, oregano, 50 75 149
 27. Venesa, tomat, ost, oksekød, sucuk, løg, bacon, gorgonzola, oregano, 50 75 149
-28. Din Pizza, tomat, ost, oregano + max. 5 tilbehør efter eget valg, 55 79 159
+28. Din Pizza, tomat, ost, oregano plus max. fem tilbehør efter eget valg, 55 79 159
 29. Freds Fromage Fest, tomat, ost, mozzerella, blå ost, cheddar, mancheco 65 85 162
 
 Indbagte Pizzaer

@@ -11,12 +11,13 @@ public class FileReader {
     public Pizza processPizzaMenuLine(Scanner input) {
         //int twoDigitsPlusDot = 3; // required length of String for the pizza number including the dot. TODO: Move this to menu printer
         String pizzaNumber = input.next(); // Includes "." but not spaces. TODO: Maybe unecessary, move to menu printer?
-        String pizzaName;
+        String pizzaName = "";
         String pizzaDescription = "";
         double alm;
         double deep;
         double fam;
 
+        // TODO: Check pizza number first, to determine whether or not it is a menu header
         /* TODO: Move this to the menu printer
         if(pizzaNumber.length() < twoDigitsPlusDot) {
             pizzaNumber += "  "; // Two spaces for formatting
@@ -24,19 +25,26 @@ public class FileReader {
             pizzaNumber += " "; // One space for formatting
         }
          */
-        pizzaName = input.next(); // Adds pizzaname
-        if(pizzaName.contains(",")) {
-            return null; // checks if the string contains "," and decides whether it is a pizza or menu header
+        if(!pizzaNumber.contains(".")) {
+            return null;
         }
-        pizzaName = pizzaName.substring(-1); // Removes ","
+
+        pizzaName = input.next(); // Adds pizzaname
+
+        while(!pizzaName.contains(",")) {
+            pizzaName += " " + input.next(); // For pizza names with multiple words
+        }
+        //pizzaName = pizzaName; // TODO: Remove "," at the end
+        System.out.println(pizzaName);
 
         while(!input.hasNextDouble()) {
-            pizzaDescription = input.next(); // Scans through all the toppings on the pizza
+            pizzaDescription += input.next(); // Scans through all the toppings on the pizza
         }
         //pizzaDescription = pizzaDescription.substring(-1); // Removes "," at the end if necessary
         alm = input.nextDouble();
         deep = input.nextDouble();
-        if(deep > 100) { // all family pizzas cost more than 100, so if the next input is more than 100 then we know it's a family pizza and not a deep pan.
+        if(deep > 100) {
+            // all family pizzas cost more than 100, so if the next input is more than 100 then we know it's a family pizza and not a deep pan.
             fam = deep;
             deep = 0;
         } else {
@@ -55,7 +63,10 @@ public class FileReader {
             Scanner load = new Scanner(new File("PizzaMenuClean.txt"));
 
             while (load.hasNextLine()) {
-                pizzaList.add(processPizzaMenuLine(load)); // processes the line and adds the pizza object to the array.
+                Pizza pizza = processPizzaMenuLine(load);
+                if(pizza != null) {
+                    pizzaList.add(pizza); // processes the line and adds the pizza object to the array.
+                }
             }
         } catch (IOException e){
             System.out.println("File not found.");
