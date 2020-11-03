@@ -16,14 +16,15 @@ public class Main {
 
         // test print of printPizzaMenu() method
         Pizza.printPizzaMenu();
-        FileReader.loadCompletedOrders();
+        //FileReader.loadCompletedOrders();
 
 
 
         String headerText = "Marios Pizzabar: ";
         String leadText = "Choose an option: ";
-        String[] menuGenstande = { "1. Show Pizza menu", "2. Check active orders", "3. Add new order", "4. Remove Order",
-                "5. Check statistics", "6. Exit" };
+        String[] menuGenstande = { "1. Show Pizza menu", "2. Check active orders",
+                                   "3. Add new order", "4. Remove Order",
+                                   "5. Check statistics", "6. Exit" };
 
         Menu hovedMenu = new Menu(headerText, leadText, menuGenstande);
         hovedMenu.printMenu();
