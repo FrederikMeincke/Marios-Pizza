@@ -26,4 +26,22 @@ public class Menus {
                 break;
         }
     }
+
+    public static void checkMenu() {
+        //displays menu Pizza.printMenu
+    }
+
+    public static void checkActiveOrders() {
+        //print arraylist of Pizzas in activeOrders ArrayList
+    }
+
+    public static void addOrder() {
+        //add new Pizza object to activeOrders ArrayList
+    }
+
+    public static void removeOrder() {
+        //remove Pizza object from activeOrders ArrayList
+    }
+
+
 }
