@@ -19,9 +19,5 @@ public class Main {
     // The system also needs to be able to delete an order once it has been retrieved and paid for.
         Menus.mainMenu();
 
-        // test print of printPizzaMenu() method
-        Pizza.printPizzaMenu();
-        //FileReader.loadCompletedOrders();
-
     }
 }
