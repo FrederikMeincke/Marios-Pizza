@@ -3,7 +3,7 @@ package com.mariospizza;
 /**
  * Marios Pizza Menu POS for command line application
  * @author Frederik M., Jimmy, Kasper, Mads, Philip
- * @version 0.1
+ * @version 0.2
  */
 
 public class Main {
