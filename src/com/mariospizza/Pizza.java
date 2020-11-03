@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class Pizza {
     int pizzaID; //number you use to order the pizza
     int pizzaSize; //1 for normal, 2 for Deep-Pan, 3 for Family
-    double price; // price of pizza. Maybe different prices for different sizes?
+    double priceNormal; // price of pizza. Maybe different prices for different sizes?
+    double priceDeep;
+    double priceFamily;
 
     /**
      * Prints out the menu .txt file, line for line.
