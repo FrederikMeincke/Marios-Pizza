@@ -11,7 +11,8 @@ public class Menus {
         GenericMenu mainGenericMenu = new GenericMenu(headerText, leadText, menuItems);
         mainGenericMenu.printMenu();
 
-        switch (menuItems.length) {
+        int choice = -1;
+        switch (choice) {
             case 1:
                 Pizza.printPizzaMenu();
                 break;
@@ -26,7 +27,7 @@ public class Menus {
                 System.out.println("4");
                 break;
             case 5:
-                System.out.println("5");
+                FileReader.loadCompletedOrders();
                 break;
             case 6:
                 break;
