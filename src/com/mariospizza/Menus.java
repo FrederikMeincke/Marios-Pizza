@@ -16,18 +16,24 @@ public class Menus {
             menuChoice = mainGenericMenu.readChoice();
 
             switch (menuChoice) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
+                    case 1:
+                        Pizza.printPizzaMenu();
+                        break;
+                    case 2:
+                        FileReader.loadActiveOrders();
+                        break;
+                    case 3:
+                        System.out.println("3");
+                        //FileWriter.addOrder();
+                        break;
+                    case 4:
+                        System.out.println("4");
+                        break;
+                    case 5:
+                        FileReader.loadCompletedOrders();
+                        break;
+                    case 6:
+                        break;
             }
         }
     }
