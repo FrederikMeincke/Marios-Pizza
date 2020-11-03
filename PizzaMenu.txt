@@ -1,14 +1,14 @@
-Normale Pizza
-1. Sofia, tomat, ost, oregano, 40 55 110
-2. Constatina,tomat, ost, skinke, oregano, 45 60 120
-3. Bolognese, tomat, ost, kødsauce, løg, oregano, 45 60 120
-4. Gordonia, tomat, ost, oksekød, løg, oregano, 45 60 120
-5. Nikonia, tomat, ost, skinke, bacon, oregano, 45 60 120
-6. Halikarnas, tomat, ost, skinke, champignon, oregano, 45 60 120
-7. Trojaline, tomat, ost, oksekød, bacon, løg, oregano, 45 60 120
-8. Akropol, tomat, ost, pepperoni, løg, oregano, 45 60 120
-9. Avanos, tomat, ost, skinke, ananas, oregano, 45 60 120
-10. Mudania, tomat, ost, kebab, oregano, 45 60 120
+Normale Pizza                                          Alm |Deep| Fam
+1. Sofia, tomat, ost, oregano, ........................ 40 | 55 | 110
+2. Constatina, tomat, ost, skinke, oregano, ........... 45 | 60 | 120
+3. Bolognese, tomat, ost, kødsauce, løg, oregano, ..... 45 | 60 | 120
+4. Gordonia, tomat, ost, oksekød, løg, oregano, ....... 45 | 60 | 120
+5. Nikonia, tomat, ost, skinke, bacon, oregano, ....... 45 | 60 | 120
+6. Halikarnas, tomat, ost, skinke, champignon, oregano, 45 | 60 | 120
+7. Trojaline, tomat, ost, oksekød, bacon, løg, oregano, 45 | 60 | 120
+8. Akropol, tomat, ost, pepperoni, løg, oregano, ...... 45 | 60 | 120
+9. Avanos, tomat, ost, skinke, ananas, oregano, ....... 45 | 60 | 120
+10. Mudania, tomat, ost, kebab, oregano, .............. 45 | 60 | 120
 
 Classic pizza
 11. Pergoman, tomat, ost, pepperoni, bacon,paprika, oregano, 45 65 130
