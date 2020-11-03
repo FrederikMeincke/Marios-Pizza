@@ -34,20 +34,23 @@ public class Menus {
         }
     }
 
-    public static void checkMenu() {
-        //displays menu Pizza.printMenu
-    }
-
     public static void checkActiveOrders() {
         //print arraylist of Pizzas in activeOrders ArrayList
     }
 
     public static void addOrder() {
-        //add new Pizza object to activeOrders ArrayList
+        /*
+        add new Pizza object to activeOrders ArrayList
+        activeOrders.add(new Pizza(x,x,x));
+         */
     }
 
     public static void removeOrder() {
         //remove Pizza object from activeOrders ArrayList
+    }
+
+    public static void showStats() {
+        //read stats from stats.txt file
     }
 
 
