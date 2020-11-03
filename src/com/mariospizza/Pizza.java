@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Pizza {
 
     /**
-     * Prints out a .txt file line for line
+     * Prints out the menu .txt file, line for line.
      */
     public static void printPizzaMenu() {
         try {
