@@ -39,5 +39,5 @@ Indbagte Pizzaer                                                              Al
 32. Didim, tomat, ost, kebab, champignon, bearnaisesauce, løg, oregano, ...... 67 |    | 119
 33. Miletos, tomat, ost, kebab, champignon, kødsauce, chili, oregano, ........ 67 |    | 119
 34. Bodrum, tomat, ost, kebab, pommes-frites, salat, dressing, oregano, ······ 72 |    | 120
-35. UFO, tomat, ost, pepperoni, kebab, hvidløg, oregano, ..................... 75 |    | 120
+35. UFO, tomat, ost, pepperoni, kebab, hvidløg, oregano, ..................... 75 |    | 125
 36. UFO, tomat, ost, spaghetti, champignon, kødsauce, cocktailpølser, oregano, 82 |    | 130
