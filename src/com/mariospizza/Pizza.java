@@ -51,6 +51,10 @@ public class Pizza {
         this.priceNormal = priceNormal;
     }
 
+    public double getPriceNormal() {
+        return priceNormal;
+    }
+
     public void setPriceDeep(double priceDeep) {
         this.priceDeep = priceDeep;
     }
