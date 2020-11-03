@@ -30,7 +30,7 @@ public class Main {
         String[] menuItems = { "Show Pizza menu", "Check active orders",
                 "Add new order", "Remove Order", "Check statistics", "Exit" };
 
-        Menu mainMenu = new Menu(headerText, leadText, menuItems);
+        GenericMenu mainMenu = new GenericMenu(headerText, leadText, menuItems);
         mainMenu.printMenu();
 
     }
