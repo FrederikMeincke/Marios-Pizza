@@ -20,13 +20,13 @@ public class Main {
 
 
 
-        String headerText = "Marios Pizzabar: ";
+        String headerText = "Marios Pizzabar:\n";
         String leadText = "Choose an option: ";
-        String[] menuGenstande = { "Show Pizza menu", "Check active orders",
+        String[] menuItems = { "Show Pizza menu", "Check active orders",
                 "Add new order", "Remove Order", "Check statistics", "Exit" };
 
-        Menu hovedMenu = new Menu(headerText, leadText, menuGenstande);
-        hovedMenu.printMenu();
+        Menu mainMenu = new Menu(headerText, leadText, menuItems);
+        mainMenu.printMenu();
 
 
 
