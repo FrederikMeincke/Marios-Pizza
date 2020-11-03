@@ -35,7 +35,6 @@ public class FileReader {
             pizzaName += " " + input.next(); // For pizza names with multiple words
         }
         //pizzaName = pizzaName; // TODO: Remove "," at the end
-        System.out.println(pizzaName);
 
         while(!input.hasNextDouble()) {
             pizzaDescription += input.next(); // Scans through all the toppings on the pizza
