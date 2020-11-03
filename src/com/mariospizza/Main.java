@@ -22,9 +22,8 @@ public class Main {
 
         String headerText = "Marios Pizzabar: ";
         String leadText = "Choose an option: ";
-        String[] menuGenstande = { "1. Show Pizza menu", "2. Check active orders",
-                                   "3. Add new order", "4. Remove Order",
-                                   "5. Check statistics", "6. Exit" };
+        String[] menuGenstande = { "Show Pizza menu", "Check active orders",
+                "Add new order", "Remove Order", "Check statistics", "Exit" };
 
         Menu hovedMenu = new Menu(headerText, leadText, menuGenstande);
         hovedMenu.printMenu();
