@@ -8,7 +8,6 @@ package com.mariospizza;
 
 public class Main {
 
-
     public static void main(String[] args) {
 	// Program that lists a Pizza Menu,
     // can take orders and sort them chronologically based on time.
@@ -18,17 +17,7 @@ public class Main {
         Pizza.printPizzaMenu();
         //FileReader.loadCompletedOrders();
 
-
-
-        String headerText = "Marios Pizzabar:\n";
-        String leadText = "Choose an option: ";
-        String[] menuItems = { "Show Pizza menu", "Check active orders",
-                "Add new order", "Remove Order", "Check statistics", "Exit" };
-
-        GenericMenu mainGenericMenu = new GenericMenu(headerText, leadText, menuItems);
-        mainGenericMenu.printMenu();
-
-
+        Menus.mainMenu();
 
     }
 }

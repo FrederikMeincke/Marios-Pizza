@@ -7,30 +7,28 @@ public class Menus {
         String leadText = "Choose an option: ";
         String[] menuItems = {"Show Pizza menu", "Check active orders",
                 "Add new order", "Remove Order", "Check statistics", "Exit"};
+        boolean menuRun = true;
+        int menuChoice = -1;
 
-        GenericMenu mainGenericMenu = new GenericMenu(headerText, leadText, menuItems);
-        mainGenericMenu.printMenu();
+        while (menuRun) {
+            GenericMenu mainGenericMenu = new GenericMenu(headerText, leadText, menuItems);
+            mainGenericMenu.printMenu();
+            menuChoice = mainGenericMenu.readChoice();
 
-        int choice = -1;
-        switch (choice) {
-            case 1:
-                Pizza.printPizzaMenu();
-                break;
-            case 2:
-                FileReader.loadActiveOrders();
-                break;
-            case 3:
-                System.out.println("3");
-                //FileWriter.addOrder();
-                break;
-            case 4:
-                System.out.println("4");
-                break;
-            case 5:
-                FileReader.loadCompletedOrders();
-                break;
-            case 6:
-                break;
+            switch (menuChoice) {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+            }
         }
     }
 
