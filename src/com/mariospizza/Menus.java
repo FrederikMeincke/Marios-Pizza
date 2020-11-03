@@ -20,7 +20,7 @@ public class Menus {
                         Pizza.printPizzaMenu();
                         break;
                     case 2:
-                        //FileReader.loadActiveOrders();
+                        FileReader.loadActiveOrders();
                         break;
                     case 3:
                         System.out.println("3");
