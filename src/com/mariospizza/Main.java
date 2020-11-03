@@ -23,15 +23,5 @@ public class Main {
         Pizza.printPizzaMenu();
         //FileReader.loadCompletedOrders();
 
-
-
-        String headerText = "Marios Pizzabar:\n";
-        String leadText = "Choose an option: ";
-        String[] menuItems = { "Show Pizza menu", "Check active orders",
-                "Add new order", "Remove Order", "Check statistics", "Exit" };
-
-        GenericMenu mainMenu = new GenericMenu(headerText, leadText, menuItems);
-        mainMenu.printMenu();
-
     }
 }
