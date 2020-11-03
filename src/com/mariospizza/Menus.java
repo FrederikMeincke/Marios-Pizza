@@ -38,7 +38,7 @@ public class Menus {
                         menuRun = false;
                         break;
                     default:
-                        System.out.println("Try Again!");
+                        System.out.println("\nInvalid input.\nPlease try Again!");
                         break;
             }
         }
