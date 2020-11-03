@@ -2,12 +2,13 @@ package com.mariospizza;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileReader {
 
-    public void processPizzaMenuLine(Scanner input) {
+    public Pizza processPizzaMenuLine(Scanner input) {
         //int twoDigitsPlusDot = 3; // required length of String for the pizza number including the dot. TODO: Move this to menu printer
         String pizzaNumber = input.next(); // Includes "." but not spaces. TODO: Maybe unecessary, move to menu printer?
         String pizzaName;
@@ -23,7 +24,11 @@ public class FileReader {
             pizzaNumber += " "; // One space for formatting
         }
          */
-        pizzaName = input.next().substring(-1); // Adds pizzaname and removes ","
+        pizzaName = input.next(); // Adds pizzaname
+        if(pizzaName.contains(",")) {
+            return null; // checks if the string contains "," and decides whether it is a pizza or menu header
+        }
+        pizzaName = pizzaName.substring(-1); // Removes ","
 
         while(!input.hasNextDouble()) {
             pizzaDescription = input.next(); // Scans through all the toppings on the pizza
@@ -38,22 +43,24 @@ public class FileReader {
             fam = input.nextDouble(); // in case the price is lower than 100, then the next pizza will be a family pizza.
         }
 
+        // Once it finishes finding the prices it will end the method and we look for another line.
         Pizza pizza = new Pizza(pizzaName,pizzaDescription,alm,deep,fam);
+        return pizza;
         //TODO: Construct pizza object with variables pizzaNumber, pizzaName, alm, deep, fam
     }
 
     public ArrayList<Pizza> loadPizzaMenu() {
+        ArrayList<Pizza> pizzaList = new ArrayList<>();
         try {
-            Scanner load = new Scanner(new File("PizzaMenu.txt"));
+            Scanner load = new Scanner(new File("PizzaMenuClean.txt"));
 
             while (load.hasNextLine()) {
-                String loadPizza = load.nextLine();
-                System.out.println(loadPizza);
+                pizzaList.add(processPizzaMenuLine(load)); // processes the line and adds the pizza object to the array.
             }
         } catch (IOException e){
             System.out.println("File not found.");
         }
-        return new ArrayList<>(); //TODO: Finish the loading method for the ArrayList
+        return pizzaList; //TODO: Finish the loading method for the ArrayList
     }
 
     public static void loadActiveOrders() {
