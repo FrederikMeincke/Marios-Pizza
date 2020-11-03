@@ -1,12 +1,12 @@
 package com.mariospizza;
 import java.util.Scanner;
 
-public class Menu {
+public class GenericMenu {
     private String menuHeader;
     private String leadText;
     private String[] menuItems;
 
-    public Menu(String menuHeader, String leadText, String[] menuItems) {
+    public GenericMenu(String menuHeader, String leadText, String[] menuItems) {
         this.menuHeader = menuHeader;
         this.leadText = leadText;
         this.menuItems = menuItems;
