@@ -27,7 +27,7 @@ public class FileReader {
 
             while (active.hasNextLine()) {
                 String activeOrders = active.nextLine();
-                System.out.println(activeOrders);
+                System.out.println(activeOrders); //TODO: insert the data from active orders
             }
         } catch (IOException e){
             System.out.println("File not found.");
