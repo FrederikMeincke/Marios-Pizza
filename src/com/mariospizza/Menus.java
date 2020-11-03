@@ -11,8 +11,19 @@ public class Menus {
         GenericMenu mainGenericMenu = new GenericMenu(headerText, leadText, menuItems);
         mainGenericMenu.printMenu();
 
-        switch (1) {
+        switch (menuItems.length) {
             case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
         }
     }
 }
