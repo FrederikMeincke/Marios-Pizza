@@ -15,7 +15,7 @@ public class Main {
 
         // test print of printPizzaMenu() method
         Pizza.printPizzaMenu();
-        MyReader.loadCompletedOrders();
+        FileReader.loadCompletedOrders();
 
     }
 }

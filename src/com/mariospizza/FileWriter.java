@@ -1,4 +1,4 @@
 package com.mariospizza;
 
-public class MyWriter {
+public class FileWriter {
 }

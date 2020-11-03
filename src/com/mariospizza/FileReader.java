@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MyReader {
+public class FileReader {
 
     public ArrayList<Pizza> loadPizzaMenu() {
         try {
