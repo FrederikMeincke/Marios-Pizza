@@ -10,7 +10,7 @@ public class MyReader {
 
     }
 
-    public void loadCompleted() {
+    public void loadCompletedOrders() {
 
     }
 }
