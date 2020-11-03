@@ -2,21 +2,18 @@ package com.mariospizza;
 
 import java.io.File;
 import java.io.IOException;
-<<<<<<< Updated upstream
-=======
 import java.util.ArrayList;
->>>>>>> Stashed changes
 import java.util.Scanner;
 
 public class MyReader {
 
     public ArrayList<Pizza> loadPizzaMenu() {
         try {
-            Scanner input = new Scanner(new File("PizzaMenu.txt"));
+            Scanner load = new Scanner(new File("PizzaMenu.txt"));
 
-            while (input.hasNextLine()) {
-                String pizza = input.nextLine();
-                System.out.println(pizza);
+            while (load.hasNextLine()) {
+                String loadPizza = load.nextLine();
+                System.out.println(loadPizza);
             }
         } catch (IOException e){
             System.out.println("File not found.");
@@ -24,9 +21,19 @@ public class MyReader {
         return new ArrayList<>(); //TODO: Finish the loading method for the ArrayList
     }
 
-    public void loadActiveOrders() {
+    public static void loadActiveOrders() {
+        try {
+            Scanner active = new Scanner(new File("ActiveOrders.txt"));
 
+            while (active.hasNextLine()) {
+                String activeOrders = active.nextLine();
+                System.out.println(activeOrders);
+            }
+        } catch (IOException e){
+            System.out.println("File not found.");
+        }
     }
+
 //husk knj du har lavet denne static for at kunne teste i main
     public static void loadCompletedOrders() {
         try {
@@ -39,6 +46,5 @@ public class MyReader {
         } catch (IOException e){
             System.out.println("File not found.");
         }
-
     }
 }
