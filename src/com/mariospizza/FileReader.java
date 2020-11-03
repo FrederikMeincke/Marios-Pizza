@@ -17,7 +17,6 @@ public class FileReader {
         double deep;
         double fam;
 
-        // TODO: Check pizza number first, to determine whether or not it is a menu header
         /* TODO: Move this to the menu printer
         if(pizzaNumber.length() < twoDigitsPlusDot) {
             pizzaNumber += "  "; // Two spaces for formatting
@@ -53,7 +52,6 @@ public class FileReader {
         // Once it finishes finding the prices it will end the method and we look for another line.
         Pizza pizza = new Pizza(pizzaName,pizzaDescription,alm,deep,fam);
         return pizza;
-        //TODO: Construct pizza object with variables pizzaNumber, pizzaName, alm, deep, fam
     }
 
     public ArrayList<Pizza> loadPizzaMenu() {
