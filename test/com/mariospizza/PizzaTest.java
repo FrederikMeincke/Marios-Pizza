@@ -16,4 +16,28 @@ class PizzaTest {
             if (pizzaMenu.isFile() && pizzaMenu.exists());
         }
     }
+
+    @Test
+    void testPrintPizzaMenu() {
+    }
+
+    @Test
+    void setPizzaName() {
+    }
+
+    @Test
+    void setPizzaDescription() {
+    }
+
+    @Test
+    void setPriceNormal() {
+    }
+
+    @Test
+    void setPriceDeep() {
+    }
+
+    @Test
+    void setPriceFamily() {
+    }
 }
