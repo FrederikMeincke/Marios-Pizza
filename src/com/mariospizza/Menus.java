@@ -13,14 +13,20 @@ public class Menus {
 
         switch (menuItems.length) {
             case 1:
+                Pizza.printPizzaMenu();
                 break;
             case 2:
+                FileReader.loadActiveOrders();
                 break;
             case 3:
+                System.out.println("3");
+                //FileWriter.addOrder();
                 break;
             case 4:
+                System.out.println("4");
                 break;
             case 5:
+                System.out.println("5");
                 break;
             case 6:
                 break;
