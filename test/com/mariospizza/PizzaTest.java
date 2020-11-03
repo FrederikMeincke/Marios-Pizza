@@ -13,8 +13,7 @@ class PizzaTest {
         File pizzaMenu = new File("PizzaMenu.txt");
         boolean exists = pizzaMenu.exists();
         if (exists) {
-            if (pizzaMenu.isFile() && pizzaMenu.exists())
-            System.out.println("Pizza Menu exists");
+            if (pizzaMenu.isFile() && pizzaMenu.exists());
         }
     }
 }
