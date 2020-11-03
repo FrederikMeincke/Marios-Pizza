@@ -24,13 +24,15 @@ public class Menus {
                         break;
                     case 3:
                         System.out.println("3");
-                        //FileWriter.addOrder();
+                        //addOrder();
                         break;
                     case 4:
                         System.out.println("4");
+                        //deleteOrder();
                         break;
                     case 5:
                         FileReader.loadCompletedOrders();
+                        //showStats();
                         break;
                     case 6:
                         menuRun = false;
