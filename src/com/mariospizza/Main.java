@@ -10,19 +10,14 @@ import java.util.ArrayList;
 
 public class Main {
 
-
-
     static FileReader fileReader = new FileReader();
     static ArrayList<Pizza> pizzaList = fileReader.loadPizzaMenu();
-
 
     public static void main(String[] args) {
 	// Program that lists a Pizza Menu,
     // can take orders and sort them chronologically based on time.
     // The system also needs to be able to delete an order once it has been retrieved and paid for.
-
         Menus.mainMenu();
-
 
         // test print of printPizzaMenu() method
         Pizza.printPizzaMenu();
@@ -35,10 +30,8 @@ public class Main {
         String[] menuItems = { "Show Pizza menu", "Check active orders",
                 "Add new order", "Remove Order", "Check statistics", "Exit" };
 
-        GenericMenu mainMenu = new GenericMenu(headerText, leadText, menuItems);
+        Menu mainMenu = new Menu(headerText, leadText, menuItems);
         mainMenu.printMenu();
-
-
 
     }
 }
