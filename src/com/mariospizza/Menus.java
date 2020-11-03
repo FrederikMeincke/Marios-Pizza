@@ -33,8 +33,11 @@ public class Menus {
                         FileReader.loadCompletedOrders();
                         break;
                     case 6:
-                        System.exit(1);
+                        menuRun = false;
                         break;
+                default:
+                    System.out.println("Try Again!");
+                    break;
             }
         }
     }
