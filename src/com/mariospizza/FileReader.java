@@ -9,7 +9,7 @@ public class FileReader {
 
     public void processPizzaMenuLine(Scanner input) {
         //int twoDigitsPlusDot = 3; // required length of String for the pizza number including the dot. TODO: Move this to menu printer
-        String pizzaNumber = input.next(); // Includes "." but not spaces.
+        String pizzaNumber = input.next(); // Includes "." but not spaces. TODO: Maybe unecessary, move to menu printer?
         String pizzaName;
         String pizzaDescription = "";
         double alm;
@@ -38,6 +38,7 @@ public class FileReader {
             fam = input.nextDouble(); // in case the price is lower than 100, then the next pizza will be a family pizza.
         }
 
+        Pizza pizza = new Pizza(pizzaName,pizzaDescription,alm,deep,fam);
         //TODO: Construct pizza object with variables pizzaNumber, pizzaName, alm, deep, fam
     }
 
