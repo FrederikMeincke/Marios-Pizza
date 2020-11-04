@@ -25,7 +25,7 @@ public class Order {
         String pizzaString = "";
 
         for (Pizza pizza: orderPizzaList) {
-            pizzaString =+ pizza.toString() + "\n"; //TODO: Fix this thing!      WHY NO WORK!?!?!?!
+            pizzaString += pizza.toString() + "\n";
         }
         return "OrderID:" + orderID +
                 "\nList of all pizzas in this order:\n" + pizzaString;
