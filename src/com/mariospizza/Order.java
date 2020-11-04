@@ -3,17 +3,24 @@ package com.mariospizza;
 import java.util.ArrayList;
 
 public class Order {
+    int orderID; //unique id for every order
+    static int counter = 0;
     Pizza pizza;
     ArrayList<Pizza> orderPizzaList = new ArrayList<>();
-    ArrayList<Order> activeOrdersList = new ArrayList<>();
+    static ArrayList<Order> activeOrdersList = new ArrayList<>();
+    static ArrayList<Order> completedOrders = new ArrayList<>();
 
 
-    public Order(Pizza pizza, ArrayList<Pizza> orderPizzaList, ArrayList<Order> activeOrdersList) {
+    public Order(int orderID, Pizza pizza, ArrayList<Pizza> orderPizzaList, ArrayList<Order> activeOrdersList) {
         this.pizza = pizza;
         this.orderPizzaList = orderPizzaList;
-        this.activeOrdersList = activeOrdersList;
+
+        //counter for unique id for every order
+        counter++;
+        this.orderID = counter;
     }
 
+    //adds an order to the active orders list
     public void addOrder(Pizza orderPizza) {
         orderPizzaList.add(orderPizza);
     }
@@ -22,7 +29,11 @@ public class Order {
 
     }
 
-    public void cancelOrder() {
+    public void cancelOrder(int orderNumber) {
+        for (int i = 0; i < activeOrdersList.size(); i++) {
+
+        }
+        //deleteOrder(orderToCancel);
 
     }
 
@@ -30,8 +41,12 @@ public class Order {
 
     }
 
-    public void completeOrder() {
+    public void completeOrder(Order orderToComplete) {
+        completedOrders.add(orderToComplete);
+    }
 
+    public void deleteOrder(Order order) {
+        activeOrdersList.remove(order);
     }
 
     public Pizza getPizza() {
