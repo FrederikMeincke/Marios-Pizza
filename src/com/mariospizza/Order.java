@@ -20,7 +20,22 @@ public class Order {
         this.orderID = counter;
     }
 
-    //adds an order to the active orders list
+    @Override
+    public String toString() {
+        String pizzaString = "";
+
+        for (Pizza pizza: orderPizzaList) {
+            pizzaString =+ pizza.toString() + "\n"; //TODO: Fix this thing!      WHY NO WORK!?!?!?!
+        }
+        return "OrderID:" + orderID +
+                "\nList of all pizzas in this order:\n" + pizzaString;
+    }
+
+    /**
+     *  adds an order to the active order list
+     *
+     * @param orderPizza
+     */
     public void addOrder(Pizza orderPizza) {
         orderPizzaList.add(orderPizza);
     }
@@ -29,16 +44,26 @@ public class Order {
 
     }
 
+    /**
+     * Deletes order with orderNumber from the active order list
+     * @param orderNumber
+     */
     public void cancelOrder(int orderNumber) {
         for (int i = 0; i < activeOrdersList.size(); i++) {
             if (orderNumber == activeOrdersList.get(i).getOrderID()) {
-                //deleteOrder(orderToCancel);
-
-            }
+                deleteOrder(activeOrdersList.get(i));
+            } //TODO: maybe add an expection for this "no such order found"
         }
     }
 
+
+    /**
+     * Prints all the orders in the active orders list
+     */
     public void checkActiveOrders() {
+        for (Order order: activeOrdersList) {
+            order.toString();
+        }
 
     }
 
