@@ -1,5 +1,6 @@
 package com.mariospizza;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ public class MyFileWriter {
 
     public void saveCompletedOrders(ArrayList<Order> orderList, String fileName) {
         try {
-            PrintStream output = new PrintStream(fileName+".txt");
+            PrintStream output = new PrintStream(new File(fileName+".txt"));
             for (int i = 0; i < orderList.size(); i++) {
                 output.println(orderList.get(i).toString()); // TODO: Add toString in Order that prints the information we need in the text file
             }
@@ -22,7 +23,7 @@ public class MyFileWriter {
 
     public void saveActiveOrder(ArrayList<Order> orderList, String fileName) {
         try {
-            PrintStream output = new PrintStream(fileName+".txt");
+            PrintStream output = new PrintStream(new File(fileName+".txt"));
             for (int i = 0; i < orderList.size(); i++) {
                 output.println(orderList.get(i).toString()); // TODO: Add toString in Order that prints the information we need in the text file
             }
