@@ -1,8 +1,34 @@
 package com.mariospizza;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.util.ArrayList;
+
 public class MyFileWriter {
 
-    public static void addOrder() {
-        //TODO: make arraylist that can add an order
+    // TODO: write to files
+
+    public void saveCompletedOrders(ArrayList<Order> orderList, String fileName) {
+        try {
+            PrintStream output = new PrintStream(new File(fileName+".txt"));
+            for (int i = 0; i < orderList.size(); i++) {
+                output.println(orderList.get(i).toString()); // TODO: Add toString in Order that prints the information we need in the text file
+            }
+        } catch (IOException e) {
+            //TODO: Add message
+        }
+
+    }
+
+    public void saveActiveOrder(ArrayList<Order> orderList, String fileName) {
+        try {
+            PrintStream output = new PrintStream(new File(fileName+".txt"));
+            for (int i = 0; i < orderList.size(); i++) {
+                output.println(orderList.get(i).toString()); // TODO: Add toString in Order that prints the information we need in the text file
+            }
+        } catch (IOException e) {
+            //TODO: Add message
+        }
     }
 }
