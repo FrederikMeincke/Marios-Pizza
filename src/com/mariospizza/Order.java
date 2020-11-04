@@ -31,10 +31,11 @@ public class Order {
 
     public void cancelOrder(int orderNumber) {
         for (int i = 0; i < activeOrdersList.size(); i++) {
+            if (orderNumber == activeOrdersList.get(i).getOrderID()) {
+                //deleteOrder(orderToCancel);
 
+            }
         }
-        //deleteOrder(orderToCancel);
-
     }
 
     public void checkActiveOrders() {
@@ -73,4 +74,11 @@ public class Order {
         this.activeOrdersList = activeOrdersList;
     }
 
+    public int getOrderID() {
+        return orderID;
+    }
+
+    public void setOrderID(int orderID) {
+        this.orderID = orderID;
+    }
 }
