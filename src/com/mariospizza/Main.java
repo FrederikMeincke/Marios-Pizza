@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Main {
 
-    static FileReader fileReader = new FileReader();
+    static MyFileReader fileReader = new MyFileReader();
     static ArrayList<Pizza> pizzaList = fileReader.loadPizzaMenu();
 
     public static void main(String[] args) {
