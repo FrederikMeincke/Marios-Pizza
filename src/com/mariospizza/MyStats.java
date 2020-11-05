@@ -2,8 +2,8 @@ package com.mariospizza;
 
 public class MyStats {
 
-    // Variables
-/*
+
+    /*
 Metoder til at udregne mest pop pizza
 Jeg skal vel have en getter. Getteren til at hente data som kan bruges til at lave statestik.
 
@@ -71,9 +71,7 @@ String MyBestChoice2
 String MyBestChoice3
 String MyBestChoice4
 
-
-
-
+ //TODO: Kigge på nogle beregninger til statistik
 
 
      */
