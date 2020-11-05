@@ -43,7 +43,7 @@ public class Main {
                     pizzaList.get(i).getPriceNormal());
         }
 
-        String.format("%s, %s, %s, %d", Pizza.pizzaName, pizzaDescription, printDots(), pizzaPrice);
+        //String.format("%s, %s, %s, %d", Pizza.pizzaName, pizzaDescription, printDots(), pizzaPrice);
     }
 
     public static void main(String[] args) throws FileNotFoundException {
@@ -51,7 +51,7 @@ public class Main {
     // can take orders and sort them chronologically based on time.
     // The system also needs to be able to delete an order once it has been retrieved and paid for.
        // Menus.mainMenu();
-        formatPizzaMenu();
+        formatPizzaMenu(pizzaList);
 
     }
 }
