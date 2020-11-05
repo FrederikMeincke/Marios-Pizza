@@ -17,38 +17,30 @@ public class Main {
     static MyFileReader fileReader = new MyFileReader();
     static ArrayList<Pizza> pizzaList = fileReader.loadPizzaMenu("PizzaMenuClean");
 
-    public static void printDots(ArrayList<Pizza> pizzaList, int formatLength) {
+    public static String printDots(Pizza pizza, int formatLength) {
+        // total length of the line
+        String dotSpace = "";
+        String pizzaString =
+                pizza.getPizzaID() + ". " +
+                pizza.getPizzaName() + ", " +
+                pizza.getPizzaDescription() +
+                pizza.getPriceNormal();
+            int dotLength = Math.abs(pizzaString.length()-formatLength);
 
-        for(int i = 1; i <= pizzaList.size(); i++) {
-            String pizzaString = i + ". " +
-                    pizzaList.get(i).getPizzaName() + ", " +
-                    pizzaList.get(i).getPizzaDescription()
+        for(int i = 0; i < dotLength; i++) {
+            dotSpace += " ";
         }
+        return dotSpace;
     }
 
-    public static void formatPizzaMenu() throws FileNotFoundException {
-        File pizzaMenu = new File("PizzaMenuClean.txt");
-        Scanner in = new Scanner(pizzaMenu);
-        PrintWriter out = new PrintWriter("test.txt");
+    public static void formatPizzaMenu(ArrayList<Pizza> pizzaList) throws FileNotFoundException {
 
-        double total = 0;
-
-        while (in.hasNextLine()) {
-            String line = in.nextLine();
-            boolean found = false;
-            String item = "";
-            double price = 0;
-            for (int i = 0; !found && i < line.length(); i++){
-                char ch = line.charAt(i);
-                if (ch == '-'){
-                    found = true;
-                    item = line.substring(0, i + 1);
-                    price = Double.parseDouble(line.substring(i + 1).trim());
-                }
-            }
-            if (found) {
-                out.printf("%-20s %10.2f\n", item, price);
-            }
+        for(int i = 0; i < pizzaList.size(); i++) {
+            System.out.println(pizzaList.get(i).getPizzaID() + ". " +
+                    pizzaList.get(i).getPizzaName() +
+                    pizzaList.get(i).getPizzaDescription() +
+                    printDots(pizzaList.get(i),50) +
+                    pizzaList.get(i).getPriceNormal());
         }
 
         String.format("%s, %s, %s, %d", Pizza.pizzaName, pizzaDescription, printDots(), pizzaPrice);

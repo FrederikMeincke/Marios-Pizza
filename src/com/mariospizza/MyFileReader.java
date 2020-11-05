@@ -27,7 +27,8 @@ public class MyFileReader {
         if(!pizzaNumber.contains(".")) {
             return null;
         }
-        int pizzaID = Integer.parseInt(pizzaNumber);
+        pizzaNumber = pizzaNumber.substring(0,pizzaNumber.length()-1); // removes "."
+        int pizzaID = Integer.parseInt(pizzaNumber); // converts to integer so it works as an argument in the pizza constructor
 
         pizzaName = input.next(); // Adds pizzaname
 
