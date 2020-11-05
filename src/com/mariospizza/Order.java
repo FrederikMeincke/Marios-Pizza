@@ -12,7 +12,6 @@ public class Order {
 
 
     public Order(int orderID, Pizza pizza, ArrayList<Pizza> orderPizzaList, ArrayList<Order> activeOrdersList) {
-        this.pizza = pizza;
         this.orderPizzaList = orderPizzaList;
 
         //counter for unique id for every order
@@ -68,7 +67,7 @@ public class Order {
                 //System.out.println("add some extra extra salami");
                 break;
             case 5:
-                //System.out.println("I want some disgusting pineapple on my pizza. Yikes cringe bro");
+                //System.out.println("I want some disgusting pineapple on my pizza. Yikes bro that's cringe af");
                 break;
             default:
                 System.out.println("invalid option");
