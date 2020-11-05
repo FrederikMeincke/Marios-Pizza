@@ -17,7 +17,7 @@ public class Main {
     static MyFileReader fileReader = new MyFileReader();
     static ArrayList<Pizza> pizzaList = fileReader.loadPizzaMenu("PizzaMenuClean");
 
-    public static String printDots(Pizza pizza, int formatLength) {
+    public static String printPizzaDots(Pizza pizza, int formatLength) {
         // total length of the line
         String dotSpace = "";
         String pizzaString =
@@ -33,13 +33,24 @@ public class Main {
         return dotSpace;
     }
 
+    public static String printDots(String line, int formatLength) {
+        String dotSpace = "";
+        int dotLength = Math.abs(line.length()-formatLength);
+
+        for(int i = 0; i < dotLength; i++) {
+            dotSpace += " ";
+        }
+        return dotSpace;
+    }
+
     public static void formatPizzaMenu(ArrayList<Pizza> pizzaList) throws FileNotFoundException {
 
+        System.out.println(printDots("",97) + "alm    " + "deep    " + "family");
         for(int i = 0; i < pizzaList.size(); i++) {
             System.out.println(pizzaList.get(i).getPizzaID() + ". " +
-                    pizzaList.get(i).getPizzaName() +
+                    pizzaList.get(i).getPizzaName() + ", " +
                     pizzaList.get(i).getPizzaDescription() +
-                    printDots(pizzaList.get(i),50) +
+                    printPizzaDots(pizzaList.get(i),100) +
                     pizzaList.get(i).getPriceNormal());
         }
 
