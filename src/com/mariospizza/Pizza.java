@@ -12,7 +12,8 @@ public class Pizza {
     double priceFamily;
 
 
-    public Pizza(String pizzaName, String pizzaDescription, double priceNormal, double priceDeep, double priceFamily) {
+    public Pizza(int pizzaID, String pizzaName, String pizzaDescription, double priceNormal, double priceDeep, double priceFamily) {
+        setPizzaID(pizzaID);
         setPizzaName(pizzaName);
         setPizzaDescription(pizzaDescription);
         setPriceNormal(priceNormal);
@@ -39,12 +40,28 @@ public class Pizza {
         }
     }
 
+    public void setPizzaID(int pizzaID) {
+        this.pizzaID = pizzaID;
+    }
+
+    public int getPizzaID() {
+        return pizzaID;
+    }
+
     public void setPizzaName(String pizzaName) {
         this.pizzaName = pizzaName;
     }
 
+    public String getPizzaName() {
+        return pizzaName;
+    }
+
     public void setPizzaDescription(String pizzaDescription) {
         this.pizzaDescription = pizzaDescription;
+    }
+
+    public String getPizzaDescription() {
+        return pizzaDescription;
     }
 
     public void setPriceNormal(double priceNormal) {

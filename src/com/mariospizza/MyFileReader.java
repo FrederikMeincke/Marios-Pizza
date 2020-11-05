@@ -27,6 +27,7 @@ public class MyFileReader {
         if(!pizzaNumber.contains(".")) {
             return null;
         }
+        int pizzaID = Integer.parseInt(pizzaNumber);
 
         pizzaName = input.next(); // Adds pizzaname
 
@@ -50,7 +51,7 @@ public class MyFileReader {
         }
 
         // Once it finishes finding the prices it will end the method and we look for another line.
-        Pizza pizza = new Pizza(pizzaName,pizzaDescription,alm,deep,fam);
+        Pizza pizza = new Pizza(pizzaID,pizzaName,pizzaDescription,alm,deep,fam);
         return pizza;
     }
 
