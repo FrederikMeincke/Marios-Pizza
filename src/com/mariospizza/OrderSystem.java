@@ -5,24 +5,38 @@ import java.util.ArrayList;
 public class OrderSystem {
     Pizza pizza;
 
-    ArrayList<Order> activeOrdersList = new ArrayList<>();
-    ArrayList<Order> completedOrders = new ArrayList<>();
+    static ArrayList<Order> activeOrdersList = new ArrayList<>();
+    static ArrayList<Order> completedOrders = new ArrayList<>();
 
     public OrderSystem(ArrayList<Order> activeOrdersList, ArrayList<Order> completedOrders) {
         this.activeOrdersList = activeOrdersList;
         this.completedOrders = completedOrders;
     }
 
+    /**
+     * Removes a finished order from the active orders list and adds it to the completed orders list
+     *
+     * @param orderToComplete
+     */
     public void completeOrder(Order orderToComplete) {
         completedOrders.add(orderToComplete);
         activeOrdersList.remove(orderToComplete);
     }
 
+    /**
+     * Prints all elements in the active orders list
+     */
     public void checkActiveOrders() {
         for (Order order: activeOrdersList) {
             order.toString();
         }
     }
+
+    /**
+     * Deletes an order from the active orders list
+     *
+     * @param order
+     */
     public void deleteOrder(Order order) {
         activeOrdersList.remove(order);
     }
