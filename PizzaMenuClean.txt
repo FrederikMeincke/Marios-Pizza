@@ -39,3 +39,4 @@ Indbagte Pizzaer
 34. Bodrum, tomat, ost, kebab, pommes-frites, salat, dressing, oregano, 72 120
 35. UFO, tomat, ost, pepperoni, kebab, hvidløg, oregano, 75 125
 36. UFO, tomat, ost, spaghetti, champignon, kødsauce, cocktailpølser, oregano, 82 130
+37. Betrayal, tomast, ost, gift, skinke, kødsauce, 65 110
