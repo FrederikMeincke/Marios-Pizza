@@ -17,6 +17,13 @@ public class Main {
     static MyFileReader fileReader = new MyFileReader();
     static ArrayList<Pizza> pizzaList = fileReader.loadPizzaMenu("PizzaMenuClean");
 
+    public static void printDots(ArrayList<Pizza> pizzaList, int formatLength) {
+
+        for(int i = 0; i < pizzaList.size(); i++) {
+            String pizzaString = pizzaList.get(i).n
+        }
+    }
+
     public static void formatPizzaMenu() throws FileNotFoundException {
         File pizzaMenu = new File("PizzaMenuClean.txt");
         Scanner in = new Scanner(pizzaMenu);

@@ -12,7 +12,8 @@ public class Pizza {
     double priceFamily;
 
 
-    public Pizza(String pizzaName, String pizzaDescription, double priceNormal, double priceDeep, double priceFamily) {
+    public Pizza(int pizzaID, String pizzaName, String pizzaDescription, double priceNormal, double priceDeep, double priceFamily) {
+        setPizzaID(pizzaID);
         setPizzaName(pizzaName);
         setPizzaDescription(pizzaDescription);
         setPriceNormal(priceNormal);
@@ -37,6 +38,14 @@ public class Pizza {
         } catch (IOException e){
             System.out.println("File not found.");
         }
+    }
+
+    public void setPizzaID(int pizzaID) {
+        this.pizzaID = pizzaID;
+    }
+
+    public int getPizzaID() {
+        return pizzaID;
     }
 
     public void setPizzaName(String pizzaName) {
