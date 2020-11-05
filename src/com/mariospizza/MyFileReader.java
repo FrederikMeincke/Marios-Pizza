@@ -25,8 +25,11 @@ public class MyFileReader {
         }
          */
         if(!pizzaNumber.contains(".")) {
-            return null;
+            return  null;
+            //Pizza pizzaTitle = new Pizza(0,pizzaNumber,"",0,0,0);
+            //return pizzaTitle;
         }
+
         pizzaNumber = pizzaNumber.substring(0,pizzaNumber.length()-1); // removes "."
         int pizzaID = Integer.parseInt(pizzaNumber); // converts to integer so it works as an argument in the pizza constructor
 

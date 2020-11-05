@@ -76,7 +76,15 @@ public class Pizza {
         this.priceDeep = priceDeep;
     }
 
+    public double getPriceDeep() {
+        return priceDeep;
+    }
+
     public void setPriceFamily(double priceFamily) {
         this.priceFamily = priceFamily;
+    }
+
+    public double getPriceFamily() {
+        return priceFamily;
     }
 }

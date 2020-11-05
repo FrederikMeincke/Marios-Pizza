@@ -36,7 +36,7 @@ public class Order {
      *
      * @param orderPizza
      */
-    public void addOrder(Pizza orderPizza) {
+    public void addPizza(Pizza orderPizza) {
         orderPizzaList.add(orderPizza);
     }
 
@@ -76,70 +76,12 @@ public class Order {
         }
     }
 
-    /**
-     * Deletes order with orderNumber from the active order list
-     *
-     * @param orderNumber
-     */
-    public void cancelOrder(int orderNumber) {
-        for (int i = 0; i < activeOrdersList.size(); i++) {
-            if (orderNumber == activeOrdersList.get(i).getOrderID()) {
-                deleteOrder(activeOrdersList.get(i));
-            } //TODO: maybe add an expection for this "no such order found"
-        }
-    }
-
-
-    /**
-     * Prints all the orders in the active orders list
-     */
-    public void checkActiveOrders() {
-        for (Order order: activeOrdersList) {
-            order.toString();
-        }
-    }
-
-    /**
-     * puts the order in the completed orders list and then removes it from the active orders list
-     *
-     * @param orderToComplete
-     */
-    public void completeOrder(Order orderToComplete) {
-        completedOrders.add(orderToComplete);
-        activeOrdersList.remove(orderToComplete);
-    }
-
-    /**
-     * Deletes an active order
-     *
-     * @param order
-     */
-    public void deleteOrder(Order order) {
-        activeOrdersList.remove(order);
-    }
-
-    public Pizza getPizza() {
-        return pizza;
-    }
-
-    public void setPizza(Pizza pizza) {
-        this.pizza = pizza;
-    }
-
     public ArrayList<Pizza> getOrderPizzaList() {
         return orderPizzaList;
     }
 
     public void setOrderPizzaList(ArrayList<Pizza> orderPizzaList) {
         this.orderPizzaList = orderPizzaList;
-    }
-
-    public ArrayList<Order> getActiveOrdersList() {
-        return activeOrdersList;
-    }
-
-    public void setActiveOrdersList(ArrayList<Order> activeOrdersList) {
-        this.activeOrdersList = activeOrdersList;
     }
 
     public int getOrderID() {
