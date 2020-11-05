@@ -25,9 +25,10 @@ public class MyFileReader {
         }
          */
         if(!pizzaNumber.contains(".")) {
-            return  null;
-            //Pizza pizzaTitle = new Pizza(0,pizzaNumber,"",0,0,0);
-            //return pizzaTitle;
+            //return  null;
+            pizzaNumber += " " + input.next();
+            Pizza pizzaTitle = new Pizza(0,pizzaNumber,"",0,0,0);
+            return pizzaTitle;
         }
 
         pizzaNumber = pizzaNumber.substring(0,pizzaNumber.length()-1); // removes "."

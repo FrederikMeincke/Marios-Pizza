@@ -17,32 +17,12 @@ public class Main {
     static MyFileReader fileReader = new MyFileReader();
     static ArrayList<Pizza> pizzaList = fileReader.loadPizzaMenu("PizzaMenuClean");
 
-    public static String printPizzaDots(Pizza pizza, int formatLength) {
-        int pizzaID = pizza.getPizzaID();
-        String pizzaName = pizza.getPizzaName();
-        String pizzaDescription = pizza.getPizzaDescription();
-        double normalPrice = pizza.getPriceNormal();
-        // total length of the line
-        String dotSpace = "";
-        String pizzaString =
-                pizzaID + ". " +
-                pizzaName + ", " +
-                pizzaDescription +
-                normalPrice;
-            int dotLength = Math.abs(pizzaString.length()-formatLength);
-
-        for(int i = 0; i < dotLength; i++) {
-            dotSpace += ".";
-        }
-        return dotSpace;
-    }
-
-    public static String printDots(String line, int formatLength) {
+    public static String printSymbols(String symbol, String line, int formatLength) {
         String dotSpace = "";
         int dotLength = Math.abs(line.length()-formatLength);
 
         for(int i = 0; i < dotLength; i++) {
-            dotSpace += " ";
+            dotSpace += symbol;
         }
         return dotSpace;
     }
@@ -52,20 +32,27 @@ public class Main {
             return "";
         } else {
             String string = String.format("%.0f",number);
-
             return string;
         }
     }
 
     public static void formatPizzaMenu(ArrayList<Pizza> pizzaList) throws FileNotFoundException {
 
-        System.out.println(printDots("",95) + "alm    " + "deep    " + "family");
         for(int i = 0; i < pizzaList.size(); i++) {
             String pizzaID = formatPizzaHeader(pizzaList.get(i).getPizzaID());
             String pizzaName = pizzaList.get(i).getPizzaName();
             String pizzaDescription = pizzaList.get(i).getPizzaDescription();
-            String pizzaDots = printPizzaDots(pizzaList.get(i), 100);
-            String priceNormal = formatPizzaHeader(pizzaList.get(i).getPriceNormal());
+
+            String priceNormal = formatPizzaHeader(pizzaList.get(i).getPriceNormal()) + " | ";
+            String priceDeep = formatPizzaHeader(pizzaList.get(i).getPriceDeep()) + " | ";
+            if(priceDeep.equals(" | ")) {
+                priceDeep = "   | ";
+            }
+            String priceFamily = formatPizzaHeader(pizzaList.get(i).getPriceFamily());
+
+            //String pizzaDots = printPizzaDots(pizzaList.get(i), 100);
+            String pizzaLine = pizzaID+pizzaName+pizzaDescription+priceNormal+priceDeep+priceFamily;
+            String pizzaDots = printSymbols(".", pizzaLine,100);
             /*System.out.println( pizzaID + ". " +
                     pizzaName + ", " +
                     pizzaDescription +
@@ -73,10 +60,21 @@ public class Main {
                     priceNormal);
 
              */
-            System.out.printf("%s. %s, %s %s %s\n",pizzaID,pizzaName,pizzaDescription,pizzaDots,priceNormal);
-        }
 
-        //String.format("%s, %s, %s, %d", Pizza.pizzaName, pizzaDescription, printDots(), pizzaPrice);
+            if(pizzaID != "") {
+                System.out.printf("%s. %s,%s%s%s%s%s\n",pizzaID,pizzaName,pizzaDescription,pizzaDots,priceNormal,priceDeep,priceFamily);
+            } else {
+                String titleLine = pizzaName + "alm | " + "deep | " + "fam";
+                System.out.println("\n" + pizzaName + printSymbols(" ", titleLine,105)+"Alm |" + "Deep| " + "Fam");
+            }
+        }
+    }
+
+    public static void pizzaInfo(int i) {
+        System.out.println(pizzaList.get(i).getPizzaID());
+        System.out.println(pizzaList.get(i).getPizzaName());
+        System.out.println(pizzaList.get(i).getPizzaDescription());
+        System.out.println(pizzaList.get(i).getPriceNormal());
     }
 
     public static void main(String[] args) throws FileNotFoundException {
@@ -85,6 +83,7 @@ public class Main {
     // The system also needs to be able to delete an order once it has been retrieved and paid for.
        // Menus.mainMenu();
         formatPizzaMenu(pizzaList);
+
 
     }
 }
