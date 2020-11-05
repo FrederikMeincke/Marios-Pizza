@@ -19,9 +19,10 @@ public class Main {
 
     public static void printDots(ArrayList<Pizza> pizzaList, int formatLength) {
 
-        for(int i = 0; i < pizzaList.size(); i++) {
-            String pizzaString = pizzaList.get(i).getPizzaID() + ", " +
-                    pizzaList.get(i).getp
+        for(int i = 1; i <= pizzaList.size(); i++) {
+            String pizzaString = i + ". " +
+                    pizzaList.get(i).getPizzaName() + ", " +
+                    pizzaList.get(i).getPizzaDescription()
         }
     }
 

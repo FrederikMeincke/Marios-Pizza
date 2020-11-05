@@ -60,6 +60,10 @@ public class Pizza {
         this.pizzaDescription = pizzaDescription;
     }
 
+    public String getPizzaDescription() {
+        return pizzaDescription;
+    }
+
     public void setPriceNormal(double priceNormal) {
         this.priceNormal = priceNormal;
     }
