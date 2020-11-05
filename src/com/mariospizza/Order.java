@@ -18,8 +18,6 @@ public class Order {
      *                   in the list
      */
     public Order() {
-        this.orderPizzaList = orderPizzaList;
-
         //counter for unique id for every order
         counter++;
         this.orderID = counter;
