@@ -20,7 +20,7 @@ public class Main {
     public static void printDots(ArrayList<Pizza> pizzaList, int formatLength) {
 
         for(int i = 0; i < pizzaList.size(); i++) {
-            String pizzaString = pizzaList.get(i).n
+            String pizzaString = pizzaList.get(i).getPizzaID()
         }
     }
 
