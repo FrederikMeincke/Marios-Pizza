@@ -54,10 +54,10 @@ public class MyFileReader {
         return pizza;
     }
 
-    public ArrayList<Pizza> loadPizzaMenu() {
+    public ArrayList<Pizza> loadPizzaMenu(String fileName) {
         ArrayList<Pizza> pizzaList = new ArrayList<>();
         try {
-            Scanner load = new Scanner(new File("PizzaMenuClean.txt"));
+            Scanner load = new Scanner(new File(fileName+".txt"));
 
             while (load.hasNextLine()) {
                 Pizza pizza = processPizzaMenuLine(load);
