@@ -52,6 +52,10 @@ public class Pizza {
         this.pizzaName = pizzaName;
     }
 
+    public String getPizzaName() {
+        return pizzaName;
+    }
+
     public void setPizzaDescription(String pizzaDescription) {
         this.pizzaDescription = pizzaDescription;
     }
