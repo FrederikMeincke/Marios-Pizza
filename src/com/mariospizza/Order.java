@@ -9,8 +9,10 @@ public class Order {
 
     /**
      * Constructor
+     *
      *  orderID          Unique id for every order so we can differentiate between orders
-     *                   orderPizzaList A list of all the pizzas in the current order.
+     *
+     *  orderPizzaList   A list of all the pizzas in the current order.
      *                   a customer might want a salami pizza and Hawaii pizza. these would both be contained
      *                   in the list
      */
