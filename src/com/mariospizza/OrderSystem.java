@@ -50,7 +50,7 @@ public class OrderSystem {
         for (int i = 0; i < activeOrdersList.size(); i++) {
             if (orderNumber == activeOrdersList.get(i).getOrderID()) {
                 deleteOrder(activeOrdersList.get(i));
-            } 
+            }
         }
     }
 
