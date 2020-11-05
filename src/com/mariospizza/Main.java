@@ -62,10 +62,10 @@ public class Main {
              */
 
             if(pizzaID != "") {
-                System.out.printf("%s.%s,%s%s%s%s%s\n",pizzaID,pizzaName,pizzaDescription,pizzaDots,priceNormal,priceDeep,priceFamily);
+                System.out.printf("%s. %s,%s%s%s%s%s\n",pizzaID,pizzaName,pizzaDescription,pizzaDots,priceNormal,priceDeep,priceFamily);
             } else {
                 String titleLine = pizzaName + "alm | " + "deep | " + "fam";
-                System.out.println("\n" + pizzaName + printSymbols(" ", titleLine,104)+"Alm |" + "Deep| " + "Fam");
+                System.out.println("\n" + pizzaName + printSymbols(" ", titleLine,105)+"Alm |" + "Deep| " + "Fam");
             }
         }
     }
