@@ -6,9 +6,6 @@ public class Order {
     private int orderID; //unique id for every order
     static int counter = 0;
     ArrayList<Pizza> orderPizzaList = new ArrayList<>();
-    static ArrayList<Order> activeOrdersList = new ArrayList<>();
-    static ArrayList<Order> completedOrders = new ArrayList<>();
-
 
     /**
      * Constructor
@@ -53,7 +50,7 @@ public class Order {
     public void changeOrder(int orderID) {
         int whatToChange = -1; // int input by user to indicate what they want changed. Initialized as -1 for compiler
         //Order is reference type. so if i make a variable of it and change that variable they will both change?
-        Order orderToChange = activeOrdersList.get(orderID);
+        Order orderToChange = OrderSystem.activeOrdersList.get(orderID);
         //TODO: menu here for what needs to be changed about the order
 
         String menuHeader = "CHANGE YOUR ORDER";
