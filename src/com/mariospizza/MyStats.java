@@ -4,27 +4,41 @@ public class MyStats {
 
     // Variables
 /*
+Pseudo 0.1
+
 Private int pizzaSoldToday;
 Private int pizzaSoldThisWeek;
 Private int pizzaSoldInAMonth;
 Private int pizzaSoldThisYear;
 Private int allThePizzaSoldForNow;
-Private int mostPopular1;
-Private int mostPopular2;
-Private int mostPopular3;
-Private int mostPopular4;
-int allMyPizzas = pizzaSoldToday;
- public Pizza getPizza() {
-        return allMyPizzas;
-    }
-    public void set(ArrayList<Order> activeOrdersList) {
-        this.activeOrdersList = activeOrdersList;
-    }
-    int
-public void setActiveOrdersList(ArrayList<Order> activeOrdersList) {
-        this.activeOrdersList = activeOrdersList;
-    }
+Private string mostPopularPizza1;
+Private string mostPopularPizza2;
+Private string mostPopularPizza3;
+Private String mostPopularPizza4;
+int allMyPizzasForToday;
+int allMyPizzasThisWeek;
+int allMyPizzasThisMonth;
+pizzaSoldToday = allMyPizzasForToday;
+pizzaSoldThisWeek = allMyPizzasThisWeek;
+pizzaSoldInAMonth = allMyPizzasThisMonth;
+pizzaSoldThisYear = allMyPizzasThisYear;
+allThePizzaSoldForNow = allThePizzas;
 
+ public Pizza getPizzaToday() {
+        return allMyPizzasForToday;
+    }
+     public Pizza getPizzaThisWeek() {
+        return allMyPizzasThisWeek;
+    }
+     public Pizza getPizzaThisMonth() {
+        return allMyPizzasThisMonth;
+    }
+ public Pizza getPizzaThisYear() {
+        return allMyPizzasThisYear;
+    }
+ public Pizza getAllOfThePizzas() {
+        return allThePizzas;
+    }
 
 
 Metoder til at udregne mest pop pizza
