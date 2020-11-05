@@ -9,6 +9,10 @@ Private int pizzaSoldThisWeek;
 Private int pizzaSoldInAMonth;
 Private int pizzaSoldThisYear;
 Private int allThePizzaSoldForNow;
+Private int mostPopular1;
+Private int mostPopular2;
+Private int mostPopular3;
+Private int mostPopular4;
 int allMyPizzas = pizzaSoldToday;
  public Pizza getPizza() {
         return allMyPizzas;
