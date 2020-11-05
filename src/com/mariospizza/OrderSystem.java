@@ -14,6 +14,24 @@ public class OrderSystem {
     }
 
     /**
+     * Method for returning an Order from an orderID.
+     * Useful for other methods so they can figure out which Order to manipulate
+     *
+     * @param orderID
+     * @return Order in activeOrdersList if it matches orderID else returns null
+     */
+    public Order findOrder(int orderID) {
+        Order order = null;
+
+        for (Order activeOrder: activeOrdersList) {
+            if (activeOrder.orderID == orderID) {
+                return activeOrder;
+            }
+        }
+        return null; //TODO: Maybe add an exception for Order not found?
+    }
+
+    /**
      * Removes a finished order from the active orders list and adds it to the completed orders list
      *
      * @param orderToComplete
@@ -44,14 +62,10 @@ public class OrderSystem {
     /**
      * Deletes order with orderNumber from the active order list
      *
-     * @param orderNumber
+     * @param orderToRemove this should be found out by inputing the orderID into the findOrder method
      */
-    public void cancelOrder(int orderNumber) {
-        for (int i = 0; i < activeOrdersList.size(); i++) {
-            if (orderNumber == activeOrdersList.get(i).getOrderID()) {
-                deleteOrder(activeOrdersList.get(i));
-            } 
-        }
+    public void cancelOrder(Order orderToRemove) {
+        deleteOrder(orderToRemove);
     }
 
     /**

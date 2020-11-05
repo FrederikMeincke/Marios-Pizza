@@ -5,13 +5,19 @@ import java.util.ArrayList;
 public class Order {
     int orderID; //unique id for every order
     static int counter = 0;
-    Pizza pizza;
     ArrayList<Pizza> orderPizzaList = new ArrayList<>();
     static ArrayList<Order> activeOrdersList = new ArrayList<>();
     static ArrayList<Order> completedOrders = new ArrayList<>();
 
 
-    public Order(int orderID, Pizza pizza, ArrayList<Pizza> orderPizzaList, ArrayList<Order> activeOrdersList) {
+    /**
+     * Constructor
+     * @param orderID Unique id for every order so we can differentiate between orders
+     * @param orderPizzaList A list of all the pizzas in the current order.
+     *                       a customer might want a salami pizza and Hawaii pizza. these would both be contained
+     *                       in the list
+     */
+    public Order(int orderID, ArrayList<Pizza> orderPizzaList) {
         this.orderPizzaList = orderPizzaList;
 
         //counter for unique id for every order
@@ -40,6 +46,12 @@ public class Order {
     }
 
 
+    /**
+     * Menu for changing an order.
+     * unsure what these changes could be maybe adding an additional pizza or changing toppings?
+     *
+     * @param orderID
+     */
     public void changeOrder(int orderID) {
         int whatToChange = -1; // int input by user to indicate what they want changed. Initialized as -1 for compiler
         //Order is reference type. so if i make a variable of it and change that variable they will both change?
