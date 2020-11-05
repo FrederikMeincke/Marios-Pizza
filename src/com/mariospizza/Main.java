@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Marios Pizza Menu POS for command line application
  * @author Frederik M., Jimmy, Kasper, Mads, Philip
- * @version 0.3
+ * @version 0.4
  */
 
 public class Main {
