@@ -6,13 +6,15 @@ public class Pizza {
     int pizzaID; //number you use to order the pizza
     String pizzaName;
     String pizzaDescription;
+    //TODO: utilize this! Maybe when a pizza is constructed it should be assigned a type/size so we keep track
     int pizzaSize; //1 for normal, 2 for Deep-Pan, 3 for Family
     double priceNormal; // price of pizza. Maybe different prices for different sizes?
     double priceDeep;
     double priceFamily;
 
 
-    public Pizza(int pizzaID, String pizzaName, String pizzaDescription, double priceNormal, double priceDeep, double priceFamily) {
+    public Pizza(int pizzaID, String pizzaName, String pizzaDescription,
+                 double priceNormal, double priceDeep, double priceFamily) {
         setPizzaID(pizzaID);
         setPizzaName(pizzaName);
         setPizzaDescription(pizzaDescription);
@@ -24,6 +26,7 @@ public class Pizza {
     public String toString() {
         return pizzaName;
     }
+
     /**
      * Prints out the menu .txt file, line for line.
      */
