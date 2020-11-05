@@ -25,12 +25,22 @@ int allMyPizzasForToday;
 int allMyPizzasThisWeek;
 int allMyPizzasThisMonth;
 int allThePizzas;
+String MyBestChoice1;
+String MyBestChoice2;
+String MyBestChoice3;
+String MyBestChoice4;
 // Equation for setting the private ints
 pizzaSoldToday = allMyPizzasForToday;
 pizzaSoldThisWeek = allMyPizzasThisWeek;
 pizzaSoldInAMonth = allMyPizzasThisMonth;
 pizzaSoldThisYear = allMyPizzasThisYear;
 allThePizzaSoldForNow = allThePizzas;
+mostPopularPizza1 = MyBestChoice1;
+mostPopularPizza2 = MyBestChoice2;
+mostPopularPizza3 = MyBestChoice3;
+mostPopularPizza4 = MyBestChoice4;
+
+
 
 // Getters for temporaries
  public Pizza getPizzaToday() {
@@ -53,6 +63,13 @@ allThePizzaSoldForNow = allThePizzas;
  public Pizza getAllOfThePizzas() {
         return allThePizzas;
 
+//Get the 4 biggest quantity of pizzas in a while loop
+
+// Set the values for String variables. Example: Manisa, Kokken’s special, Olimpos, Vegatar.
+String MyBestChoice1
+String MyBestChoice2
+String MyBestChoice3
+String MyBestChoice4
 
 
 
