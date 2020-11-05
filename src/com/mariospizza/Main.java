@@ -18,17 +18,21 @@ public class Main {
     static ArrayList<Pizza> pizzaList = fileReader.loadPizzaMenu("PizzaMenuClean");
 
     public static String printPizzaDots(Pizza pizza, int formatLength) {
+        int pizzaID = pizza.getPizzaID();
+        String pizzaName = pizza.getPizzaName();
+        String pizzaDescription = pizza.getPizzaDescription();
+        double normalPrice = pizza.getPriceNormal();
         // total length of the line
         String dotSpace = "";
         String pizzaString =
-                pizza.getPizzaID() + ". " +
-                pizza.getPizzaName() + ", " +
-                pizza.getPizzaDescription() +
-                pizza.getPriceNormal();
+                pizzaID + ". " +
+                pizzaName + ", " +
+                pizzaDescription +
+                normalPrice;
             int dotLength = Math.abs(pizzaString.length()-formatLength);
 
         for(int i = 0; i < dotLength; i++) {
-            dotSpace += " ";
+            dotSpace += ".";
         }
         return dotSpace;
     }
@@ -43,15 +47,33 @@ public class Main {
         return dotSpace;
     }
 
+    public static String formatPizzaHeader(double number) {
+        if(number == 0) {
+            return "";
+        } else {
+            String string = String.format("%.0f",number);
+
+            return string;
+        }
+    }
+
     public static void formatPizzaMenu(ArrayList<Pizza> pizzaList) throws FileNotFoundException {
 
-        System.out.println(printDots("",97) + "alm    " + "deep    " + "family");
+        System.out.println(printDots("",95) + "alm    " + "deep    " + "family");
         for(int i = 0; i < pizzaList.size(); i++) {
-            System.out.println(pizzaList.get(i).getPizzaID() + ". " +
-                    pizzaList.get(i).getPizzaName() + ", " +
-                    pizzaList.get(i).getPizzaDescription() +
-                    printPizzaDots(pizzaList.get(i),100) +
-                    pizzaList.get(i).getPriceNormal());
+            String pizzaID = formatPizzaHeader(pizzaList.get(i).getPizzaID());
+            String pizzaName = pizzaList.get(i).getPizzaName();
+            String pizzaDescription = pizzaList.get(i).getPizzaDescription();
+            String pizzaDots = printPizzaDots(pizzaList.get(i), 100);
+            String priceNormal = formatPizzaHeader(pizzaList.get(i).getPriceNormal());
+            /*System.out.println( pizzaID + ". " +
+                    pizzaName + ", " +
+                    pizzaDescription +
+                    pizzaDots +
+                    priceNormal);
+
+             */
+            System.out.printf("%s. %s, %s %s %s\n",pizzaID,pizzaName,pizzaDescription,pizzaDots,priceNormal);
         }
 
         //String.format("%s, %s, %s, %d", Pizza.pizzaName, pizzaDescription, printDots(), pizzaPrice);
