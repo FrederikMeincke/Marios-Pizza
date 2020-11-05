@@ -5,13 +5,13 @@ import java.util.ArrayList;
 /**
  * Marios Pizza Menu POS for command line application
  * @author Frederik M., Jimmy, Kasper, Mads, Philip
- * @version 0.3
+ * @version 0.4
  */
 
 public class Main {
 
     static MyFileReader fileReader = new MyFileReader();
-    static ArrayList<Pizza> pizzaList = fileReader.loadPizzaMenu();
+    static ArrayList<Pizza> pizzaList = fileReader.loadPizzaMenu("PizzaMenuClean");
 
     public static void main(String[] args) {
 	// Program that lists a Pizza Menu,
