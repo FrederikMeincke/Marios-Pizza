@@ -17,12 +17,12 @@ public class Main {
     static MyFileReader fileReader = new MyFileReader();
     static ArrayList<Pizza> pizzaList = fileReader.loadPizzaMenu("PizzaMenuClean");
 
-    public static String printDots(String line, int formatLength) {
+    public static String printSymbols(String symbol, String line, int formatLength) {
         String dotSpace = "";
         int dotLength = Math.abs(line.length()-formatLength);
 
         for(int i = 0; i < dotLength; i++) {
-            dotSpace += ".";
+            dotSpace += symbol;
         }
         return dotSpace;
     }
@@ -52,7 +52,7 @@ public class Main {
 
             //String pizzaDots = printPizzaDots(pizzaList.get(i), 100);
             String pizzaLine = pizzaID+pizzaName+pizzaDescription+priceNormal+priceDeep+priceFamily;
-            String pizzaDots = printDots(pizzaLine,100);
+            String pizzaDots = printSymbols(".", pizzaLine,100);
             /*System.out.println( pizzaID + ". " +
                     pizzaName + ", " +
                     pizzaDescription +
@@ -65,7 +65,7 @@ public class Main {
                 System.out.printf("%s.%s,%s%s%s%s%s\n",pizzaID,pizzaName,pizzaDescription,pizzaDots,priceNormal,priceDeep,priceFamily);
             } else {
                 String titleLine = pizzaName + "alm | " + "deep | " + "fam";
-                System.out.println("\n" + pizzaName + printDots(titleLine,104)+"Alm |" + "Deep| " + "Fam");
+                System.out.println("\n" + pizzaName + printSymbols(" ", titleLine,104)+"Alm |" + "Deep| " + "Fam");
             }
         }
     }
