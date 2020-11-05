@@ -3,7 +3,7 @@ package com.mariospizza;
 import java.util.ArrayList;
 
 public class Order {
-    int orderID; //unique id for every order
+    private int orderID; //unique id for every order
     static int counter = 0;
     ArrayList<Pizza> orderPizzaList = new ArrayList<>();
     static ArrayList<Order> activeOrdersList = new ArrayList<>();
@@ -12,12 +12,12 @@ public class Order {
 
     /**
      * Constructor
-     * @param orderID Unique id for every order so we can differentiate between orders
-     * @param orderPizzaList A list of all the pizzas in the current order.
-     *                       a customer might want a salami pizza and Hawaii pizza. these would both be contained
-     *                       in the list
+     *  orderID          Unique id for every order so we can differentiate between orders
+     *                   orderPizzaList A list of all the pizzas in the current order.
+     *                   a customer might want a salami pizza and Hawaii pizza. these would both be contained
+     *                   in the list
      */
-    public Order(int orderID, ArrayList<Pizza> orderPizzaList) {
+    public Order() {
         this.orderPizzaList = orderPizzaList;
 
         //counter for unique id for every order

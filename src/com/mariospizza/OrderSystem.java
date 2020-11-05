@@ -3,8 +3,6 @@ package com.mariospizza;
 import java.util.ArrayList;
 
 public class OrderSystem {
-    Pizza pizza;
-
     static ArrayList<Order> activeOrdersList = new ArrayList<>();
     static ArrayList<Order> completedOrders = new ArrayList<>();
 
@@ -24,7 +22,7 @@ public class OrderSystem {
         Order order = null;
 
         for (Order activeOrder: activeOrdersList) {
-            if (activeOrder.orderID == orderID) {
+            if (activeOrder.getOrderID() == orderID) {
                 return activeOrder;
             }
         }
