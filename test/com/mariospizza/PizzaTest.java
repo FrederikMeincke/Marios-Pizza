@@ -62,10 +62,8 @@ class PizzaTest {
 
     @Test
     void getPizzaID() {
-    }
-
-    @Test
-    void testSetPizzaName() {
+        //Constructor made pizzaID = 1
+        assertEquals(1,pizza.getPizzaID());
     }
 
     @Test
