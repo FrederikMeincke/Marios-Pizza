@@ -19,8 +19,39 @@ public class OrderSystem {
     /**
      * Method that adds an oder containing pizza(s) to the order system
      */
-    public void addOrder() {
+    public static void addOrder() {
+        String headerText = "Mario's Pizzabar add Order:\n";
+        String leadText = "Choose an option: ";
+        String[] menuItems = {"Add Pizza", "Remove Pizza",
+                "List Current Order", "Exit"};
+        boolean menuRun = true;
+        int menuChoice = -1;
 
+        while (menuRun) {
+            GenericMenu mainGenericMenu = new GenericMenu(headerText, leadText, menuItems);
+            mainGenericMenu.printMenu();
+            menuChoice = mainGenericMenu.readChoice();
+            while (menuRun) {
+                switch (menuChoice) {
+                    case 1:
+                        System.out.println("Add Pizza");
+                        break;
+                    case 2:
+                        System.out.println("Remove Pizza");
+                        break;
+                    case 3:
+                        System.out.println("List Current Order");
+                        break;
+                    case 4:
+                        menuRun = false;
+                        break;
+                    default:
+                        System.out.println("\nInvalid input.\nPlease try Again!");
+                        break;
+                }
+
+            }
+        }
     }
 
     /**

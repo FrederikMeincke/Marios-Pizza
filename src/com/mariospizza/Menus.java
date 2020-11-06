@@ -30,8 +30,7 @@ public class Menus {
                         MyFileReader.loadActiveOrders();
                         break;
                     case 3:
-                        System.out.println("3");
-                        //addOrder();
+                        OrderSystem.addOrder();
                         break;
                     case 4:
                         System.out.println("4");
