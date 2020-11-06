@@ -62,7 +62,9 @@ public class Main {
              */
 
             if(pizzaID != "") {
-                System.out.printf("%s. %s,%s%s%s%s%s\n",pizzaID,pizzaName,pizzaDescription,pizzaDots,priceNormal,priceDeep,priceFamily);
+                pizzaID += ". ";
+                String pizzaIDSpace = printSymbols(" ",pizzaID,4);
+                System.out.printf("%s%s%s,%s%s%s%s%s\n",pizzaID,pizzaIDSpace,pizzaName,pizzaDescription,pizzaDots,priceNormal,priceDeep,priceFamily);
             } else {
                 String titleLine = pizzaName + "alm | " + "deep | " + "fam";
                 System.out.println("\n" + pizzaName + printSymbols(" ", titleLine,105)+"Alm |" + "Deep| " + "Fam");
