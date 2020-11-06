@@ -23,6 +23,7 @@ public class Menus {
             menuChoice = mainGenericMenu.readChoice();
 
             switch (menuChoice) {
+
                     case 1:
                         PizzaMenu.formatPizzaMenu(pizzaList);
                         break;
