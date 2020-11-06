@@ -6,12 +6,21 @@ public class GenericMenu {
     private String leadText;
     private String[] menuItems;
 
+    /**
+     * Array to keep track on different parts of the menu
+     * @param menuHeader
+     * @param leadText
+     * @param menuItems
+     */
     public GenericMenu(String menuHeader, String leadText, String[] menuItems) {
         this.menuHeader = menuHeader;
         this.leadText = leadText;
         this.menuItems = menuItems;
     }
 
+    /**
+     * Printing out menu
+     */
     public void printMenu() {
         String printString = menuHeader + "\n";
 
@@ -20,6 +29,10 @@ public class GenericMenu {
         System.out.println("\n" + printString);
     }
 
+    /**
+     * Dictates the users choice navigating the menu
+     * @return
+     */
     public int readChoice() {
         Scanner scanner = new Scanner(System.in);
         boolean validChoice = false;

@@ -9,6 +9,11 @@ public class MyFileWriter {
 
     // TODO: write to files
 
+    /**
+     * Save completed orders in an arraylist and file.txt
+     * @param orderList
+     * @param fileName
+     */
     public void saveCompletedOrders(ArrayList<Order> orderList, String fileName) {
         try {
             PrintStream output = new PrintStream(new File(fileName+".txt"));
@@ -21,6 +26,11 @@ public class MyFileWriter {
 
     }
 
+    /**
+     * Saved active orders in an arraylist and file.txt
+     * @param orderList
+     * @param fileName
+     */
     public void saveActiveOrder(ArrayList<Order> orderList, String fileName) {
         try {
             PrintStream output = new PrintStream(new File(fileName+".txt"));

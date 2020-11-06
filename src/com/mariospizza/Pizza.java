@@ -13,7 +13,15 @@ public class Pizza {
     double priceDeep;
     double priceFamily;
 
-
+    /**
+     * Pizza description.
+     * @param pizzaID
+     * @param pizzaName
+     * @param pizzaDescription
+     * @param priceNormal
+     * @param priceDeep
+     * @param priceFamily
+     */
     public Pizza(int pizzaID, String pizzaName, String pizzaDescription,
                  double priceNormal, double priceDeep, double priceFamily) {
         setPizzaID(pizzaID);

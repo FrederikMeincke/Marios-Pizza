@@ -84,18 +84,34 @@ public class Order {
         }
     }
 
+    /**
+     * Get order from out pizzalist
+     * @return
+     */
     public ArrayList<Pizza> getOrderPizzaList() {
         return orderPizzaList;
     }
 
+    /**
+     * Set order from the arraylist, to pizzalist
+     * @param orderPizzaList
+     */
     public void setOrderPizzaList(ArrayList<Pizza> orderPizzaList) {
         this.orderPizzaList = orderPizzaList;
     }
 
+    /**
+     * Get the order ID
+     * @return
+     */
     public int getOrderID() {
         return orderID;
     }
 
+    /**
+     * Set and orderID as an integer
+     * @param orderID
+     */
     public void setOrderID(int orderID) {
         this.orderID = orderID;
     }

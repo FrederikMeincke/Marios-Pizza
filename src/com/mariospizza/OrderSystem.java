@@ -6,6 +6,11 @@ public class OrderSystem {
     static ArrayList<Order> activeOrdersList = new ArrayList<>();
     static ArrayList<Order> completedOrders = new ArrayList<>();
 
+    /**
+     * Arraylist containing activeorderlist and completedorders.
+     * @param activeOrdersList
+     * @param completedOrders
+     */
     public OrderSystem(ArrayList<Order> activeOrdersList, ArrayList<Order> completedOrders) {
         this.activeOrdersList = activeOrdersList;
         this.completedOrders = completedOrders;

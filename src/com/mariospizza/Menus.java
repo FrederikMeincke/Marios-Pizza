@@ -6,6 +6,9 @@ import static com.mariospizza.PizzaMenu.pizzaList;
 
 public class Menus {
 
+    /**
+     * Menu build - While loop, Switch and case.
+     */
     public static void mainMenu() {
         String headerText = "Mario's Pizzabar:\n";
         String leadText = "Choose an option: ";
