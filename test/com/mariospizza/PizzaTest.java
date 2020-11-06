@@ -55,49 +55,41 @@ class PizzaTest {
 
     @Test
     void setPizzaID() {
+        int IDTest = 100;
+        pizza.setPizzaID(IDTest);
+        assertEquals(IDTest,pizza.getPizzaID());
     }
 
     @Test
     void getPizzaID() {
-    }
-
-    @Test
-    void testSetPizzaName() {
+        //Constructor made pizzaID = 1
+        assertEquals(1,pizza.getPizzaID());
     }
 
     @Test
     void getPizzaName() {
-    }
-
-    @Test
-    void testSetPizzaDescription() {
+        //Constructor made pizzaName = "pizzaTest"
+        assertEquals("pizzaTest",pizza.getPizzaName());
     }
 
     @Test
     void getPizzaDescription() {
-    }
-
-    @Test
-    void testSetPriceNormal() {
+        //Constructor made pizzaDescription = "boloni,sauerkraut,tears"
+        assertEquals("boloni,sauerkraut,tears",pizza.getPizzaDescription());
     }
 
     @Test
     void getPriceNormal() {
-    }
-
-    @Test
-    void testSetPriceDeep() {
+        assertEquals(35.0,pizza.getPriceNormal());
     }
 
     @Test
     void getPriceDeep() {
-    }
-
-    @Test
-    void testSetPriceFamily() {
+        assertEquals(55.0,pizza.getPriceDeep());
     }
 
     @Test
     void getPriceFamily() {
+        assertEquals(105.0,pizza.getPriceFamily());
     }
 }
