@@ -68,18 +68,14 @@ class PizzaTest {
 
     @Test
     void getPizzaName() {
-    }
-
-    @Test
-    void testSetPizzaDescription() {
+        //Constructor made pizzaName = "hawaii"
+        assertEquals("hawaii",pizza.getPizzaName());
     }
 
     @Test
     void getPizzaDescription() {
-    }
-
-    @Test
-    void testSetPriceNormal() {
+        //Constructor made pizzaDescription = "boloni,sauerkraut,tears"
+        assertEquals("boloni,sauerkraut,tears",pizza.getPizzaDescription());
     }
 
     @Test
@@ -87,15 +83,7 @@ class PizzaTest {
     }
 
     @Test
-    void testSetPriceDeep() {
-    }
-
-    @Test
     void getPriceDeep() {
-    }
-
-    @Test
-    void testSetPriceFamily() {
     }
 
     @Test
