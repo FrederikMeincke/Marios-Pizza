@@ -16,6 +16,9 @@ public class OrderSystem {
         this.completedOrders = completedOrders;
     }
 
+    /**
+     * adds an oder containing pizza(s) to the order system
+     */
     public void addOrder() {
 
     }
