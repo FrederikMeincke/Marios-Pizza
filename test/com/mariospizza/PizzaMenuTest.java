@@ -9,13 +9,13 @@ class PizzaMenuTest {
 
     @Test
     void printSymbols() {
+        int formatLength = 15;
         String symbol = " ";
-        String line = "Phillip";
+        String line1 = "Phillip";
         String line2 = "Brown";
-        String line3 = "line + line2";
-        String line4 = "line3 + printSymbols";
-        int formatLenght = 15;
-        assertEquals(formatLenght, line4.length());
+        String line3 = line1 + line2;
+        String line4 = line3 + PizzaMenu.printSymbols(symbol,line3,formatLength);
+        assertEquals(formatLength, line4.length());
     }
 
     @Test

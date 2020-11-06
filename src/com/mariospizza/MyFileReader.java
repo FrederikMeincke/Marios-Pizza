@@ -1,5 +1,6 @@
 package com.mariospizza;
 
+import javax.print.attribute.standard.OrientationRequested;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Array;
@@ -79,6 +80,7 @@ public class MyFileReader {
         return pizzaList; //TODO: Finish the loading method for the ArrayList
     }
 
+    /*
     public static void loadActiveOrders() {
         try {
             Scanner active = new Scanner(new File("ActiveOrders.txt"));
@@ -91,8 +93,34 @@ public class MyFileReader {
             System.out.println("File not found.");
         }
     }
+     */
+
+    public Order processActiveOrderList(Scanner input) {
+return null;
+    }
+
+    public ArrayList<Order> loadActiveOrders(String fileName) {
+        ArrayList<Order> orderList = new ArrayList<>();
+        try {
+            Scanner load = new Scanner(new File(fileName+".txt"));
+            while (load.hasNextLine()) {
+                Order order = processActiveOrderList(load);
+                if(order != null) {
+                    orderList.add(order); // processes the line and adds the pizza object to the array.
+                }
+            }
+        } catch (IOException e){
+            System.out.println("File not found.");
+        }
+        return orderList; //TODO: Finish the loading method for the ArrayList
+    }
+
+    public ArrayList<Order> loadCompletedOrders() {
+return null;
+    }
 
 //husk knj du har lavet denne static for at kunne teste i main
+    /*
     public static void loadCompletedOrders() {
         try {
             Scanner complete = new Scanner(new File("CompletedOrders.txt"));
@@ -105,4 +133,5 @@ public class MyFileReader {
             System.out.println("File not found.");
         }
     }
+     */
 }
