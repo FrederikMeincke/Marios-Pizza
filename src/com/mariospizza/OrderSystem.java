@@ -16,6 +16,10 @@ public class OrderSystem {
         this.completedOrders = completedOrders;
     }
 
+    public void addOrder() {
+
+    }
+
     /**
      * Method for returning an Order from an orderID.
      * Useful for other methods so they can figure out which Order to manipulate
