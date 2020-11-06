@@ -55,6 +55,9 @@ class PizzaTest {
 
     @Test
     void setPizzaID() {
+        int IDTest = 100;
+        pizza.setPizzaID(IDTest);
+        assertEquals(IDTest,pizza.getPizzaID());
     }
 
     @Test
