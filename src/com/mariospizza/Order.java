@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Order {
     private int orderID; //unique id for every order
     static int counter = 0;
-    ArrayList<Pizza> orderPizzaList = new ArrayList<>();
+    private ArrayList<Pizza> orderPizzaList = new ArrayList<>();
 
     /**
      * Constructor
