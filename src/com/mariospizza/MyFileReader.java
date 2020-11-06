@@ -42,7 +42,7 @@ public class MyFileReader {
         pizzaName = pizzaName.substring(0,pizzaName.length()-1); // TODO: Does it work?
 
         while(!input.hasNextDouble()) {
-            pizzaDescription += input.next(); // Scans through all the toppings on the pizza
+            pizzaDescription += input.next(); // Scans through all the toppings on the pizza //TODO: Add space between each token
         }
         //pizzaDescription = pizzaDescription.substring(-1); // Removes "," at the end if necessary
         alm = input.nextDouble();
