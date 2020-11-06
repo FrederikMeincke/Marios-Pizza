@@ -27,6 +27,8 @@ public class OrderSystem {
         boolean menuRun = true;
         int menuChoice = -1;
 
+        Order order = new Order();
+
         while (menuRun) {
             GenericMenu addOrderGenericMenu = new GenericMenu(headerText, leadText, menuItems);
             addOrderGenericMenu.printMenu();
@@ -41,6 +43,9 @@ public class OrderSystem {
                         break;
                     case 3:
                         System.out.println("List Current Order");
+                        for (Pizza pizza : order.getOrderPizzaList()) {
+                            System.out.println(pizza.toString());
+                        }
                         break;
                     case 4:
                         menuRun = false;

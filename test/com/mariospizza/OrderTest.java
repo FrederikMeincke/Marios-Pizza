@@ -93,6 +93,7 @@ class OrderTest {
         assertEquals(1, pizzaListSize);
     }
 
+    //this will fail if you test the entire class together because of the way unique ids are generated with static int
     @Test
     void getOrderID() {
         Order orderA = new Order();
