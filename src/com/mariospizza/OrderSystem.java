@@ -65,7 +65,7 @@ public class OrderSystem {
                 }
 
             }
-        }//TODO: invalid input creates infinite loop - fix this
+        }//TODO: all cases should be methodized
 
     /**
      * Method for returning an Order from an orderID.
