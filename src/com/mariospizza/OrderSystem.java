@@ -19,7 +19,7 @@ public class OrderSystem {
     /**
      * Method that adds an oder containing pizza(s) to the order system
      */
-    public static void addOrder() {
+    public static void addNewOrder() {
         String headerText = "Mario's Pizzabar add Order:\n";
         String leadText = "Choose an option: ";
         String[] menuItems = {"Add Pizza", "Remove Pizza",
@@ -35,11 +35,11 @@ public class OrderSystem {
             menuChoice = addOrderGenericMenu.readChoice();
                 switch (menuChoice) {
                     case 1:
-                        System.out.println("Add Pizza");
+                        System.out.println("Add Pizza to current order");
                         //addPizza();
                         break;
                     case 2:
-                        System.out.println("Remove Pizza");
+                        System.out.println("Remove Pizza to current order");
                         break;
                     case 3:
                         System.out.println("List Current Order");
