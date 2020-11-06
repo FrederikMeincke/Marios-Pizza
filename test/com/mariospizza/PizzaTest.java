@@ -68,8 +68,8 @@ class PizzaTest {
 
     @Test
     void getPizzaName() {
-        //Constructor made pizzaName = "pizzaTest"
-        assertEquals("pizzaTest",pizza.getPizzaName());
+        //Constructor made pizzaName = "hawaii"
+        assertEquals("hawaii",pizza.getPizzaName());
     }
 
     @Test
@@ -90,6 +90,6 @@ class PizzaTest {
 
     @Test
     void getPriceFamily() {
-        assertEquals(105.0,pizza.getPriceFamily());
+        assertEquals(105,pizza.getPriceFamily());
     }
 }
