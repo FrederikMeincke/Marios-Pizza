@@ -24,30 +24,30 @@ public class Menus {
 
             switch (menuChoice) {
 
-                    case 1:
-                        PizzaMenu.formatPizzaMenu(pizzaList);
+                case 1:
+                    PizzaMenu.formatPizzaMenu(pizzaList);
                         break;
-                    case 2:
-                        //MyFileReader.loadActiveOrders();
-                        break;
-                    case 3:
-                        OrderSystem.addNewOrder();
-                        break;
-                    case 4:
-                        System.out.println("Remove Order");
-                        //deleteOrder();
-                        break;
-                    case 5:
-                        System.out.println("Check statistics");
-                        //MyFileReader.loadCompletedOrders();
-                        //showStats();
-                        break;
-                    case 6:
-                        menuRun = false;
-                        break;
-                    default:
-                        System.out.println("\nInvalid input.\nPlease try Again!");
-                        break;
+                case 2:
+                    //MyFileReader.loadActiveOrders();
+                    break;
+                case 3:
+                    OrderSystem.addNewOrder();
+                    break;
+                case 4:
+                    System.out.println("Remove Order");
+                    //deleteOrder();
+                    break;
+                case 5:
+                    System.out.println("Check statistics");
+                    //MyFileReader.loadCompletedOrders();
+                    //MyStats.();
+                    break;
+                case 6:
+                    menuRun = false;
+                    break;
+                default:
+                    System.out.println("\nInvalid input.\nPlease try Again!");
+                    break;
             }
         }
     }
