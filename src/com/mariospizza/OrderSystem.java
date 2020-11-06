@@ -17,7 +17,7 @@ public class OrderSystem {
     }
 
     /**
-     * adds an oder containing pizza(s) to the order system
+     * Method that adds an oder containing pizza(s) to the order system
      */
     public void addOrder() {
 
