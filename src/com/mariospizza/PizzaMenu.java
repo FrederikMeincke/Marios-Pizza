@@ -26,7 +26,7 @@ public class PizzaMenu {
         }
     }
 
-    public static void formatPizzaMenu(ArrayList<Pizza> pizzaList) throws FileNotFoundException {
+    public static void formatPizzaMenu(ArrayList<Pizza> pizzaList) {
 
         for(int i = 0; i < pizzaList.size(); i++) {
             String pizzaID = formatPizzaHeader(pizzaList.get(i).getPizzaID());

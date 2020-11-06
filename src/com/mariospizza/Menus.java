@@ -6,7 +6,7 @@ import static com.mariospizza.PizzaMenu.pizzaList;
 
 public class Menus {
 
-    public static void mainMenu() throws FileNotFoundException {
+    public static void mainMenu() {
         String headerText = "Mario's Pizzabar:\n";
         String leadText = "Choose an option: ";
         String[] menuItems = {"Show Pizza menu", "Check active orders",
@@ -47,25 +47,4 @@ public class Menus {
             }
         }
     }
-
-    public static void checkActiveOrders() {
-        //print arraylist of Pizzas in activeOrders ArrayList
-    }
-
-    public static void addOrder() {
-        /*
-        add new Pizza object to activeOrders ArrayList
-        activeOrders.add(new Pizza(x,x,x));
-         */
-    }
-
-    public static void removeOrder() {
-        //remove Pizza object from activeOrders ArrayList
-    }
-
-    public static void showStats() {
-        //read stats from stats.txt file
-    }
-
-
 }
