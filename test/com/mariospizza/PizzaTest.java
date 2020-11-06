@@ -9,15 +9,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class PizzaTest {
 
     @Test
-    void printPizzaMenu() {
-        File pizzaMenu = new File("PizzaMenu.txt");
-        boolean exists = pizzaMenu.exists();
-        if (exists) {
-            if (pizzaMenu.isFile() && pizzaMenu.exists());
-        }
-    }
-
-    @Test
     void testPrintPizzaMenu() {
     }
 
