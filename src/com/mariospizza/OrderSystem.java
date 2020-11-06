@@ -1,6 +1,7 @@
 package com.mariospizza;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class OrderSystem {
     static ArrayList<Order> activeOrdersList = new ArrayList<>();
@@ -27,6 +28,7 @@ public class OrderSystem {
         boolean menuRun = true;
         int menuChoice = -1;
 
+        Scanner scn = new Scanner(System.in);
         Order order = new Order();
 
         while (menuRun) {
@@ -42,12 +44,15 @@ public class OrderSystem {
                     case 2:
                         System.out.println("Remove Pizza to current order");
                         for (int i = 1; i <= order.getOrderPizzaList().size(); i++) {
-                            System.out.println(i + order.getOrderPizzaList().get(i - 1).toString());
+                            System.out.println(i + ". " + order.getOrderPizzaList().get(i - 1).toString());
                         }
+
                         System.out.println("type the number of the pizza you want to delete");
                         //userChoice = scn.nextInt + 1;
                         int userchoice = -1; //TODO: input validation?
-                        order.getOrderPizzaList().remove(userchoice - 1);
+                        userchoice = scn.nextInt();
+
+                        order.getOrderPizzaList().remove(userchoice);
 
                         break;
                     case 3:
