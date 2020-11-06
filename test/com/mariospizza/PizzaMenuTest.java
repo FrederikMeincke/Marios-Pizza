@@ -16,6 +16,7 @@ class PizzaMenuTest {
         String line3 = line1 + line2;
         String line4 = line3 + PizzaMenu.printSymbols(symbol,line3,formatLength);
         assertEquals(formatLength, line4.length());
+        assertEquals("PhillipBrown   ", line4);
     }
 
     @Test
