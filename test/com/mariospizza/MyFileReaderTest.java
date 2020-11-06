@@ -21,17 +21,21 @@ class MyFileReaderTest {
         //and Each Pizza object will have its variables assigned from the text file.
         //Our headers are also Pizza objects but don't contain important information besides their name
         /* test.txt
-        testHeader
-        5. pizzaNameTest1, description1, description2, 40 70 101
-        3. pizzaNameTest2, description3, description4, 50 80 102
-        testHeader2
-        6. pizzaNameTest3, description5, 60 90 120
+        testHeader  name2
+        5. pizzaNameTestOne, descrOne, descrTwo 40 70 101
+        3. pizzaNameTestTwo, descrThree, descrFour 50 80 102
+
+        testHeaderTest name3
+        6. pizzaNameTestThree, descrFive 60 90 120
          */
         ArrayList<Pizza> testPizzaList = testFileReader.loadPizzaMenu("TestFile");
-        //System.out.println(testPizzaList.get(0).getPizzaID());
-        //System.out.println(testPizzaList.get(0).getPizzaName());
-        //assertEquals("testHeader",testPizzaList.get(0).getPizzaName());
+        assertEquals("testHeader name2",testPizzaList.get(0).getPizzaName());
+        assertEquals(5,testPizzaList.get(1).getPizzaID());
+        assertEquals("descrOne,descrTwo",testPizzaList.get(1).getPizzaDescription());
+        assertEquals(40,testPizzaList.get(1).getPriceNormal());
+        assertEquals("testHeaderTest name3",testPizzaList.get(3).getPizzaName());
 
+        //TODO: fix description String so it contains spaces in both the real method and the test method.
     }
 
     @Test
