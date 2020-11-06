@@ -31,7 +31,6 @@ public class OrderSystem {
             GenericMenu addOrderGenericMenu = new GenericMenu(headerText, leadText, menuItems);
             addOrderGenericMenu.printMenu();
             menuChoice = addOrderGenericMenu.readChoice();
-            while (menuRun) {
                 switch (menuChoice) {
                     case 1:
                         System.out.println("Add Pizza");
@@ -51,8 +50,7 @@ public class OrderSystem {
                 }
 
             }
-        }
-    } //TODO: invalid input creates infinite loop - fix this
+        }//TODO: invalid input creates infinite loop - fix this
 
     /**
      * Method for returning an Order from an orderID.
