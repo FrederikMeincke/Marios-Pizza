@@ -46,6 +46,8 @@ public class OrderSystem {
                         }
                         System.out.println("type the number of the pizza you want to delete");
                         //userChoice = scn.nextInt + 1;
+                        int userchoice = -1; //TODO: input validation?
+                        order.getOrderPizzaList().remove(userchoice - 1);
 
                         break;
                     case 3:
