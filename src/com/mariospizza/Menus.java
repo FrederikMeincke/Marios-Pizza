@@ -34,10 +34,11 @@ public class Menus {
                         OrderSystem.addNewOrder();
                         break;
                     case 4:
-                        System.out.println("4");
+                        System.out.println("Remove Order");
                         //deleteOrder();
                         break;
                     case 5:
+                        System.out.println("Check statistics");
                         //MyFileReader.loadCompletedOrders();
                         //showStats();
                         break;
