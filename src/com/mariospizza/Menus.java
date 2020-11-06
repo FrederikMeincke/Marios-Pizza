@@ -1,8 +1,12 @@
 package com.mariospizza;
 
+import java.io.FileNotFoundException;
+
+import static com.mariospizza.PizzaMenu.pizzaList;
+
 public class Menus {
 
-    public static void mainMenu() {
+    public static void mainMenu() throws FileNotFoundException {
         String headerText = "Mario's Pizzabar:\n";
         String leadText = "Choose an option: ";
         String[] menuItems = {"Show Pizza menu", "Check active orders",
@@ -17,7 +21,7 @@ public class Menus {
 
             switch (menuChoice) {
                     case 1:
-                        Pizza.printPizzaMenu();
+                        PizzaMenu.formatPizzaMenu(pizzaList);
                         break;
                     case 2:
                         MyFileReader.loadActiveOrders();

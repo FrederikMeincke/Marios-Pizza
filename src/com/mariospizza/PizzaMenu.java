@@ -1,19 +1,9 @@
 package com.mariospizza;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Scanner;
 
-/**
- * Marios Pizza Menu POS for command line application
- * @author Frederik M., Jimmy, Kasper, Mads, Philip
- * @version 0.4
- */
-
-public class Main {
-/*
+public class PizzaMenu {
     static MyFileReader fileReader = new MyFileReader();
     static ArrayList<Pizza> pizzaList = fileReader.loadPizzaMenu("PizzaMenuClean");
 
@@ -60,7 +50,7 @@ public class Main {
                     priceNormal);
 
              */
-/*
+
             if(pizzaID != "") {
                 pizzaID += ". ";
                 String pizzaIDSpace = printSymbols(" ",pizzaID,4);
@@ -77,16 +67,5 @@ public class Main {
         System.out.println(pizzaList.get(i).getPizzaName());
         System.out.println(pizzaList.get(i).getPizzaDescription());
         System.out.println(pizzaList.get(i).getPriceNormal());
-    }
-
-    */
-
-    public static void main(String[] args) throws FileNotFoundException {
-	// Program that lists a Pizza Menu,
-    // can take orders and sort them chronologically based on time.
-    // The system also needs to be able to delete an order once it has been retrieved and paid for.
-       Menus.mainMenu();
-
-
     }
 }
