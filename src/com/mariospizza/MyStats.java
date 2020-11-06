@@ -58,18 +58,17 @@ mostPopularPizza4 = MyBestChoice4;
  public Pizza getAllOfThePizzas() {
         return allThePizzas;
     }
-//Getters for temporaries
-
- public Pizza getAllOfThePizzas() {
-        return allThePizzas;
 
 //Get the 4 biggest quantity of pizzas in a while loop
+public PizzaPop getArrayOfMostSoldPizza
 
 // Set the values for String variables. Example: Manisa, Kokken’s special, Olimpos, Vegatar.
 String MyBestChoice1
 String MyBestChoice2
 String MyBestChoice3
 String MyBestChoice4
+
+
 
  //TODO: Kigge på nogle beregninger til statistik
 

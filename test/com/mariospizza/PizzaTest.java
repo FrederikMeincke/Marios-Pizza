@@ -80,13 +80,16 @@ class PizzaTest {
 
     @Test
     void getPriceNormal() {
+        assertEquals("35.0",pizza.getPriceNormal());
     }
 
     @Test
     void getPriceDeep() {
+        assertEquals("55.0",pizza.getPriceDeep());
     }
 
     @Test
     void getPriceFamily() {
+        assertEquals("105",pizza.getPriceFamily());
     }
 }
