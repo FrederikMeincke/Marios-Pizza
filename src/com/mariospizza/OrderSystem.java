@@ -44,15 +44,15 @@ public class OrderSystem {
                     case 2:
                         System.out.println("Remove Pizza to current order");
                         for (int i = 1; i <= order.getOrderPizzaList().size(); i++) {
-                            System.out.println(i + ". " + order.getOrderPizzaList().get(i - 1).toString());
+                            System.out.println(i + ". \n" + order.getOrderPizzaList().get(i - 1).toString());
                         }
 
                         System.out.println("type the number of the pizza you want to delete");
-                        //userChoice = scn.nextInt + 1;
+
                         int userchoice = -1; //TODO: input validation?
                         userchoice = scn.nextInt();
 
-                        order.getOrderPizzaList().remove(userchoice);
+                        order.getOrderPizzaList().remove(userchoice - 1);
 
                         break;
                     case 3:

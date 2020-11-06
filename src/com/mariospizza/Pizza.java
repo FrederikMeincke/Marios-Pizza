@@ -33,7 +33,9 @@ public class Pizza {
     }
 
     public String toString() {
-        return pizzaName;
+        return "Pizza name: " + getPizzaName() +
+                "\n Pizza size: " + getPizzaSize() +
+                "\n";
     }
 
     public void setPizzaID(int pizzaID) {
@@ -82,5 +84,13 @@ public class Pizza {
 
     public double getPriceFamily() {
         return priceFamily;
+    }
+
+    public int getPizzaSize() {
+        return pizzaSize;
+    }
+
+    public void setPizzaSize(int pizzaSize) {
+        this.pizzaSize = pizzaSize;
     }
 }
