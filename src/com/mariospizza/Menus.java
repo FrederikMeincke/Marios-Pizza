@@ -23,11 +23,12 @@ public class Menus {
             menuChoice = mainGenericMenu.readChoice();
 
             switch (menuChoice) {
+
                     case 1:
                         PizzaMenu.formatPizzaMenu(pizzaList);
                         break;
                     case 2:
-                        MyFileReader.loadActiveOrders();
+                        //MyFileReader.loadActiveOrders();
                         break;
                     case 3:
                         OrderSystem.addNewOrder();
@@ -37,7 +38,7 @@ public class Menus {
                         //deleteOrder();
                         break;
                     case 5:
-                        MyFileReader.loadCompletedOrders();
+                        //MyFileReader.loadCompletedOrders();
                         //showStats();
                         break;
                     case 6:
