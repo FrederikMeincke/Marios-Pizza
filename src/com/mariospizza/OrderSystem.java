@@ -23,7 +23,7 @@ public class OrderSystem {
         String headerText = "Mario's Pizzabar add Order:\n";
         String leadText = "Choose an option: ";
         String[] menuItems = {"Add Pizza", "Remove Pizza",
-                "List Current Order", "Exit"};
+                "List Current Order", "Main Menu"};
         boolean menuRun = true;
         int menuChoice = -1;
 
@@ -34,6 +34,7 @@ public class OrderSystem {
                 switch (menuChoice) {
                     case 1:
                         System.out.println("Add Pizza");
+                        //addPizza();
                         break;
                     case 2:
                         System.out.println("Remove Pizza");
