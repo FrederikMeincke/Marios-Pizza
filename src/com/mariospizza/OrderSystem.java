@@ -28,9 +28,9 @@ public class OrderSystem {
         int menuChoice = -1;
 
         while (menuRun) {
-            GenericMenu mainGenericMenu = new GenericMenu(headerText, leadText, menuItems);
-            mainGenericMenu.printMenu();
-            menuChoice = mainGenericMenu.readChoice();
+            GenericMenu addOrderGenericMenu = new GenericMenu(headerText, leadText, menuItems);
+            addOrderGenericMenu.printMenu();
+            menuChoice = addOrderGenericMenu.readChoice();
             while (menuRun) {
                 switch (menuChoice) {
                     case 1:
@@ -52,7 +52,7 @@ public class OrderSystem {
 
             }
         }
-    }
+    } //TODO: invalid input creates infinite loop - fix this
 
     /**
      * Method for returning an Order from an orderID.
