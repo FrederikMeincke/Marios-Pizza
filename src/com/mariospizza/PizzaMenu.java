@@ -17,7 +17,7 @@ public class PizzaMenu {
         return dotSpace;
     }
 
-    public static String formatPizzaHeader(double number) {
+    public static String formatPizzaHeader(double number) { //TODO: refactor method name
         if(number == 0) {
             return "";
         } else {
