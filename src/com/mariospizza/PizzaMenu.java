@@ -68,4 +68,8 @@ public class PizzaMenu {
         System.out.println(pizzaList.get(i).getPizzaDescription());
         System.out.println(pizzaList.get(i).getPriceNormal());
     }
+
+    public static void run() {
+        formatPizzaMenu(pizzaList);
+    }
 }

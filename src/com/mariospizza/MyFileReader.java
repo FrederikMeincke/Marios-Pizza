@@ -26,7 +26,9 @@ public class MyFileReader {
          */
         if(!pizzaNumber.contains(".")) {
             //return  null;
-            pizzaNumber += " " + input.next();
+            if(!input.hasNext(".")){ // checks if the next token isn't a pizzaID
+                pizzaNumber += " " + input.next(); // for two-word headers
+            }
             Pizza pizzaTitle = new Pizza(0,pizzaNumber,"",0,0,0);
             return pizzaTitle;
         }
