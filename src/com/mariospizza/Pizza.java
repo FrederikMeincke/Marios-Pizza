@@ -34,7 +34,7 @@ public class Pizza {
 
     public String toString() {
         return "Pizza name: " + getPizzaName() +
-                "\n Pizza size: " + getPizzaSize() +
+                "\nPizza size: " + getPizzaSize() +
                 "\n";
     }
 
