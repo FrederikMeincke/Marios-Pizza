@@ -4,21 +4,21 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class GenericMenuTest {
+class MyFileReaderTest {
 
     @Test
-    void printMenu() {
+    void processPizzaMenuLine() {
     }
 
     @Test
-    void readChoice() {
+    void loadPizzaMenu() {
     }
 
     @Test
-    void testPrintMenu() {
+    void loadActiveOrders() {
     }
 
     @Test
-    void testReadChoice() {
+    void loadCompletedOrders() {
     }
 }

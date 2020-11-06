@@ -4,21 +4,21 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class GenericMenuTest {
+class PizzaMenuTest {
 
     @Test
-    void printMenu() {
+    void printSymbols() {
     }
 
     @Test
-    void readChoice() {
+    void formatPizzaHeader() {
     }
 
     @Test
-    void testPrintMenu() {
+    void formatPizzaMenu() {
     }
 
     @Test
-    void testReadChoice() {
+    void pizzaInfo() {
     }
 }
