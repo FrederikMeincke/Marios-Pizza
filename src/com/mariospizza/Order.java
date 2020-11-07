@@ -42,6 +42,15 @@ public class Order {
         orderPizzaList.add(orderPizza);
     }
 
+    public Pizza plusPizza(int pizzaMenuChoice) {
+        ArrayList<Pizza> pizzaList = PizzaMenu.pizzaList;
+        for(int i = 0; i < pizzaList.size(); i++) {
+            if(pizzaList.get(i).getPizzaID() == pizzaMenuChoice) {
+                return pizzaList.get(i);
+            }
+        }
+        return null;
+    }
 
     /**
      * Menu for changing an order.
