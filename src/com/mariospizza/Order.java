@@ -38,18 +38,19 @@ public class Order {
      *
      * @param orderPizza
      */
+    /*
     public void addPizza(Pizza orderPizza) {
         orderPizzaList.add(orderPizza);
     }
+     */
 
-    public Pizza plusPizza(int pizzaMenuChoice) {
+    public void addPizza(int pizzaMenuChoice) {
         ArrayList<Pizza> pizzaList = PizzaMenu.pizzaList;
         for(int i = 0; i < pizzaList.size(); i++) {
             if(pizzaList.get(i).getPizzaID() == pizzaMenuChoice) {
-                return pizzaList.get(i);
+                orderPizzaList.add(pizzaList.get(i));
             }
         }
-        return null;
     }
 
     /**

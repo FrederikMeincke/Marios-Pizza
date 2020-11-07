@@ -38,8 +38,7 @@ public class OrderSystem {
                 switch (menuChoice) {
                     case 1:
                         System.out.println("Add Pizza to current order");
-                        order.addPizza(new Pizza(123,"name", "lolern pizza",
-                                69.0, 85.0, 100.0));
+                        order.addPizza(addOrderGenericMenu.readChoice());
                         break;
                     case 2:
                         System.out.println("Remove Pizza to current order");
@@ -136,4 +135,5 @@ public class OrderSystem {
         completedOrders.add(orderToComplete);
         activeOrdersList.remove(orderToComplete);
     }
+
 }
