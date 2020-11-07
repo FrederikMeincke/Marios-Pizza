@@ -50,7 +50,7 @@ public class MyFileReader {
         //pizzaDescription = pizzaDescription.substring(-1); // Removes "," at the end if necessary
         alm = input.nextDouble();
         deep = input.nextDouble();
-        if(deep > 100) {
+        if(deep > 100) { //TODO: clarify why this value is 100
             // all family pizzas cost more than 100, so if the next input is more than 100 then we know it's a family pizza and not a deep pan.
             fam = deep;
             deep = 0;
