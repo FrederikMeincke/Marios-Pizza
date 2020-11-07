@@ -41,23 +41,24 @@ public class PizzaMenu {
             String priceFamily = formatPizzaHeader(pizzaList.get(i).getPriceFamily());
 
             //String pizzaDots = printPizzaDots(pizzaList.get(i), 100);
-            String pizzaLine = pizzaID+pizzaName+pizzaDescription+priceNormal+priceDeep+priceFamily;
-            String pizzaDots = printSymbols(".", pizzaLine,100);
+            //String pizzaLine = pizzaID+pizzaName+pizzaDescription+priceNormal+priceDeep+priceFamily+;
+            //String pizzaDots = printSymbols(".", pizzaLine,100);
             /*System.out.println( pizzaID + ". " +
                     pizzaName + ", " +
                     pizzaDescription +
                     pizzaDots +
                     priceNormal);
-
              */
 
             if(pizzaID != "") {
                 pizzaID += ". ";
                 String pizzaIDSpace = printSymbols(" ",pizzaID,4); // TODO: include this in pizzaID to reduce variables in StringFormat
+                String pizzaLine = pizzaID+pizzaIDSpace+pizzaName+pizzaDescription+priceNormal+priceDeep+priceFamily;
+                String pizzaDots = printSymbols(".", pizzaLine,100);
                 System.out.printf("%s%s%s,%s%s%s%s%s\n",pizzaID,pizzaIDSpace,pizzaName,pizzaDescription,pizzaDots,priceNormal,priceDeep,priceFamily);
             } else {
                 String titleLine = pizzaName + "alm | " + "deep | " + "fam";
-                System.out.println("\n" + pizzaName + printSymbols(" ", titleLine,105)+ "Alm |" + "Deep| " + "Fam");
+                System.out.println("\n" + pizzaName + printSymbols(" ", titleLine,103)+ "Alm |" + "Deep| " + "Fam");
             }
         }
     }
