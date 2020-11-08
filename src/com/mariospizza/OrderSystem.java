@@ -24,7 +24,7 @@ public class OrderSystem {
         String headerText = "Mario's Pizzabar add Order:\n";
         String leadText = "Choose an option: ";
         String[] menuItems = {"Add Pizza", "Remove Pizza",
-                "List Current Order", "Main Menu"};
+                "List Current Order", "Save Order", "Main Menu"};
         boolean menuRun = true;
         int menuChoice = -1;
 
@@ -41,7 +41,7 @@ public class OrderSystem {
                         order.addPizza(Main.inputInt("What pizza? "),Main.inputInt("What size? 1,2,3: "));
                         break;
                     case 2:
-                        System.out.println("Remove Pizza to current order\n");
+                        System.out.println("Remove Pizza from current order\n");
                         for (int i = 1; i <= order.getOrderPizzaList().size(); i++) {
                             System.out.println(i + ". \n" + order.getOrderPizzaList().get(i - 1).toString());
                         }
@@ -63,6 +63,9 @@ public class OrderSystem {
                         }
                         break;
                     case 4:
+                        System.out.println("Save Order\n");
+                        break;
+                    case 5:
                         menuRun = false;
                         break;
                     default:
