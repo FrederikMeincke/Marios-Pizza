@@ -28,7 +28,7 @@ public class Menus {
                     PizzaMenu.formatPizzaMenu(pizzaList);
                         break;
                 case 2:
-                    //MyFileReader.loadActiveOrders();
+                    //MyFileReader.loadActiveOrders(); //TODO: maybe write something to a file
                     OrderSystem.checkActiveOrders();
                     break;
                 case 3:
