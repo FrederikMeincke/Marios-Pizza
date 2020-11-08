@@ -37,16 +37,17 @@ public class OrderSystem {
             menuChoice = addOrderGenericMenu.readChoice();
                 switch (menuChoice) {
                     case 1:
-                        System.out.println("Add Pizza to current order");
-                        order.addPizza(Main.inputInt("What pizza? "),Main.inputInt("What size? 1,2,3: "));
+                        System.out.println("\nAdding a pizza to current order:");
+                        order.addPizza(Main.inputInt("Add pizza #"),
+                                Main.inputInt("What size? 1: Normal, 2: Deep Pan, 3: Family:"));
                         break;
                     case 2:
-                        System.out.println("Remove Pizza from current order\n");
+                        System.out.println("\nRemove a pizza from the current order:");
                         for (int i = 1; i <= order.getOrderPizzaList().size(); i++) {
                             System.out.println(i + ". \n" + order.getOrderPizzaList().get(i - 1).toString());
                         }
 
-                        System.out.println("type the number of the pizza you want to delete");
+                        System.out.println("Type the number of the pizza you want to delete");
 
                         int userchoice = -1; //TODO: input validation?
                         userchoice = scn.nextInt();
@@ -55,7 +56,7 @@ public class OrderSystem {
 
                         break;
                     case 3:
-                        System.out.println("List Current Order\n");
+                        System.out.println("\nListing pizzas on current order:");
                         int j = 1;
                         for (Pizza pizza : order.getOrderPizzaList()) {
                             System.out.println(j + ".\n" + pizza.toString());
@@ -63,13 +64,13 @@ public class OrderSystem {
                         }
                         break;
                     case 4:
-                        System.out.println("Save Order\n");
+                        System.out.println("\nSaving order...\n");
                         break;
                     case 5:
                         menuRun = false;
                         break;
                     default:
-                        System.out.println("\nInvalid input.\nPlease try Again!");
+                        System.out.println("\nInvalid input.\nPlease try Again:");
                         break;
                 }
 
