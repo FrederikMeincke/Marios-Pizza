@@ -113,7 +113,9 @@ public class OrderSystem {
         Scanner scn = new Scanner(System.in);
         System.out.println("\nRemove a pizza from the current order:");
         for (int i = 1; i <= order.getOrderPizzaList().size(); i++) {
-            System.out.println(i + ". \n" + order.getOrderPizzaList().get(i - 1).toString());
+            System.out.println(i + ". \n"
+
+                    + order.getOrderPizzaList().get(i - 1).toString());
         }
 
         System.out.println("Type the number of the pizza you want to delete");
