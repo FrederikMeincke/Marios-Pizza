@@ -45,7 +45,7 @@ public class OrderSystem {
                 switch (menuChoice) {
                     case 1:
                         System.out.println("Add Pizza to current order");
-                        order.addPizza(inputInt("What pizza? "),inputInt("What size? 1,2,3: "));
+                        order.addPizza(inputInt("What pizza? "),inputInt("What size? 1,2,3: ")); //TODO: move scanner input to addPizza method
                         break;
                     case 2:
                         System.out.println("Remove Pizza to current order");
