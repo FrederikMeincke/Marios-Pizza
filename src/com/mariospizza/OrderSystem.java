@@ -102,6 +102,8 @@ public class OrderSystem {
     public static void completedOrder(Order orderToComplete) {
         completedOrders.add(orderToComplete);
         activeOrdersList.remove(orderToComplete);
+        fileWriter.updateOrderFile(completedOrders,"CompletedOrders");
+        fileWriter.updateOrderFile(activeOrdersList,"ActiveOrders");
     }
 
     public static void addPizzaToOrder(Order order) {
