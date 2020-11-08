@@ -31,7 +31,7 @@ public class MyFileWriter {
      * @param orderList
      * @param fileName
      */
-    public void saveActiveOrder(ArrayList<Order> orderList, String fileName) {
+    public void updateOrderFile(ArrayList<Order> orderList, String fileName) {
         try {
             PrintStream output = new PrintStream(new File(fileName+".txt"));
             for (int i = 0; i < orderList.size(); i++) {

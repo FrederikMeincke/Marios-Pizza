@@ -140,6 +140,6 @@ public class OrderSystem {
     public static void saveCurrentOrder(Order order) {
         System.out.println("\nSaving order...\n");
         activeOrdersList.add(order);
-        fileWriter.saveActiveOrder(activeOrdersList,"ActiveOrders");
+        fileWriter.updateOrderFile(activeOrdersList,"ActiveOrders");
     }
 }
