@@ -44,11 +44,13 @@ public class Order {
     }
      */
 
-    public void addPizza(int pizzaMenuChoice) {
+    public void addPizza(int pizzaMenuChoice, int pizzaSizeChoice) {
         ArrayList<Pizza> pizzaList = PizzaMenu.pizzaList;
         for(int i = 0; i < pizzaList.size(); i++) {
             if(pizzaList.get(i).getPizzaID() == pizzaMenuChoice) {
-                orderPizzaList.add(pizzaList.get(i));
+                Pizza pizzaChoice = pizzaList.get(i);
+                pizzaChoice.setPizzaSize(pizzaSizeChoice);
+                orderPizzaList.add(pizzaChoice);
             }
         }
     }
