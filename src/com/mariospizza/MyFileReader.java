@@ -95,16 +95,16 @@ public class MyFileReader {
     }
      */
 
-    public Order processActiveOrderList(Scanner input) {
+    public Order processOrderList(Scanner input) {
 return null;
     }
 
-    public ArrayList<Order> loadActiveOrders(String fileName) {
+    public ArrayList<Order> loadOrderFile(String fileName) {
         ArrayList<Order> orderList = new ArrayList<>();
         try {
             Scanner load = new Scanner(new File(fileName+".txt"));
             while (load.hasNextLine()) {
-                Order order = processActiveOrderList(load);
+                Order order = processOrderList(load);
                 if(order != null) {
                     orderList.add(order); // processes the line and adds the pizza object to the array.
                 }
