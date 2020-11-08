@@ -57,7 +57,9 @@ public class OrderSystem {
                     case 3:
                         System.out.println("List Current Order");
                         for (Pizza pizza : order.getOrderPizzaList()) {
-                            System.out.println(pizza.toString());
+                            int i = 1;
+                            System.out.println(i + ".\n" + pizza.toString());
+                            i++;
                         }
                         break;
                     case 4:
