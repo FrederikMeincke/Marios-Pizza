@@ -1,7 +1,2 @@
-1 Pizza #1
-Pizza name: Sofia
-Pizza size: 1
-Pizza #2
-Pizza name: Constatina
-Pizza size: 1
-
+1 1 12 35 1
+2 6 2
