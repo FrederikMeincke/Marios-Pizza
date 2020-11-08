@@ -38,7 +38,7 @@ public class OrderSystem {
                 switch (menuChoice) {
                     case 1:
                         System.out.println("Add Pizza to current order");
-                        order.addPizza(addOrderGenericMenu.readChoice());
+                        order.addPizza(addOrderGenericMenu.readChoice(),addOrderGenericMenu.readChoice());
                         break;
                     case 2:
                         System.out.println("Remove Pizza to current order");
