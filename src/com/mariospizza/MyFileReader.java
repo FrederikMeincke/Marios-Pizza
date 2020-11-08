@@ -107,7 +107,7 @@ public class MyFileReader {
             orderPizza.setPizzaID(pizzaID);
             orderPizza.setPizzaSize(pizzaSize);
             order.addPizza(pizzaID,pizzaSize);
-        } //TODO: Finish this on monday 9/11
+        } //TODO: Finish this on monday 9/11, needs to loop for each pizza
 
 return null;
     }
