@@ -56,10 +56,10 @@ public class OrderSystem {
                         break;
                     case 3:
                         System.out.println("List Current Order");
+                        int j = 1;
                         for (Pizza pizza : order.getOrderPizzaList()) {
-                            int i = 1;
-                            System.out.println(i + ".\n" + pizza.toString());
-                            i++;
+                            System.out.println(j + ".\n" + pizza.toString());
+                            j++;
                         }
                         break;
                     case 4:
