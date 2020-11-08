@@ -38,31 +38,13 @@ public class OrderSystem {
             menuChoice = addOrderGenericMenu.readChoice();
                 switch (menuChoice) {
                     case 1:
-                        System.out.println("\nAdding a pizza to current order:");
-                        order.addPizza(Main.inputInt("Add pizza #"),Main.inputInt(
-                                "What size? 1: Normal, 2: Deep Pan, 3: Family:"));
+                        addPizzaToOrder(order);
                         break;
                     case 2:
-                        System.out.println("\nRemove a pizza from the current order:");
-                        for (int i = 1; i <= order.getOrderPizzaList().size(); i++) {
-                            System.out.println(i + ". \n" + order.getOrderPizzaList().get(i - 1).toString());
-                        }
-
-                        System.out.println("Type the number of the pizza you want to delete");
-
-                        int userchoice = -1; //TODO: input validation?
-                        userchoice = scn.nextInt();
-
-                        order.getOrderPizzaList().remove(userchoice - 1);
-
+                        removePizzaFromOrder(order);
                         break;
                     case 3:
-                        System.out.println("\nListing pizzas on current order:");
-                        int j = 1;
-                        for (Pizza pizza : order.getOrderPizzaList()) {
-                            System.out.println(j + ".\n" + pizza.toString());
-                            j++;
-                        }
+                        listCurrentOrder(order);
                         break;
                     case 4:
                         System.out.println("\nSaving order...\n");
@@ -134,6 +116,35 @@ public class OrderSystem {
     public static void completedOrder(Order orderToComplete) {
         completedOrders.add(orderToComplete);
         activeOrdersList.remove(orderToComplete);
+    }
+    public static void addPizzaToOrder(Order order) {
+        System.out.println("\nAdding a pizza to current order:");
+        order.addPizza(Main.inputInt("Add pizza #"),Main.inputInt(
+                "What size? 1: Normal, 2: Deep Pan, 3: Family:"));
+    }
+    public static void removePizzaFromOrder(Order order) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("\nRemove a pizza from the current order:");
+        for (int i = 1; i <= order.getOrderPizzaList().size(); i++) {
+            System.out.println(i + ". \n" + order.getOrderPizzaList().get(i - 1).toString());
+        }
+
+        System.out.println("Type the number of the pizza you want to delete");
+
+        int userchoice = -1; //TODO: input validation?
+        userchoice = scn.nextInt();
+
+        order.getOrderPizzaList().remove(userchoice - 1);
+
+    }
+    public static void listCurrentOrder(Order order) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("\nListing pizzas on current order:");
+        int j = 1;
+        for (Pizza pizza : order.getOrderPizzaList()) {
+            System.out.println(j + ".\n" + pizza.toString());
+            j++;
+        }
     }
 
 }
