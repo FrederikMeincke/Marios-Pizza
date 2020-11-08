@@ -18,7 +18,6 @@ public class OrderSystem {
                 "List Current Order", "Save Order", "Main Menu"};
         boolean menuRun = true;
         int menuChoice = -1;
-
         Order order = new Order();
 
         while (menuRun) {
@@ -129,7 +128,6 @@ public class OrderSystem {
 
 
     public static void listCurrentOrder(Order order) {
-        Scanner scn = new Scanner(System.in);
         System.out.println("\nListing pizzas on current order:\n");
         int j = 1;
         for (Pizza pizza : order.getOrderPizzaList()) {
