@@ -17,13 +17,6 @@ public class OrderSystem {
         this.completedOrders = completedOrders;
     }
 
-    public static int inputInt(String prompt) {
-        Scanner in = new Scanner(System.in);
-        System.out.println(prompt);
-        int input = in.nextInt();
-        return input;
-    }
-
     /**
      * Method that adds an oder containing pizza(s) to the order system
      */
@@ -45,10 +38,10 @@ public class OrderSystem {
                 switch (menuChoice) {
                     case 1:
                         System.out.println("Add Pizza to current order");
-                        order.addPizza(inputInt("What pizza? "),inputInt("What size? 1,2,3: "));
+                        order.addPizza(Main.inputInt("What pizza? "),Main.inputInt("What size? 1,2,3: "));
                         break;
                     case 2:
-                        System.out.println("Remove Pizza to current order");
+                        System.out.println("Remove Pizza to current order\n");
                         for (int i = 1; i <= order.getOrderPizzaList().size(); i++) {
                             System.out.println(i + ". \n" + order.getOrderPizzaList().get(i - 1).toString());
                         }
@@ -62,7 +55,7 @@ public class OrderSystem {
 
                         break;
                     case 3:
-                        System.out.println("List Current Order");
+                        System.out.println("List Current Order\n");
                         int j = 1;
                         for (Pizza pizza : order.getOrderPizzaList()) {
                             System.out.println(j + ".\n" + pizza.toString());
@@ -87,7 +80,7 @@ public class OrderSystem {
      * @param orderID
      * @return Order in activeOrdersList if it matches orderID else returns null
      */
-    public Order findOrder(int orderID) {
+    public static Order findOrder(int orderID) {
         Order order = null;
 
         for (Order activeOrder: activeOrdersList) {
@@ -111,9 +104,9 @@ public class OrderSystem {
     /**
      * Prints all elements in the active orders list
      */
-    public void checkActiveOrders() {
+    public static void checkActiveOrders() {
         for (Order order: activeOrdersList) {
-            order.toString();
+            System.out.println(order.toString());
         }
     }
 
@@ -122,17 +115,8 @@ public class OrderSystem {
      *
      * @param order
      */
-    public void deleteOrder(Order order) {
+    public static void deleteOrder(Order order) {
         activeOrdersList.remove(order);
-    }
-
-    /**
-     * Deletes order with orderNumber from the active order list
-     *
-     * @param orderToRemove this should be found out by inputing the orderID into the findOrder method
-     */
-    public void cancelOrder(Order orderToRemove) {
-        deleteOrder(orderToRemove);
     }
 
     /**
@@ -140,7 +124,7 @@ public class OrderSystem {
      *
      * @param orderToComplete
      */
-    public void completedOrder(Order orderToComplete) {
+    public static void completedOrder(Order orderToComplete) {
         completedOrders.add(orderToComplete);
         activeOrdersList.remove(orderToComplete);
     }

@@ -13,7 +13,7 @@ public class Menus {
         String headerText = "Mario's Pizzabar:\n";
         String leadText = "Choose an option: ";
         String[] menuItems = {"Show Pizza menu", "Check active orders",
-                "Add new order", "Remove Order", "Check statistics", "Exit"};
+                "Add new order", "Complete Order", "Cancel Order", "Check statistics", "Exit"};
         boolean menuRun = true;
         int menuChoice = -1;
 
@@ -29,20 +29,23 @@ public class Menus {
                         break;
                 case 2:
                     //MyFileReader.loadActiveOrders();
+                    OrderSystem.checkActiveOrders();
                     break;
                 case 3:
                     OrderSystem.addNewOrder();
                     break;
                 case 4:
-                    System.out.println("Remove Order");
-                    //deleteOrder();
+                    OrderSystem.completedOrder(OrderSystem.findOrder(Main.inputInt("")));
                     break;
                 case 5:
+                    OrderSystem.deleteOrder(OrderSystem.findOrder(Main.inputInt("")));
+                    break;
+                case 6:
                     System.out.println("Check statistics");
                     //MyFileReader.loadCompletedOrders();
                     //MyStats.();
                     break;
-                case 6:
+                case 7:
                     menuRun = false;
                     break;
                 default:

@@ -1,5 +1,7 @@
 package com.mariospizza;
 
+import java.util.Scanner;
+
 /**
  * Marios Pizza Menu POS for command line application
  * @author Frederik M., Jimmy, Kasper, Mads, Philip
@@ -7,6 +9,14 @@ package com.mariospizza;
  */
 
 public class Main {
+
+    public static int inputInt(String prompt) {
+        Scanner in = new Scanner(System.in);
+        System.out.println(prompt);
+        int input = in.nextInt();
+        return input;
+    }
+
 
     public static void main(String[] args) {
 	// Program that lists a Pizza Menu,
