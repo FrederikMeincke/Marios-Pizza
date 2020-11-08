@@ -35,7 +35,13 @@ public class MyFileWriter {
         try {
             PrintStream output = new PrintStream(new File(fileName+".txt"));
             for (int i = 0; i < orderList.size(); i++) {
-                output.println(orderList.get(i).toString()); // TODO: Add toString in Order that prints the information we need in the text file
+                int orderID = orderList.get(i).getOrderID();
+                String orderIDString = String.format("%d",orderID);
+                String pizzaList = "";
+                        for(int j = 0; j < orderList.get(i).getOrderPizzaList().size(); j++) {
+                            pizzaList += orderList.get(i).getOrderPizzaList().get(j);
+                        }
+                output.println(orderIDString + " " + pizzaList);
             }
         } catch (IOException e) {
             //TODO: Add message
