@@ -111,7 +111,7 @@ public class OrderSystem {
      */
     public static void checkActiveOrders() {
         for (Order order: activeOrdersList) {
-            System.out.println(order.toString());
+            System.out.println("\n" + order.toString());
         }
     }
 
