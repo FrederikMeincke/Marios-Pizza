@@ -17,6 +17,13 @@ public class OrderSystem {
         this.completedOrders = completedOrders;
     }
 
+    public static int inputInt(String prompt) {
+        Scanner in = new Scanner(System.in);
+        System.out.println(prompt);
+        int input = in.nextInt();
+        return input;
+    }
+
     /**
      * Method that adds an oder containing pizza(s) to the order system
      */
@@ -38,7 +45,7 @@ public class OrderSystem {
                 switch (menuChoice) {
                     case 1:
                         System.out.println("Add Pizza to current order");
-                        order.addPizza(addOrderGenericMenu.readChoice(),addOrderGenericMenu.readChoice());
+                        order.addPizza(inputInt("What pizza? "),inputInt("What size? 1,2,3: "));
                         break;
                     case 2:
                         System.out.println("Remove Pizza to current order");
