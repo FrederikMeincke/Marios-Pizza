@@ -32,6 +32,10 @@ public class Pizza {
         setPriceFamily(priceFamily);
     }
 
+    public Pizza() {
+        
+    }
+
     public String toString() {
         return  "Pizza #" + getPizzaID() +
                 "\nPizza name: " + getPizzaName() +
