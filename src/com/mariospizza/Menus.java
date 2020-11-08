@@ -1,7 +1,5 @@
 package com.mariospizza;
 
-import java.io.FileNotFoundException;
-
 import static com.mariospizza.PizzaMenu.pizzaList;
 
 public class Menus {
@@ -15,7 +13,7 @@ public class Menus {
         String[] menuItems = {"Show Pizza menu", "Check active orders",
                 "Add new order", "Complete Order", "Cancel Order", "Check statistics", "Exit"};
         boolean menuRun = true;
-        int menuChoice = -1;
+        int menuChoice;
 
         while (menuRun) {
             GenericMenu mainGenericMenu = new GenericMenu(headerText, leadText, menuItems);
@@ -66,7 +64,7 @@ public class Menus {
         String[] menuItems = {"Add Pizza", "Remove Pizza",
                 "List Current Order", "Save Order", "Main Menu"};
         boolean menuRun = true;
-        int menuChoice = -1;
+        int menuChoice;
         Order order = new Order();
 
         while (menuRun) {
@@ -95,5 +93,5 @@ public class Menus {
             }
 
         }
-    }//TODO: all cases should be methodized
+    }
 }
