@@ -39,7 +39,8 @@ public class Menus {
                             "What is the orderID of the Order to complete?: ")));
                     break;
                 case 5:
-                    OrderSystem.deleteOrder(OrderSystem.findOrder(Main.inputInt("")));
+                    OrderSystem.deleteOrder(OrderSystem.findOrder(Main.inputInt(
+                            "What is the orderID of the Order to complete?: ")));
                     break;
                 case 6:
                     System.out.println("Check statistics");
