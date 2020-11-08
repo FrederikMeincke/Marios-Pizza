@@ -49,9 +49,17 @@ public class Order {
         Pizza newPizza = new Pizza();
         for(int i = 0; i < pizzaList.size(); i++) {
             if(pizzaList.get(i).getPizzaID() == pizzaMenuChoice) {
-                Pizza pizzaChoice = pizzaList.get(i);
-                pizzaChoice.setPizzaSize(pizzaSizeChoice);
-                orderPizzaList.add(pizzaChoice);
+                newPizza.setPizzaID(pizzaList.get(i).getPizzaID());
+                newPizza.setPizzaName(pizzaList.get(i).getPizzaName());
+                newPizza.setPizzaDescription(pizzaList.get(i).getPizzaDescription());
+                newPizza.setPizzaSize(pizzaSizeChoice);
+                newPizza.setPriceNormal(pizzaList.get(i).getPriceNormal());
+                newPizza.setPriceDeep(pizzaList.get(i).getPriceDeep());
+                newPizza.setPriceFamily(pizzaList.get(i).getPriceFamily());
+                //Pizza pizzaChoice = pizzaList.get(i);
+                //pizzaChoice.setPizzaSize(pizzaSizeChoice);
+                //orderPizzaList.add(pizzaChoice);
+                orderPizzaList.add(newPizza);
             }
         }
     }

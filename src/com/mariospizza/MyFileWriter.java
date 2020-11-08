@@ -40,7 +40,7 @@ public class MyFileWriter {
                 String pizzaList = "";
                         for(int j = 0; j < orderList.get(i).getOrderPizzaList().size(); j++) {
                             pizzaList += orderList.get(i).getOrderPizzaList().get(j).pizzaID + " " +
-                            orderList.get(i).getOrderPizzaList().get(j).getPizzaSize();
+                            orderList.get(i).getOrderPizzaList().get(j).getPizzaSize() + " ";
                         }
                 output.println(orderIDString + " " + pizzaList);
             }
