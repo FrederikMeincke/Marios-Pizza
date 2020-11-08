@@ -7,7 +7,7 @@ import static com.mariospizza.PizzaMenu.pizzaList;
 public class Menus {
 
     /**
-     * Menu build - While loop, Switch and case.
+     * Main Menu build - While loop, Switch and case.
      */
     public static void mainMenu() {
         String headerText = "Mario's Pizzabar:\n";
@@ -32,7 +32,7 @@ public class Menus {
                     OrderSystem.checkActiveOrders();
                     break;
                 case 3:
-                    OrderSystem.addNewOrder();
+                    OrderSystem.addNewOrderMenu();
                     break;
                 case 4:
                     OrderSystem.completedOrder(OrderSystem.findOrder(Main.inputInt(

@@ -11,7 +11,7 @@ public class OrderSystem {
     /**
      * Method that adds an oder containing pizza(s) to the order system
      */
-    public static void addNewOrder() {
+    public static void addNewOrderMenu() {
         String headerText = "Mario's Pizzabar add Order:\n";
         String leadText = "Choose an option: ";
         String[] menuItems = {"Add Pizza", "Remove Pizza",
