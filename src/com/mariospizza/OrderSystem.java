@@ -63,7 +63,7 @@ public class OrderSystem {
                         }
                         break;
                     case 4:
-                        System.out.println("Save Order\n");
+                        System.out.println("\nSaving order...\n");
                         activeOrdersList.add(order);
                         break;
                     case 5:
