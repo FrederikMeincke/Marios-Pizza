@@ -9,16 +9,6 @@ public class OrderSystem {
     static MyFileWriter fileWriter = new MyFileWriter();
 
     /**
-     * Arraylist containing activeorderlist and completedorders.
-     * @param activeOrdersList
-     * @param completedOrders
-     */
-    public OrderSystem(ArrayList<Order> activeOrdersList, ArrayList<Order> completedOrders) {
-        this.activeOrdersList = activeOrdersList;
-        this.completedOrders = completedOrders;
-    }
-
-    /**
      * Method that adds an oder containing pizza(s) to the order system
      */
     public static void addNewOrder() {
@@ -29,7 +19,6 @@ public class OrderSystem {
         boolean menuRun = true;
         int menuChoice = -1;
 
-        Scanner scn = new Scanner(System.in);
         Order order = new Order();
 
         while (menuRun) {
@@ -47,9 +36,7 @@ public class OrderSystem {
                         listCurrentOrder(order);
                         break;
                     case 4:
-                        System.out.println("\nSaving order...\n");
-                        activeOrdersList.add(order);
-                        fileWriter.saveActiveOrder(activeOrdersList,"ActiveOrders");
+                        saveCurrentOrder(order);
                         break;
                     case 5:
                         menuRun = false;
@@ -147,4 +134,9 @@ public class OrderSystem {
         }
     }
 
+    public static void saveCurrentOrder(Order order) {
+        System.out.println("\nSaving order...\n");
+        activeOrdersList.add(order);
+        fileWriter.saveActiveOrder(activeOrdersList,"ActiveOrders");
+    }
 }
