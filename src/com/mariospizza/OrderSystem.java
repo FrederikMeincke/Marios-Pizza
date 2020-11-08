@@ -124,9 +124,11 @@ public class OrderSystem {
         order.getOrderPizzaList().remove(userchoice - 1);
 
     }
+
+
     public static void listCurrentOrder(Order order) {
         Scanner scn = new Scanner(System.in);
-        System.out.println("\nListing pizzas on current order:");
+        System.out.println("\nListing pizzas on current order:\n");
         int j = 1;
         for (Pizza pizza : order.getOrderPizzaList()) {
             System.out.println(j + ".\n" + pizza.toString());
