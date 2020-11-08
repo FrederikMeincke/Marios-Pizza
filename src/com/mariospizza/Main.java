@@ -12,7 +12,7 @@ public class Main {
 
     public static int inputInt(String prompt) {
         Scanner in = new Scanner(System.in);
-        System.out.println(prompt);
+        System.out.print(prompt);
         int input = in.nextInt();
         return input;
     }
