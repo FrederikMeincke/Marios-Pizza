@@ -96,6 +96,19 @@ public class MyFileReader {
      */
 
     public Order processOrderList(Scanner input) {
+        Order order = new Order();
+        int orderID = input.nextInt();
+        order.setOrderID(orderID);
+
+        for (int i = 1; i <= 2; i++) {
+            Pizza orderPizza = new Pizza();
+            int pizzaID = input.nextInt();
+            int pizzaSize = input.nextInt();
+            orderPizza.setPizzaID(pizzaID);
+            orderPizza.setPizzaSize(pizzaSize);
+            order.addPizza(pizzaID,pizzaSize);
+        } //TODO: Finish this on monday 9/11, needs to loop for each pizza
+
 return null;
     }
 
