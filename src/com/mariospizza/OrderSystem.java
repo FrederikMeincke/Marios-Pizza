@@ -9,46 +9,6 @@ public class OrderSystem {
     static MyFileWriter fileWriter = new MyFileWriter();
 
     /**
-     * Method that adds an oder containing pizza(s) to the order system
-     */
-    public static void addNewOrderMenu() {
-        String headerText = "Mario's Pizzabar add Order:\n";
-        String leadText = "Choose an option: ";
-        String[] menuItems = {"Add Pizza", "Remove Pizza",
-                "List Current Order", "Save Order", "Main Menu"};
-        boolean menuRun = true;
-        int menuChoice = -1;
-        Order order = new Order();
-
-        while (menuRun) {
-            GenericMenu addOrderGenericMenu = new GenericMenu(headerText, leadText, menuItems);
-            addOrderGenericMenu.printMenu();
-            menuChoice = addOrderGenericMenu.readChoice();
-                switch (menuChoice) {
-                    case 1:
-                        addPizzaToOrder(order);
-                        break;
-                    case 2:
-                        removePizzaFromOrder(order);
-                        break;
-                    case 3:
-                        listCurrentOrder(order);
-                        break;
-                    case 4:
-                        saveCurrentOrder(order);
-                        break;
-                    case 5:
-                        menuRun = false;
-                        break;
-                    default:
-                        System.out.println("\nInvalid input.\nPlease try Again:");
-                        break;
-                }
-
-            }
-        }//TODO: all cases should be methodized
-
-    /**
      * Method for returning an Order from an orderID.
      * Useful for other methods so they can figure out which Order to manipulate
      *

@@ -32,7 +32,7 @@ public class Menus {
                     OrderSystem.checkActiveOrders();
                     break;
                 case 3:
-                    OrderSystem.addNewOrderMenu();
+                    addNewOrderMenu();
                     break;
                 case 4:
                     OrderSystem.completedOrder(OrderSystem.findOrder(Main.inputInt(
@@ -56,4 +56,44 @@ public class Menus {
             }
         }
     }
+
+    /**
+     * Method that adds an oder containing pizza(s) to the order system
+     */
+    public static void addNewOrderMenu() {
+        String headerText = "Mario's Pizzabar add Order:\n";
+        String leadText = "Choose an option: ";
+        String[] menuItems = {"Add Pizza", "Remove Pizza",
+                "List Current Order", "Save Order", "Main Menu"};
+        boolean menuRun = true;
+        int menuChoice = -1;
+        Order order = new Order();
+
+        while (menuRun) {
+            GenericMenu addOrderGenericMenu = new GenericMenu(headerText, leadText, menuItems);
+            addOrderGenericMenu.printMenu();
+            menuChoice = addOrderGenericMenu.readChoice();
+            switch (menuChoice) {
+                case 1:
+                    OrderSystem.addPizzaToOrder(order);
+                    break;
+                case 2:
+                    OrderSystem.removePizzaFromOrder(order);
+                    break;
+                case 3:
+                    OrderSystem.listCurrentOrder(order);
+                    break;
+                case 4:
+                    OrderSystem.saveCurrentOrder(order);
+                    break;
+                case 5:
+                    menuRun = false;
+                    break;
+                default:
+                    System.out.println("\nInvalid input.\nPlease try Again:");
+                    break;
+            }
+
+        }
+    }//TODO: all cases should be methodized
 }
