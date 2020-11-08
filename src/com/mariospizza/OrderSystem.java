@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class OrderSystem {
     static ArrayList<Order> activeOrdersList = new ArrayList<>();
     static ArrayList<Order> completedOrders = new ArrayList<>();
+    static MyFileWriter fileWriter = new MyFileWriter();
 
     /**
      * Arraylist containing activeorderlist and completedorders.
@@ -66,6 +67,7 @@ public class OrderSystem {
                     case 4:
                         System.out.println("\nSaving order...\n");
                         activeOrdersList.add(order);
+                        fileWriter.saveActiveOrder(activeOrdersList,"ActiveOrders");
                         break;
                     case 5:
                         menuRun = false;
