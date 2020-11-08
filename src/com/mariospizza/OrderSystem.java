@@ -103,11 +103,13 @@ public class OrderSystem {
         completedOrders.add(orderToComplete);
         activeOrdersList.remove(orderToComplete);
     }
+
     public static void addPizzaToOrder(Order order) {
         System.out.println("\nAdding a pizza to current order:");
         order.addPizza(Main.inputInt("Add pizza #"),Main.inputInt(
                 "What size? 1: Normal, 2: Deep Pan, 3: Family:"));
     }
+
     public static void removePizzaFromOrder(Order order) {
         Scanner scn = new Scanner(System.in);
         System.out.println("\nRemove a pizza from the current order:");
@@ -125,7 +127,6 @@ public class OrderSystem {
         order.getOrderPizzaList().remove(userchoice - 1);
 
     }
-
 
     public static void listCurrentOrder(Order order) {
         System.out.println("\nListing pizzas on current order:\n");
