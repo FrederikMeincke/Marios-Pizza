@@ -33,7 +33,8 @@ public class Pizza {
     }
 
     public String toString() {
-        return "Pizza name: " + getPizzaName() +
+        return  "Pizza #" + getPizzaID() +
+                "\nPizza name: " + getPizzaName() +
                 "\nPizza size: " + getPizzaSize() +
                 "\n";
     }
