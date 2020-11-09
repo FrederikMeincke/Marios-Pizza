@@ -28,20 +28,26 @@ public class OrderSystem {
     }
 
     public static Order findOldestOrder() {
-        Order oldestOrder = null;
+        Order oldestOrder;
         Order checkOrder;
         Order tmpOrder;
         LocalDateTime tmpOrderTime;
-        boolean isOrderBefore;
-
+        LocalDateTime checkOrderTime;
+        boolean isTmpOrderBefore;
 
         checkOrder = activeOrdersList.get(0);
+        oldestOrder = checkOrder;
+
         for (int i = 1; i < activeOrdersList.size(); i++) {
             tmpOrder = activeOrdersList.get(i);
-            tmpOrderTime = tmpOrder.getDateTime();
-            isOrderBefore = checkOrder.getDateTime().isBefore(tmpOrderTime); //is checkOrder before tmpOrder?
 
-            if (isOrderBefore) {
+            checkOrderTime = checkOrder.getDateTime();
+            tmpOrderTime = tmpOrder.getDateTime();
+
+            isTmpOrderBefore = tmpOrder.getDateTime().isBefore(checkOrderTime); //is tmpOrder before CheckOrder?
+
+            if (isTmpOrderBefore) {
+                checkOrder = tmpOrder;
                 oldestOrder = checkOrder;
             }
         }
