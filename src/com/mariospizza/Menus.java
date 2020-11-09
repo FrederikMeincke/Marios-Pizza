@@ -84,6 +84,7 @@ public class Menus {
                     break;
                 case 4:
                     OrderSystem.saveCurrentOrder(order);
+                    System.out.println("Returning to Main Menu...");
                     menuRun = false;
                     break;
                 case 5:
