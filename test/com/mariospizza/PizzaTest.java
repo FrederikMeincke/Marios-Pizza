@@ -92,4 +92,64 @@ class PizzaTest {
     void getPriceFamily() {
         assertEquals(105,pizza.getPriceFamily());
     }
+
+    @Test
+    void testToString1() {
+    }
+
+    @Test
+    void testSetPizzaID() {
+    }
+
+    @Test
+    void testGetPizzaID() {
+    }
+
+    @Test
+    void testSetPizzaName() {
+    }
+
+    @Test
+    void testGetPizzaName() {
+    }
+
+    @Test
+    void testSetPizzaDescription() {
+    }
+
+    @Test
+    void testGetPizzaDescription() {
+    }
+
+    @Test
+    void testSetPriceNormal() {
+    }
+
+    @Test
+    void testGetPriceNormal() {
+    }
+
+    @Test
+    void testSetPriceDeep() {
+    }
+
+    @Test
+    void testGetPriceDeep() {
+    }
+
+    @Test
+    void testSetPriceFamily() {
+    }
+
+    @Test
+    void testGetPriceFamily() {
+    }
+
+    @Test
+    void getPizzaSize() {
+    }
+
+    @Test
+    void setPizzaSize() {
+    }
 }

@@ -45,4 +45,24 @@ class MyFileReaderTest {
     @Test
     void loadCompletedOrders() {
     }
+
+    @Test
+    void testProcessPizzaMenuLine() {
+    }
+
+    @Test
+    void testLoadPizzaMenu() {
+    }
+
+    @Test
+    void processOrderList() {
+    }
+
+    @Test
+    void loadOrderFile() {
+    }
+
+    @Test
+    void testLoadCompletedOrders() {
+    }
 }

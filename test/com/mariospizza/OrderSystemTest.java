@@ -29,4 +29,40 @@ class OrderSystemTest {
     @Test
     void completedOrder() {
     }
+
+    @Test
+    void testFindOrder() {
+    }
+
+    @Test
+    void testCompleteOrder() {
+    }
+
+    @Test
+    void testCheckActiveOrders() {
+    }
+
+    @Test
+    void testDeleteOrder() {
+    }
+
+    @Test
+    void testCompletedOrder() {
+    }
+
+    @Test
+    void addPizzaToOrder() {
+    }
+
+    @Test
+    void removePizzaFromOrder() {
+    }
+
+    @Test
+    void listCurrentOrder() {
+    }
+
+    @Test
+    void saveCurrentOrder() {
+    }
 }

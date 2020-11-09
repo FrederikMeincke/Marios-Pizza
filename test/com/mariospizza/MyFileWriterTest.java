@@ -13,4 +13,12 @@ class MyFileWriterTest {
     @Test
     void saveActiveOrder() {
     }
+
+    @Test
+    void testSaveCompletedOrders() {
+    }
+
+    @Test
+    void updateOrderFile() {
+    }
 }

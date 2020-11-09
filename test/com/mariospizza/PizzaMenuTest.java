@@ -30,4 +30,24 @@ class PizzaMenuTest {
     @Test
     void pizzaInfo() {
     }
+
+    @Test
+    void testPrintSymbols() {
+    }
+
+    @Test
+    void testFormatPizzaHeader() {
+    }
+
+    @Test
+    void testFormatPizzaMenu() {
+    }
+
+    @Test
+    void testPizzaInfo() {
+    }
+
+    @Test
+    void run() {
+    }
 }

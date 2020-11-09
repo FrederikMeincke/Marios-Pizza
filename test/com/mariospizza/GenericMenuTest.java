@@ -21,4 +21,12 @@ class GenericMenuTest {
     @Test
     void testReadChoice() {
     }
+
+    @Test
+    void testPrintMenu1() {
+    }
+
+    @Test
+    void testReadChoice1() {
+    }
 }

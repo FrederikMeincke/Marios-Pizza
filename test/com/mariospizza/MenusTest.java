@@ -9,4 +9,12 @@ class MenusTest {
     @Test
     void mainMenu() {
     }
+
+    @Test
+    void testMainMenu() {
+    }
+
+    @Test
+    void addNewOrderMenu() {
+    }
 }
