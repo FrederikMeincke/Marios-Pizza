@@ -63,12 +63,6 @@ public class PizzaMenu {
         }
     }
 
-    public static void pizzaInfo(int i) {
-        System.out.println(pizzaList.get(i).getPizzaID());
-        System.out.println(pizzaList.get(i).getPizzaName());
-        System.out.println(pizzaList.get(i).getPizzaDescription());
-        System.out.println(pizzaList.get(i).getPriceNormal());
-    }
 
     public static void run() {
         formatPizzaMenu(pizzaList);

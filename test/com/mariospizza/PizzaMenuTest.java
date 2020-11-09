@@ -28,10 +28,6 @@ class PizzaMenuTest {
     }
 
     @Test
-    void pizzaInfo() {
-    }
-
-    @Test
     void testPrintSymbols() {
     }
 
