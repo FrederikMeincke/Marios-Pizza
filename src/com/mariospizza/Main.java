@@ -10,6 +10,8 @@ import java.util.Scanner;
 
 public class Main {
 
+    static MyFileReader fileReader = new MyFileReader();
+
     public static int inputInt(String prompt) {
         Scanner in = new Scanner(System.in);
         System.out.print(prompt);
