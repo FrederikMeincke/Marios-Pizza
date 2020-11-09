@@ -100,14 +100,16 @@ public class MyFileReader {
         int orderID = input.nextInt();
         order.setOrderID(orderID);
 
-        for (int i = 1; i <= 2; i++) {
+        // While next token, run next two tokens
+        while(input.hasNext()) {
             Pizza orderPizza = new Pizza();
             int pizzaID = input.nextInt();
             int pizzaSize = input.nextInt();
             orderPizza.setPizzaID(pizzaID);
             orderPizza.setPizzaSize(pizzaSize);
             order.addPizza(pizzaID,pizzaSize);
-        } //TODO: Finish this on monday 9/11, needs to loop for each pizza, maybe needs to look at pizzaMenu arraylist instead of creating objects on its own.
+        }
+         //TODO: Finish this on monday 9/11, needs to loop for each pizza, maybe needs to look at pizzaMenu arraylist instead of creating objects on its own.
 
 return null;
     }
@@ -119,7 +121,7 @@ return null;
             while (load.hasNextLine()) {
                 Order order = processOrderList(load);
                 if(order != null) {
-                    orderList.add(order); // processes the line and adds the pizza object to the array.
+                    orderList.add(order); // processes the line and adds the order object to the array.
                 }
             }
         } catch (IOException e){
