@@ -1,11 +1,15 @@
 package com.mariospizza;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Order {
     private int orderID; //unique id for every order
     static int counter = 0;
     private ArrayList<Pizza> orderPizzaList = new ArrayList<>();
+    private LocalDateTime dateTime;
+    private String dateTimeStr;
 
     /**
      * Constructor
@@ -20,6 +24,8 @@ public class Order {
         //counter for unique id for every order
         counter++;
         this.orderID = counter;
+        dateTime = LocalDateTime.now();
+        dateTimeStr = dateTime.format(DateTimeFormatter.ofPattern("hh:mm:ss"));
     }
 
     @Override
@@ -35,15 +41,11 @@ public class Order {
 
     /**
      *  adds an order to the active order list
+     *  Makes a copy of the a pizza object in the pizzaList
      *
-     * @param //orderPizza
+     * @param pizzaMenuChoice which pizza is wanted
+     * @param pizzaSizeChoice the size of the pizza input by user
      */
-    /*
-    public void addPizza(Pizza orderPizza) {
-        orderPizzaList.add(orderPizza);
-    }
-     */
-
     public void addPizza(int pizzaMenuChoice, int pizzaSizeChoice) {
         ArrayList<Pizza> pizzaList = PizzaMenu.pizzaList;
         Pizza newPizza = new Pizza();
@@ -135,5 +137,9 @@ public class Order {
      */
     public void setOrderID(int orderID) {
         this.orderID = orderID;
+    }
+
+    public LocalDateTime getDateTime() {
+        return dateTime;
     }
 }

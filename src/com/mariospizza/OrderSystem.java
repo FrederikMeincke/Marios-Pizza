@@ -1,5 +1,6 @@
 package com.mariospizza;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -25,6 +26,33 @@ public class OrderSystem {
         }
         return null; //TODO: Maybe add an exception for Order not found?
     }
+
+    public static Order findOldestOrder() {
+        Order oldestOrder = null;
+        Order checkOrder;
+        Order tmpOrder;
+        LocalDateTime tmpOrderTime;
+        boolean isOrderBefore;
+
+
+        checkOrder = activeOrdersList.get(0);
+        for (int i = 1; i < activeOrdersList.size(); i++) {
+            tmpOrder = activeOrdersList.get(i);
+            tmpOrderTime = tmpOrder.getDateTime();
+            isOrderBefore = checkOrder.getDateTime().isBefore(tmpOrderTime); //is checkOrder before tmpOrder?
+
+            if (isOrderBefore) {
+                oldestOrder = checkOrder;
+            }
+        }
+
+        if (oldestOrder == null) {
+            //TODO: throw exception????
+        }
+
+        return oldestOrder;
+    }
+
 
     /**
      * Removes a finished order from the active orders list and adds it to the completed orders list

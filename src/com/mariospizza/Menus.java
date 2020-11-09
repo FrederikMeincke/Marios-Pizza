@@ -44,6 +44,7 @@ public class Menus {
                     System.out.println("Check statistics");
                     //MyFileReader.loadCompletedOrders();
                     //MyStats.();
+                    System.out.println(OrderSystem.findOldestOrder().toString()); //TODO: Remove this just here to test findOldestOrder method
                     break;
                 case 7:
                     menuRun = false;
