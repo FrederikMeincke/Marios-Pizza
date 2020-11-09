@@ -95,23 +95,21 @@ public class MyFileReader {
     }
      */
 
-    public Order processOrderList(Scanner input) {
+    public Order processOrderList(String line) {
         Order order = new Order();
+        Scanner input = new Scanner(line);
         int orderID = input.nextInt();
-        order.setOrderID(orderID);
+        int pizzaID = -1;
+        int pizzaSize = -1;
 
-        // While next token, run next two tokens
-        while(input.hasNext()) {
-            Pizza orderPizza = new Pizza();
-            int pizzaID = input.nextInt();
-            int pizzaSize = input.nextInt();
-            orderPizza.setPizzaID(pizzaID);
-            orderPizza.setPizzaSize(pizzaSize);
+        order.setOrderID(orderID);
+        while(input.hasNextInt()) {
+            pizzaID = input.nextInt();
+            pizzaSize = input.nextInt();
+
             order.addPizza(pizzaID,pizzaSize);
         }
-         //TODO: Finish this on monday 9/11, needs to loop for each pizza, maybe needs to look at pizzaMenu arraylist instead of creating objects on its own.
-
-return null;
+        return order;
     }
 
     public ArrayList<Order> loadOrderFile(String fileName) {
@@ -119,7 +117,8 @@ return null;
         try {
             Scanner load = new Scanner(new File(fileName+".txt"));
             while (load.hasNextLine()) {
-                Order order = processOrderList(load);
+                String line = load.nextLine();
+                Order order = processOrderList(line);
                 if(order != null) {
                     orderList.add(order); // processes the line and adds the order object to the array.
                 }
