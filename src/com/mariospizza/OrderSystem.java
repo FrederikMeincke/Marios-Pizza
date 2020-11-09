@@ -27,6 +27,10 @@ public class OrderSystem {
         return null; //TODO: Maybe add an exception for Order not found?
     }
 
+    /**
+     * Looks at the date & time for all orders and finds the oldest one. Useful for deciding which order to make next
+     * @return oldestOrder in the active orderList
+     */
     public static Order findOldestOrder() {
         Order oldestOrder;
         Order checkOrder;
@@ -100,12 +104,21 @@ public class OrderSystem {
         fileWriter.updateOrderFile(activeOrdersList,"ActiveOrders");
     }
 
+    /**
+     * Menu option
+     * @param order
+     */
     public static void addPizzaToOrder(Order order) {
         System.out.println("\nAdding a pizza to current order:");
         order.addPizza(Main.inputInt("Add pizza #"),Main.inputInt(
                 "What size? 1: Normal, 2: Deep Pan, 3: Family:"));
     }
 
+    /**
+     * Menu option
+     * Prints all active orders in OrderSystem with a number so you can input which one to remove
+     * @param order
+     */
     public static void removePizzaFromOrder(Order order) {
         Scanner scn = new Scanner(System.in);
         System.out.println("\nRemove a pizza from the current order:");
@@ -117,13 +130,18 @@ public class OrderSystem {
 
         System.out.println("Type the number of the pizza you want to delete");
 
-        int userchoice = -1; //TODO: input validation?
+        int userchoice = -1; //TODO: Use Main.inputInt. input validation?
         userchoice = scn.nextInt();
 
         order.getOrderPizzaList().remove(userchoice - 1);
 
     }
 
+    /**
+     * prints all pizzas in current order
+     *
+     * @param order
+     */
     public static void listCurrentOrder(Order order) {
         System.out.println("\nListing pizzas on current order:\n");
         int j = 1;
@@ -133,6 +151,12 @@ public class OrderSystem {
         }
     }
 
+
+    /**
+     * saves current order to active orders list and puts it in the ActiveOrders.txt file
+     *
+     * @param order
+     */
     public static void saveCurrentOrder(Order order) {
         System.out.println("\nSaving order...");
         activeOrdersList.add(order);
