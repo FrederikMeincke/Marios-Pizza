@@ -128,8 +128,9 @@ public class OrderSystem {
     }
 
     public static void saveCurrentOrder(Order order) {
-        System.out.println("\nSaving order...\n");
+        System.out.println("\nSaving order...");
         activeOrdersList.add(order);
         fileWriter.updateOrderFile(activeOrdersList,"ActiveOrders");
+        System.out.println("Order Saved.");
     }
 }
