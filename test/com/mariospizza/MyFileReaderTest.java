@@ -2,7 +2,10 @@ package com.mariospizza;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,6 +16,28 @@ class MyFileReaderTest {
     @Test
     void processPizzaMenuLine() {
         // Upon receiving a Scanner line input, can our method determine the right value of the tokens in the line?
+        /* testFile.txt
+        testHeader  name2
+        5. pizzaNameTestOne, descrOne, descrTwo 40 70 101
+        3. pizzaNameTestTwo, descrThree, descrFour 50 80 102
+
+        testHeaderTest name3
+        6. pizzaNameTestThree, descrFive 60 90 120
+         */
+        String fileName = "testFile";
+        ArrayList<Pizza> pizzaList = new ArrayList<>();
+        try {
+            Scanner load = new Scanner(new File(fileName+".txt"));
+            while (load.hasNextLine()) {
+                Pizza pizza = testFileReader.processPizzaMenuLine(load);
+                if(pizza != null) {
+                    pizzaList.add(pizza); // processes the line and adds the pizza object to the array.
+                }
+            }
+        } catch (IOException e) {
+
+        }
+        
 
     }
 
@@ -22,7 +47,7 @@ class MyFileReaderTest {
         //If it loads correctly, we expect several Pizza objects inside the ArrayList<Pizza>
         //and Each Pizza object will have its variables assigned from the text file.
         //Our headers are also Pizza objects but don't contain important information besides their name
-        /* test.txt
+        /* testFile.txt
         testHeader  name2
         5. pizzaNameTestOne, descrOne, descrTwo 40 70 101
         3. pizzaNameTestTwo, descrThree, descrFour 50 80 102
