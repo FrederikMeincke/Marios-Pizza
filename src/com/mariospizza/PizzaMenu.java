@@ -7,6 +7,13 @@ public class PizzaMenu {
     static MyFileReader fileReader = new MyFileReader();
     static ArrayList<Pizza> pizzaList = fileReader.loadPizzaMenu("PizzaMenuClean");
 
+    /**
+     * Returns a String with a finite number of String symbol, depending on the length of String line and the desired int formatLength
+     * @param symbol
+     * @param line
+     * @param formatLength
+     * @return
+     */
     public static String printSymbols(String symbol, String line, int formatLength) {
         String dotSpace = "";
         int dotLength = Math.abs(line.length()-formatLength);
@@ -17,6 +24,12 @@ public class PizzaMenu {
         return dotSpace;
     }
 
+    /**
+     * Formats the printed menu line from our PizzaMenu ArrayList<Pizza> so that no number is displayed in front of headers
+     * and the correct number without decimals in front of pizzas. Headers are stored with a "0" in front of their name.
+     * @param number
+     * @return
+     */
     public static String formatPizzaHeader(double number) { //TODO: refactor method name
         if(number == 0) {
             return "";
@@ -26,6 +39,11 @@ public class PizzaMenu {
         }
     }
 
+    /**
+     * Taking the information from each Pizza object in the ArrayList<Pizza> and formats it into something readable
+     * and presentable. It is formatted to resemble a "physical" pizza menu.
+     * @param pizzaList
+     */
     public static void formatPizzaMenu(ArrayList<Pizza> pizzaList) {
 
         for(int i = 0; i < pizzaList.size(); i++) {
@@ -40,16 +58,6 @@ public class PizzaMenu {
             }
             String priceFamily = formatPizzaHeader(pizzaList.get(i).getPriceFamily());
 
-            //String pizzaDots = printPizzaDots(pizzaList.get(i), 100);
-            //String pizzaLine = pizzaID+pizzaName+pizzaDescription+priceNormal+priceDeep+priceFamily+;
-            //String pizzaDots = printSymbols(".", pizzaLine,100);
-            /*System.out.println( pizzaID + ". " +
-                    pizzaName + ", " +
-                    pizzaDescription +
-                    pizzaDots +
-                    priceNormal);
-             */
-
             if(pizzaID != "") {
                 pizzaID += ". ";
                 String pizzaIDSpace = printSymbols(" ",pizzaID,4); // TODO: include this in pizzaID to reduce variables in StringFormat
@@ -61,10 +69,5 @@ public class PizzaMenu {
                 System.out.println("\n" + pizzaName + printSymbols(" ", titleLine,103)+ "Alm |" + "Deep| " + "Fam");
             }
         }
-    }
-
-
-    public static void run() {
-        formatPizzaMenu(pizzaList);
     }
 }
