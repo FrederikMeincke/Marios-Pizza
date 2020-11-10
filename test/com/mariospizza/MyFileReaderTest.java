@@ -25,19 +25,23 @@ class MyFileReaderTest {
         6. pizzaNameTestThree, descrFive 60 90 120
          */
         String fileName = "testFile";
-        ArrayList<Pizza> pizzaList = new ArrayList<>();
+        ArrayList<Pizza> testPizzaList = new ArrayList<>();
         try {
             Scanner load = new Scanner(new File(fileName+".txt"));
             while (load.hasNextLine()) {
                 Pizza pizza = testFileReader.processPizzaMenuLine(load);
                 if(pizza != null) {
-                    pizzaList.add(pizza); // processes the line and adds the pizza object to the array.
+                    testPizzaList.add(pizza); // processes the line and adds the pizza object to the array.
                 }
             }
         } catch (IOException e) {
 
         }
-        
+        assertEquals("testHeader name2",testPizzaList.get(0).getPizzaName());
+        assertEquals(5,testPizzaList.get(1).getPizzaID());
+        assertEquals("descrOne,descrTwo",testPizzaList.get(1).getPizzaDescription());
+        assertEquals(40,testPizzaList.get(1).getPriceNormal());
+        assertEquals("testHeaderTest name3",testPizzaList.get(3).getPizzaName());
 
     }
 
