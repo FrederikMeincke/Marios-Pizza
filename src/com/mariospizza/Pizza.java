@@ -31,11 +31,14 @@ public class Pizza {
         setPriceDeep(priceDeep);
         setPriceFamily(priceFamily);
     }
-
+    //TODO: delete empty default constructor?
+/*
     public Pizza() {
 
     }
 
+
+ */
     public String toString() {
         return  "Pizza #" + getPizzaID() +
                 "\nPizza name: " + getPizzaName() +
