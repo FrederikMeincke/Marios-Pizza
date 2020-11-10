@@ -96,6 +96,7 @@ public class OrderSystem {
 
     /**
      * Menu option
+     *
      * @param order
      */
     public static void addPizzaToOrder(Order order) {
@@ -107,6 +108,7 @@ public class OrderSystem {
     /**
      * Menu option
      * Prints all active orders in OrderSystem with a number so you can input which one to remove
+     *
      * @param order
      */
     //This method looks like crap ngl should probably be rewritten

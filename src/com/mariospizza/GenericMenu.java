@@ -32,7 +32,7 @@ public class GenericMenu {
 
     /**
      * Dictates the users choice navigating the menu
-     * @return
+     * @return the input typed by user
      */
     public int readChoice() {
         Scanner scanner = new Scanner(System.in);
@@ -51,5 +51,3 @@ public class GenericMenu {
         return choice;
     }
 }
-
-

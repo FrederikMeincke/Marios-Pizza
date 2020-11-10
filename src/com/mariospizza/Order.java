@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 public class Order {
     private int orderID; //unique id for every order
-    static int counter = 0;
-    private ArrayList<Pizza> orderPizzaList = new ArrayList<>();
-    private LocalDateTime dateTime;
-    private String dateTimeStr;
+    static int counter = 0; //for making unique ids
+    private ArrayList<Pizza> orderPizzaList = new ArrayList<>(); //pizzas contained in current order
+    private LocalDateTime dateTime; //date and time
+    //private String dateTimeStr;
 
     /**
      * Constructor
@@ -25,7 +25,7 @@ public class Order {
         counter++;
         this.orderID = counter;
         dateTime = LocalDateTime.now();
-        dateTimeStr = dateTime.format(DateTimeFormatter.ofPattern("hh:mm:ss"));
+        //dateTimeStr = dateTime.format(DateTimeFormatter.ofPattern("hh:mm:ss"));
     }
 
     @Override
@@ -104,6 +104,12 @@ public class Order {
         }
     }
 
+    /**
+     *
+     *
+     * @param pizzaMenuChoice the pizza number from the menu that is shown to the customer
+     * @param pizzaSizeChoice 1 for normal, 2 for deep pan, 3 for familiy
+     */
     public void removePizza(int pizzaMenuChoice, int pizzaSizeChoice) {
         ArrayList<Pizza> pizzaList = getOrderPizzaList();
         for(int i = 0; i < getOrderPizzaList().size(); i++) {
