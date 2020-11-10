@@ -21,6 +21,10 @@ class PizzaMenuTest {
 
     @Test
     void formatPizzaHeader() {
+double test1 = 1;
+double test0 = 0;
+        assertEquals("1",PizzaMenu.formatPizzaHeader(test1));
+        assertEquals("",PizzaMenu.formatPizzaHeader(test0));
     }
 
     @Test
