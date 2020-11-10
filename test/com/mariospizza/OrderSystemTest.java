@@ -41,7 +41,6 @@ class OrderSystemTest {
         OrderSystem.activeOrdersList.add(order6);
 
         OrderSystem.checkActiveOrders();
-
     }
 
     @Test
@@ -62,7 +61,6 @@ class OrderSystemTest {
         actvOrdersListSizeAfter = OrderSystem.activeOrdersList.size();
 
         assertEquals(1, (actvOrdersListSizeBefore - actvOrdersListSizeAfter));
-
     }
 
     @Test
