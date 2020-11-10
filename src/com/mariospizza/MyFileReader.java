@@ -7,6 +7,12 @@ import java.util.Scanner;
 
 public class MyFileReader {
 
+
+    /**
+     * Receives a Scanner input in the form of a line and processes it into Pizza objects.
+     * @param input
+     * @return
+     */
     public Pizza processPizzaMenuLine(Scanner input) {
         //int twoDigitsPlusDot = 3; // required length of String for the pizza number including the dot. TODO: Move this to menu printer
         String pizzaNumber = input.next(); // Includes "." but not spaces. TODO: Maybe unecessary, move to menu printer?
@@ -61,6 +67,11 @@ public class MyFileReader {
         return pizza;
     }
 
+    /**
+     * Reads information from a file and returns it as an ArrayList<Pizza> that we use as our "physical" menu
+     * @param fileName
+     * @return
+     */
     public ArrayList<Pizza> loadPizzaMenu(String fileName) {
         ArrayList<Pizza> pizzaList = new ArrayList<>();
         try {
@@ -93,6 +104,11 @@ public class MyFileReader {
     }
      */
 
+    /**
+     * Receives a Scanner input in the form of a line and processes it into Order objects.
+     * @param line
+     * @return
+     */
     public Order processOrderList(String line) {
         Order order = new Order();
         Scanner input = new Scanner(line);
@@ -110,6 +126,11 @@ public class MyFileReader {
         return order;
     }
 
+    /**
+     * Reads information from a file and returns it as an ArrayList<Order> that we use as an overview of Order objects.
+     * @param fileName
+     * @return
+     */
     public ArrayList<Order> loadOrderFile(String fileName) {
         ArrayList<Order> orderList = new ArrayList<>();
         try {
