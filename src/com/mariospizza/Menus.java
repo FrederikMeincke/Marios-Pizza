@@ -64,7 +64,8 @@ public class Menus {
     }
 
     /**
-     * Method that adds an oder containing pizza(s) to the order system
+     * Method that shows a menu to add/remove pizza(s) to an order, display pizza(s) in current order or save current
+     * order to the active orders list
      */
     public static void addNewOrderMenu() {
         String headerText = "Mario's Pizzabar add Order:\n";
@@ -101,7 +102,6 @@ public class Menus {
                     System.out.println("\nInvalid input.\nPlease try Again:");
                     break;
             }
-
         }
     }
 }

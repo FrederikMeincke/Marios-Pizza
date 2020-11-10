@@ -7,7 +7,6 @@ public class Pizza {
     int pizzaID; //number you use to order the pizza
     String pizzaName;
     String pizzaDescription;
-    //TODO: utilize this! Maybe when a pizza is constructed it should be assigned a type/size so we keep track
     int pizzaSize; //1 for normal, 2 for Deep-Pan, 3 for Family
     double priceNormal; // price of pizza. Maybe different prices for different sizes?
     double priceDeep;
@@ -15,12 +14,13 @@ public class Pizza {
 
     /**
      * Pizza description.
-     * @param pizzaID
-     * @param pizzaName
-     * @param pizzaDescription
-     * @param priceNormal
-     * @param priceDeep
-     * @param priceFamily
+     *
+     * @param pizzaID number from menu
+     * @param pizzaName name of the pizza
+     * @param pizzaDescription description
+     * @param priceNormal price for normal version
+     * @param priceDeep price for deep pan version
+     * @param priceFamily price for familiy version
      */
     public Pizza(int pizzaID, String pizzaName, String pizzaDescription,
                  double priceNormal, double priceDeep, double priceFamily) {
