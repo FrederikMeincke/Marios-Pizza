@@ -11,12 +11,10 @@ class OrderSystemTest {
         Order order1 = new Order();
         Order order2 = new Order();
 
-        order2.setOrderID(2);
-
         OrderSystem.activeOrdersList.add(order1);
         OrderSystem.activeOrdersList.add(order2);
 
-        Order testOrder = OrderSystem.findOrder(2);
+        Order testOrder = OrderSystem.findOrder(order2.getOrderID());
 
         assertEquals(order2, testOrder);
     }
