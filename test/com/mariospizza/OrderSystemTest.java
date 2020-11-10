@@ -35,20 +35,6 @@ class OrderSystemTest {
     }
 
     @Test
-    void completeOrder() {
-        Order order5 = new Order();
-        int cmpltOrdersSize;
-
-
-        OrderSystem.activeOrdersList.add(order5);
-        OrderSystem.completeOrder(order5);
-
-        cmpltOrdersSize = OrderSystem.completedOrders.size();
-
-        assertEquals(1, cmpltOrdersSize);
-    }
-
-    @Test
     void checkActiveOrders() {
         Order order6 = new Order();
 

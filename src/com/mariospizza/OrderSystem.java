@@ -65,16 +65,6 @@ public class OrderSystem {
 
 
     /**
-     * Removes a finished order from the active orders list and adds it to the completed orders list
-     *
-     * @param orderToComplete
-     */
-    public static void completeOrder(Order orderToComplete) { //TODO: Delete this method??????
-        completedOrders.add(orderToComplete);
-        activeOrdersList.remove(orderToComplete);
-    }
-
-    /**
      * Prints all elements in the active orders list
      */
     public static void checkActiveOrders() {
