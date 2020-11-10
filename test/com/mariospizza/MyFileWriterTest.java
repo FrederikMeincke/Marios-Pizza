@@ -23,26 +23,20 @@ class MyFileWriterTest {
         testOrder.addPizza(assertPizzaMenuChoice,assertPizzaSizechoice);
         testOrderList.add(testOrder);
 
-        for (int i = 0; i < testOrderList.size(); i++) {
-            int orderID = testOrderList.get(i).getOrderID();
-            assertEquals(1,orderID); // assuming size 1
-            for(int j = 0; j < testOrderList.get(i).getOrderPizzaList().size(); j++) {
-                int testPizzaMenuChoice = testOrderList.get(i).getOrderPizzaList().get(j).getPizzaID();
-                int testPizzaSize = testOrderList.get(i).getOrderPizzaList().get(j).getPizzaSize();
-                assertEquals(assertPizzaMenuChoice,testPizzaMenuChoice);
-                assertEquals(assertPizzaSizechoice,testPizzaSize);
-            }
-        }
-
         try {
             PrintStream output = new PrintStream(new File(fileName + ".txt"));
             for (int i = 0; i < testOrderList.size(); i++) {
                 int orderID = testOrderList.get(i).getOrderID();
+                assertEquals(1,orderID); // assuming size 1 // ASSERTION LINE
                 String orderIDString = String.format("%d", orderID);
                 String pizzaList = "";
                 for (int j = 0; j < testOrderList.get(i).getOrderPizzaList().size(); j++) {
-                    pizzaList += testOrderList.get(i).getOrderPizzaList().get(j).getPizzaID() + " " +
-                            +testOrderList.get(i).getOrderPizzaList().get(j).getPizzaSize() + " ";
+                    int testPizzaMenuChoice = testOrderList.get(i).getOrderPizzaList().get(j).getPizzaID();
+                    int testPizzaSize = testOrderList.get(i).getOrderPizzaList().get(j).getPizzaSize();
+                    assertEquals(assertPizzaMenuChoice,testPizzaMenuChoice); // ASSERTION LINE 2
+                    assertEquals(assertPizzaSizechoice,testPizzaSize); // ASSERTION LINE 3
+                    pizzaList += testPizzaMenuChoice + " " +
+                            +testPizzaSize + " ";
                 }
                 output.println(orderIDString + " " + pizzaList);
             }
