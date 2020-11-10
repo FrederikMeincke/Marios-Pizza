@@ -13,12 +13,10 @@ public class OrderSystem {
      * Method for returning an Order from an orderID.
      * Useful for other methods so they can figure out which Order to manipulate
      *
-     * @param orderID
+     * @param orderID is the ID of a given order
      * @return Order in activeOrdersList if it matches orderID else returns null
      */
     public static Order findOrder(int orderID) {
-        Order order = null;
-
         for (Order activeOrder: activeOrdersList) {
             if (activeOrder.getOrderID() == orderID) {
                 return activeOrder;
@@ -35,7 +33,6 @@ public class OrderSystem {
         Order oldestOrder;
         Order checkOrder;
         Order tmpOrder;
-        LocalDateTime tmpOrderTime;
         LocalDateTime checkOrderTime;
         boolean isTmpOrderBefore;
 
@@ -46,7 +43,6 @@ public class OrderSystem {
             tmpOrder = activeOrdersList.get(i);
 
             checkOrderTime = checkOrder.getDateTime();
-            tmpOrderTime = tmpOrder.getDateTime();
 
             isTmpOrderBefore = tmpOrder.getDateTime().isBefore(checkOrderTime); //is tmpOrder before CheckOrder?
 
@@ -76,7 +72,7 @@ public class OrderSystem {
     /**
      * Deletes an order from the active orders list
      *
-     * @param order
+     * @param order the order to delete
      */
     public static void deleteOrder(Order order) {
         activeOrdersList.remove(order);

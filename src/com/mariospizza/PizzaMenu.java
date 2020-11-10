@@ -1,6 +1,5 @@
 package com.mariospizza;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class PizzaMenu {

@@ -1,7 +1,4 @@
 package com.mariospizza;
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Pizza {
     int pizzaID; //number you use to order the pizza
@@ -31,14 +28,15 @@ public class Pizza {
         setPriceDeep(priceDeep);
         setPriceFamily(priceFamily);
     }
-    //TODO: delete empty default constructor?
-/*
+
+    /**
+     * Empty constructor. Used when making a copy of pizza object in Order.addPizza
+     *
+     */
     public Pizza() {
 
     }
 
-
- */
     public String toString() {
         return  "Pizza #" + getPizzaID() +
                 "\nPizza name: " + getPizzaName() +
