@@ -12,6 +12,8 @@ class MyFileReaderTest {
 
     @Test
     void processPizzaMenuLine() {
+        // Upon receiving a Scanner line input, can our method determine the right value of the tokens in the line?
+
     }
 
     @Test
@@ -39,30 +41,8 @@ class MyFileReaderTest {
     }
 
     @Test
-    void loadActiveOrders() {
-    }
-
-    @Test
-    void loadCompletedOrders() {
-    }
-
-    @Test
-    void testProcessPizzaMenuLine() {
-    }
-
-    @Test
-    void testLoadPizzaMenu() {
-    }
-
-    @Test
-    void processOrderList() {
-    }
-
-    @Test
     void loadOrderFile() {
+
     }
 
-    @Test
-    void testLoadCompletedOrders() {
-    }
 }
