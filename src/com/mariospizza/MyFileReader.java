@@ -89,21 +89,6 @@ public class MyFileReader {
         return pizzaList; //TODO: Finish the loading method for the ArrayList
     }
 
-    /*
-    public static void loadActiveOrders() {
-        try {
-            Scanner active = new Scanner(new File("ActiveOrders.txt"));
-
-            while (active.hasNextLine()) {
-                String activeOrders = active.nextLine();
-                System.out.println(activeOrders); //TODO: insert the data from active orders
-            }
-        } catch (IOException e){
-            System.out.println("File not found.");
-        }
-    }
-     */
-
     /**
      * Receives a Scanner input in the form of a line and processes it into Order objects.
      * @param line
@@ -147,24 +132,4 @@ public class MyFileReader {
         }
         return orderList; //TODO: Finish the loading method for the ArrayList
     }
-
-    public ArrayList<Order> loadCompletedOrders() {
-return null;
-    }
-
-//husk knj du har lavet denne static for at kunne teste i main
-    /*
-    public static void loadCompletedOrders() {
-        try {
-            Scanner complete = new Scanner(new File("CompletedOrders.txt"));
-
-            while (complete.hasNextLine()) {
-                String completedOrders = complete.nextLine();
-                System.out.println(completedOrders);
-            }
-        } catch (IOException e){
-            System.out.println("File not found.");
-        }
-    }
-     */
 }
