@@ -1,9 +1,7 @@
 package com.mariospizza;
 
-import javax.print.attribute.standard.OrientationRequested;
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 

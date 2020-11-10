@@ -25,25 +25,7 @@ class PizzaMenuTest {
 
     @Test
     void formatPizzaMenu() {
+        // Receives an ArrayList<Pizza> that it then formats into Strings with information about each pizza and headers
     }
 
-    @Test
-    void testPrintSymbols() {
-    }
-
-    @Test
-    void testFormatPizzaHeader() {
-    }
-
-    @Test
-    void testFormatPizzaMenu() {
-    }
-
-    @Test
-    void testPizzaInfo() {
-    }
-
-    @Test
-    void run() {
-    }
 }
