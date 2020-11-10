@@ -33,7 +33,11 @@ public class Menus {
                     addNewOrderMenu();
                     break;
                 case 4:
-                    OrderSystem.findOrder(Main.inputInt("Order ID: ")).changeOrder();
+                    if(OrderSystem.activeOrdersList.size() != 0) {
+                        OrderSystem.findOrder(Main.inputInt("Order ID: ")).changeOrder();
+                    } else {
+                        System.out.println("No orders available to change at this time. ");
+                    }
                     break;
                 case 5:
                     OrderSystem.completeOrder(OrderSystem.findOrder(Main.inputInt(
