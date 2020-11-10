@@ -2,6 +2,8 @@ package com.mariospizza;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,43 +11,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class OrderTest {
     @Test
     void testToString() {
-    }
-
-    @Test
-    void addPizza() {
-    }
-
-    @Test
-    void changeOrder() {
-    }
-
-    @Test
-    void getOrderPizzaList() {
-    }
-
-    @Test
-    void setOrderPizzaList() {
-    }
-
-    @Test
-    void getOrderID() {
-    }
-
-    @Test
-    void setOrderID() {
-    }
-/*
-    @Test
-    void testToString() {
         Order order1 = new Order();
         String orderPrint;
         Boolean stringBool = true;
 
-        order1.addPizza(new Pizza(69, "McMuffin's tramp pizza",
-                "nyoh, den smagr sgyt godt G", 69.0, 420.0, 69420.0));
-
-        order1.addPizza(new Pizza(123, "Rigmandspizza",
-                "Den smager dyrt", 69000.0, 420000.0, 69420000.0));
+        order1.addPizza(1, 3);
 
 
         orderPrint = order1.toString();
@@ -58,18 +28,17 @@ class OrderTest {
 
     @Test
     void addPizza() {
-        int listSize = 0;
-        Order order1 = new Order();
+        Order order2 = new Order();
+        int orderPizzaListSizeBefore;
+        int orderPizzaListSizeAfter;
 
-        order1.addPizza(new Pizza(69, "McMuffin's tramp pizza",
-                "nyoh, den smagr sgyt godt G", 69.0, 420.0, 69420.0));
+        orderPizzaListSizeBefore = order2.getOrderPizzaList().size();
 
-        order1.addPizza(new Pizza(123, "Rigmandspizza",
-                "Den smager dyrt", 69000.0, 420000.0, 69420000.0));
+        order2.addPizza(3,2);
 
-        listSize = order1.getOrderPizzaList().size();
+        orderPizzaListSizeAfter = order2.getOrderPizzaList().size();
 
-        assertEquals(2, listSize);
+        assertEquals(1, (orderPizzaListSizeAfter - orderPizzaListSizeBefore));
     }
 
     @Test
@@ -78,81 +47,47 @@ class OrderTest {
 
     @Test
     void getOrderPizzaList() {
-        int listSize = 0;
-        Order order1 = new Order();
+        Order order3 = new Order();
 
-        order1.addPizza(new Pizza(69, "McMuffin's tramp pizza",
-                "nyoh, den smagr sgyt godt G", 69.0, 420.0, 69420.0));
-
-        order1.addPizza(new Pizza(123, "Rigmandspizza",
-                "Den smager dyrt", 69000.0, 420000.0, 69420000.0));
-
-        order1.addPizza(new Pizza(321, "123",
-                "Den smager 123", 123.0, 123.0, 123.0));
-
-        listSize = order1.getOrderPizzaList().size();
-
-        assertEquals(3, listSize);
+        order3.getOrderPizzaList();
     }
 
     @Test
     void setOrderPizzaList() {
-        int pizzaListSize = 0;
-        Order order1 = new Order();
+        Order order5 = new Order();
 
-        order1.addPizza(new Pizza(69, "McMuffin's tramp pizza",
-                "nyoh, den smagr sgyt godt G", 69.0, 420.0, 69420.0));
+        ArrayList<Pizza> pizzaTestList = new ArrayList<>();
+        pizzaTestList.add(new Pizza(23, "uwu pizza", "nyahallo x3",
+                123.0,123.0,123.0));
+        pizzaTestList.add(new Pizza(23, "pizza owo", "This is an owo pizza",
+                134.0,1213.0,1236.0));
 
-        order1.addPizza(new Pizza(123, "Rigmandspizza",
-                "Den smager dyrt", 69000.0, 420000.0, 69420000.0));
+        order5.setOrderPizzaList(pizzaTestList);
 
-        order1.addPizza(new Pizza(321, "123",
-                "Den smager 123", 123.0, 123.0, 123.0));
-
-        //new ArrayList that is gonna be passed to order1
-        ArrayList<Pizza> testPizzaList = new ArrayList<>();
-        testPizzaList.add(new Pizza(321, "321",
-                "Den smager 321", 321.0, 321.0, 321.0));
-
-        order1.setOrderPizzaList(testPizzaList);
-
-        pizzaListSize = order1.getOrderPizzaList().size();
-
-        assertEquals(1, pizzaListSize);
+        assertEquals("pizza owo", order5.getOrderPizzaList().get(1).getPizzaName());
     }
 
-    //this will fail if you test the entire class together because of the way unique ids are generated with static int
     @Test
     void getOrderID() {
-        Order orderA = new Order();
-        Order orderB = new Order();
-        Order orderC = new Order();
-        Order orderD = new Order();
+        Order order5 = new Order();
 
-        int orderID = 0;
-
-
-        System.out.println(orderA.getOrderID());
-        System.out.println(orderB.getOrderID());
-        System.out.println(orderC.getOrderID());
-        System.out.println(orderD.getOrderID());
-
-        orderID = orderD.getOrderID();
-
-        assertEquals(4, orderID);
+        order5.getOrderPizzaList();
     }
 
     @Test
     void setOrderID() {
-        Order order1 = new Order();
-        int orderID = 0;
+        Order order6 = new Order();
 
-        order1.setOrderID(420);
+        order6.setOrderID(69);
 
-        orderID = order1.getOrderID();
-
-        assertEquals(420, orderID);
+        assertEquals(69, order6.getOrderID());
     }
 
- */
+    @Test
+    void getDateTime() {
+        Order order7 = new Order();
+
+        assertEquals(LocalDateTime.now().format(DateTimeFormatter.ofPattern("hh:mm:ss")),
+                order7.getDateTime().format(DateTimeFormatter.ofPattern("hh:mm:ss")));
+    }
 }
