@@ -11,7 +11,7 @@ public class Menus {
         String headerText = "Mario's Pizzabar:\n";
         String leadText = "Choose an option: ";
         String[] menuItems = {"Show Pizza menu", "Check active orders",
-                "Add new order", "Complete Order", "Cancel Order", "Check statistics", "Exit"};
+                "Add new order", "Change Order" ,"Complete Order", "Cancel Order", "Check statistics", "Exit"};
         boolean menuRun = true;
         int menuChoice;
 
@@ -33,20 +33,27 @@ public class Menus {
                     addNewOrderMenu();
                     break;
                 case 4:
+                    if(OrderSystem.activeOrdersList.size() != 0) {
+                        OrderSystem.findOrder(Main.inputInt("Order ID: ")).changeOrder();
+                    } else {
+                        System.out.println("No orders available to change at this time. ");
+                    }
+                    break;
+                case 5:
                     OrderSystem.completeOrder(OrderSystem.findOrder(Main.inputInt(
                             "What is the orderID of the Order to complete?: ")));
                     break;
-                case 5:
+                case 6:
                     OrderSystem.deleteOrder(OrderSystem.findOrder(Main.inputInt(
                             "What is the orderID of the Order to complete?: ")));
                     break;
-                case 6:
+                case 7:
                     System.out.println("Check statistics");
                     //MyFileReader.loadCompletedOrders();
                     //MyStats.();
                     System.out.println(OrderSystem.findOldestOrder().toString()); //TODO: Remove this just here to test findOldestOrder method
                     break;
-                case 7:
+                case 8:
                     menuRun = false;
                     break;
                 default:
