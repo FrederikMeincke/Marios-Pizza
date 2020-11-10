@@ -11,6 +11,8 @@ class OrderSystemTest {
         Order order1 = new Order();
         Order order2 = new Order();
 
+        order2.setOrderID(2);
+
         OrderSystem.activeOrdersList.add(order1);
         OrderSystem.activeOrdersList.add(order2);
 
