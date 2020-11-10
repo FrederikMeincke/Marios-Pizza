@@ -79,7 +79,7 @@ public class Order {
 
         String menuHeader = "CHANGE YOUR ORDER";
         String leadText = "choose option";
-        String[] menuItems = {"option 1", "option 2", "option 3", "option 4", "option 5"};
+        String[] menuItems = {"Add a pizza", "Remove a pizza"};
         GenericMenu orderChangeMenu = new GenericMenu(menuHeader, leadText, menuItems);
 
         //prints the menu and uses user choice to select an option for switch
@@ -93,6 +93,7 @@ public class Order {
             case 2:
                 //System.out.println("make deep pan");
                 // REMOVE A PIZZA()
+                System.out.println(orderPizzaList.toString());
                 removePizza(Main.inputInt("Pizza ID? "),Main.inputInt("Pizza size? "));
 
                 break;
