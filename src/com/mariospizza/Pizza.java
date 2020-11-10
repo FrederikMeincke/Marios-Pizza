@@ -1,7 +1,4 @@
 package com.mariospizza;
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Pizza {
     int pizzaID; //number you use to order the pizza
@@ -32,6 +29,10 @@ public class Pizza {
         setPriceFamily(priceFamily);
     }
 
+    /**
+     * Empty constructor. Used when making a copy of pizza object in Order.addPizza
+     *
+     */
     public Pizza() {
 
     }
