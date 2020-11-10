@@ -82,7 +82,7 @@ class OrderSystemTest {
         actvOrdersListSizeBefore = OrderSystem.activeOrdersList.size();
         cmpltOrdersListSizeBefore = OrderSystem.completedOrders.size();
 
-        OrderSystem.completedOrder(order9);
+        OrderSystem.completeOrder(order9);
 
         actvOrdersListSizeAfter = OrderSystem.activeOrdersList.size();
         cmpltOrdersListSizeAfter = OrderSystem.completedOrders.size();

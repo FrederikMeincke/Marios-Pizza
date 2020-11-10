@@ -87,7 +87,7 @@ public class OrderSystem {
      *
      * @param orderToComplete
      */
-    public static void completedOrder(Order orderToComplete) {
+    public static void completeOrder(Order orderToComplete) {
         completedOrders.add(orderToComplete);
         activeOrdersList.remove(orderToComplete);
         fileWriter.updateOrderFile(completedOrders,"CompletedOrders");

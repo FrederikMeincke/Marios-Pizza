@@ -33,7 +33,7 @@ public class Menus {
                     addNewOrderMenu();
                     break;
                 case 4:
-                    OrderSystem.completedOrder(OrderSystem.findOrder(Main.inputInt(
+                    OrderSystem.completeOrder(OrderSystem.findOrder(Main.inputInt(
                             "What is the orderID of the Order to complete?: ")));
                     break;
                 case 5:
