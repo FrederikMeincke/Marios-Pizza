@@ -27,7 +27,7 @@ class MyFileWriterTest {
             PrintStream output = new PrintStream(new File(fileName + ".txt"));
             for (int i = 0; i < testOrderList.size(); i++) {
                 int orderID = testOrderList.get(i).getOrderID();
-                assertEquals(1,orderID); // assuming size 1 // ASSERTION LINE
+                assertEquals(1,orderID); // assuming size 1 // ASSERTION LINE 1
                 String orderIDString = String.format("%d", orderID);
                 String pizzaList = "";
                 for (int j = 0; j < testOrderList.get(i).getOrderPizzaList().size(); j++) {
