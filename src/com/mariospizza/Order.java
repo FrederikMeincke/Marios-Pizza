@@ -68,14 +68,13 @@ public class Order {
 
     /**
      * Menu for changing an order.
-     * unsure what these changes could be maybe adding an additional pizza or changing toppings?
+     * adding more pizzas or removing pizzas
      *
-     * @param orderID
      */
-    public void changeOrder(int orderID) {
-        int whatToChange = -1; // int input by user to indicate what they want changed. Initialized as -1 for compiler
+    public void changeOrder() {
+        //int whatToChange = -1; // int input by user to indicate what they want changed. Initialized as -1 for compiler
         //Order is reference type. so if i make a variable of it and change that variable they will both change?
-        Order orderToChange = OrderSystem.activeOrdersList.get(orderID);
+        //Order orderToChange = OrderSystem.activeOrdersList.get(orderID);
         //TODO: menu here for what needs to be changed about the order
 
         String menuHeader = "CHANGE YOUR ORDER";
