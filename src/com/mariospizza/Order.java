@@ -88,22 +88,27 @@ public class Order {
         switch (orderChangeMenu.readChoice()) {
             case 1:
                 //System.out.println("add some extra salami");
+                // ADD MORE PIZZA()
+                addPizza(Main.inputInt("Pizza number? "),Main.inputInt("Pizza size? "));
                 break;
             case 2:
                 //System.out.println("make deep pan");
-                break;
-            case 3:
-                //System.out.println("i want an extra pizza");
-                break;
-            case 4:
-                //System.out.println("add some extra extra salami");
-                break;
-            case 5:
-                //System.out.println("I want some disgusting pineapple on my pizza. Yikes bro that's cringe af");
+                // REMOVE A PIZZA()
+                removePizza(Main.inputInt("Pizza ID? "),Main.inputInt("Pizza size? "));
+
                 break;
             default:
                 System.out.println("invalid option");
                 break;
+        }
+    }
+
+    public void removePizza(int pizzaMenuChoice, int pizzaSizeChoice) {
+        ArrayList<Pizza> pizzaList = getOrderPizzaList();
+        for(int i = 0; i < getOrderPizzaList().size(); i++) {
+            if(pizzaList.get(i).getPizzaID() == pizzaMenuChoice && pizzaList.get(i).getPizzaSize() == pizzaSizeChoice) {
+                pizzaList.remove(i);
+            }
         }
     }
 
