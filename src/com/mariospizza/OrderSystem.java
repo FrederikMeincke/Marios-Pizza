@@ -69,7 +69,7 @@ public class OrderSystem {
      *
      * @param orderToComplete
      */
-    public void completeOrder(Order orderToComplete) {
+    public static void completeOrder(Order orderToComplete) { //TODO: Delete this method??????
         completedOrders.add(orderToComplete);
         activeOrdersList.remove(orderToComplete);
     }
@@ -119,9 +119,10 @@ public class OrderSystem {
      * Prints all active orders in OrderSystem with a number so you can input which one to remove
      * @param order
      */
+    //This method looks like crap ngl should probably be rewritten
     public static void removePizzaFromOrder(Order order) {
-        Scanner scn = new Scanner(System.in);
-        System.out.println("\nRemove a pizza from the current order:");
+        Scanner scn = new Scanner(System.in); //TODO: maybe do Main.inputInt here
+        System.out.println("\nRemove a pizza from the current order:"); //TODO: listCurrentOrder() here?
         for (int i = 1; i <= order.getOrderPizzaList().size(); i++) {
             System.out.println(i + ". \n"
 
