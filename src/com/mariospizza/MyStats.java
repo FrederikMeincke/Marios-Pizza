@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class MyStats {
 
+    static MyStats stats = new MyStats();
 
     /*
 Metoder til at udregne mest pop pizza
@@ -77,19 +78,20 @@ String MyBestChoice4
      */
 
     ArrayList<Order> completedOrders = OrderSystem.completedOrders;
+    int[] numbersOfPizzaSold;
 
     /**
      * TRIPLE FOR LOOP LET'S GOOOOO
      */
-    public void total() {
-        double moneeey = 0;
+    public double total() {
+        double revenue = 0;
         for(int i = 0; i < completedOrders.size(); i++) {
             Order currentOrder = completedOrders.get(i);
 
             for(int j = 0; j < currentOrder.getOrderPizzaList().size(); j++) {
                 Pizza currentPizza = currentOrder.getOrderPizzaList().get(j);
                 double pizzaPrice = 0;
-                int currentPizzaID = currentPizza.getPizzaID();
+                int currentPizzaID = currentPizza.getPizzaID(); //TODO: FIX
                 int currentPizzaSize = currentPizza.getPizzaSize();
                 if(currentPizzaSize == 1) {
                     pizzaPrice = currentPizza.getPriceNormal();
@@ -98,8 +100,51 @@ String MyBestChoice4
                 } else if(currentPizzaSize == 3) {
                     pizzaPrice = currentPizza.getPriceFamily();
                 }
-                moneeey += pizzaPrice;
+                revenue += pizzaPrice;
             }
         }
+        return revenue;
     }
+
+    public void numbersOfPizzaSoldArraySetup() {
+        numbersOfPizzaSold = new int[OrderSystem.completedOrders.size()];
+    }
+
+    // Top three?
+    public String mostPizzasSold() {
+        //
+        System.out.println("Start: 1");
+        for(int i = 0; i < OrderSystem.completedOrders.size(); i++) {
+            for(int j = 1; j <= OrderSystem.completedOrders.get(i).getOrderPizzaList().size(); j++) {
+                if(OrderSystem.completedOrders.get(i).getOrderPizzaList().get(j).getPizzaID() == j) {
+                    numbersOfPizzaSold[j]++;
+                }
+            }
+        }
+
+        System.out.println("next: 2");
+        int numberMostPizzaSold = -1;
+        String nameMostPizzaSold = "";
+        for(int i = 1; i <= numbersOfPizzaSold.length; i++) {
+            if(numbersOfPizzaSold[i] > numberMostPizzaSold) {
+                numberMostPizzaSold = numbersOfPizzaSold[i];
+                nameMostPizzaSold = scanPizzaMenu(i);
+            }
+        }
+        System.out.println("Final: 3");
+        String jabatheHut = "Most sold: " + nameMostPizzaSold + " Amount: " + numberMostPizzaSold;
+        return jabatheHut;
+    }
+
+    public String scanPizzaMenu(int pizzaID) {
+        ArrayList<Pizza> pizzaList = PizzaMenu.pizzaList;
+        for(int i = 0; i < pizzaList.size(); i++) {
+            if(pizzaList.get(i).getPizzaID() == pizzaID) {
+                return pizzaList.get(i).getPizzaName();
+            }
+        }
+        return null;
+    }
+
+
 }
