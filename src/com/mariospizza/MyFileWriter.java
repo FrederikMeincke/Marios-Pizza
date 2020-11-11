@@ -26,7 +26,7 @@ public class MyFileWriter {
                 output.println(orderIDString + " " + pizzaList);
             }
         } catch (IOException e) {
-            //TODO: Add message
+            System.out.println("File not found.");
         }
     }
 }

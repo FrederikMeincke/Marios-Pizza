@@ -88,7 +88,7 @@ String MyBestChoice4
 
             for(int j = 0; j < currentOrder.getOrderPizzaList().size(); j++) {
                 Pizza currentPizza = currentOrder.getOrderPizzaList().get(j);
-                double pizzaPrice;
+                double pizzaPrice = 0;
                 int currentPizzaID = currentPizza.getPizzaID();
                 int currentPizzaSize = currentPizza.getPizzaSize();
                 if(currentPizzaSize == 1) {
@@ -98,6 +98,7 @@ String MyBestChoice4
                 } else if(currentPizzaSize == 3) {
                     pizzaPrice = currentPizza.getPriceFamily();
                 }
+                moneeey += pizzaPrice;
             }
         }
     }
