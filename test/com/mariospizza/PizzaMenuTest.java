@@ -36,5 +36,4 @@ class PizzaMenuTest {
         // Unfortunately we would have to make this method return a String in order to test it as we only work with variables
         // that are local to the method itself.
     }
-
 }

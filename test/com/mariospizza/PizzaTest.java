@@ -96,5 +96,4 @@ class PizzaTest {
     @Test
     void testToString1() {
     }
-
 }

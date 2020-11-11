@@ -29,13 +29,6 @@ public class Pizza {
         setPriceFamily(priceFamily);
     }
 
-    /**
-     * Empty constructor. Used when making a copy of pizza object in Order.addPizza
-     *
-     */
-    public Pizza() {
-
-    }
 
     public String toString() {
         return  "Pizza #" + getPizzaID() +

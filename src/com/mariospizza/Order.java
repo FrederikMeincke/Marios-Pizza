@@ -60,19 +60,6 @@ public class Order {
 
                 Pizza newPizza = new Pizza(pizzaID,pizzaName,pizzaDescription,priceNormal,priceDeep,priceFamily);
                 newPizza.setPizzaSize(pizzaSizeChoice);
-                /*
-                newPizza.setPizzaID(pizzaList.get(i).getPizzaID());
-                newPizza.setPizzaName(pizzaList.get(i).getPizzaName());
-                newPizza.setPizzaDescription(pizzaList.get(i).getPizzaDescription());
-                newPizza.setPizzaSize(pizzaSizeChoice);
-                newPizza.setPriceNormal(pizzaList.get(i).getPriceNormal());
-                newPizza.setPriceDeep(pizzaList.get(i).getPriceDeep());
-                newPizza.setPriceFamily(pizzaList.get(i).getPriceFamily());
-                //Pizza pizzaChoice = pizzaList.get(i);
-                //pizzaChoice.setPizzaSize(pizzaSizeChoice);
-                //orderPizzaList.add(pizzaChoice);
-
-                 */
                 getOrderPizzaList().add(newPizza);
             }
         }
@@ -106,27 +93,11 @@ public class Order {
             case 2:
                 //System.out.println("make deep pan");
                 // REMOVE A PIZZA()
-                System.out.println(orderPizzaList.toString());
-                removePizza(Main.inputInt("Pizza ID? "),Main.inputInt("Pizza size? "));
-
+                OrderSystem.removePizzaFromOrder(this);
                 break;
             default:
                 System.out.println("invalid option");
                 break;
-        }
-    }
-
-    /**
-     * Removes a pizza object from the pizzalist
-     * @param pizzaMenuChoice
-     * @param pizzaSizeChoice
-     */
-    public void removePizza(int pizzaMenuChoice, int pizzaSizeChoice) {
-        ArrayList<Pizza> pizzaList = getOrderPizzaList();
-        for(int i = 0; i < getOrderPizzaList().size(); i++) {
-            if(pizzaList.get(i).getPizzaID() == pizzaMenuChoice && pizzaList.get(i).getPizzaSize() == pizzaSizeChoice) {
-                pizzaList.remove(i);
-            }
         }
     }
 
