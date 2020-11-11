@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Marios Pizza Menu POS for command line application
- * @author Frederik M., Jimmy, Kasper, Mads, Philip
+ * @author Frederik M., Jimmy, Kasper, Mads, Phillip
  * @version 0.8
  */
 

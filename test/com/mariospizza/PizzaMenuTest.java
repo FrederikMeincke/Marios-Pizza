@@ -2,8 +2,6 @@ package com.mariospizza;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -25,8 +23,8 @@ class PizzaMenuTest {
     void formatPizzaHeader() {
         double test1 = 1;
         double test0 = 0;
-        assertEquals("1",PizzaMenu.formatPizzaHeader(test1));
-        assertEquals("",PizzaMenu.formatPizzaHeader(test0));
+        assertEquals("1",PizzaMenu.formatPizzaLine(test1));
+        assertEquals("",PizzaMenu.formatPizzaLine(test0));
     }
 
     @Test
