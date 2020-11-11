@@ -77,11 +77,24 @@ String MyBestChoice4
      */
 
     ArrayList<Order> completedOrders = OrderSystem.completedOrders;
+
+    /**
+     * TRIPLE FOR LOOP LET'S GOOOOO
+     */
     public void total() {
         for(int i = 0; i < completedOrders.size(); i++) {
+            Order currentOrder = completedOrders.get(i);
 
+            for(int j = 0; j < currentOrder.getOrderPizzaList().size(); j++) {
+                Pizza currentPizza = currentOrder.getOrderPizzaList().get(j);
+                int currentPizzaID = currentPizza.getPizzaID();
+                int currentPizzaSize = currentPizza.getPizzaSize();
+
+            }
         }
     }
+
+
 
 
 }
