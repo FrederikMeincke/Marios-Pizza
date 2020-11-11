@@ -2,15 +2,15 @@ package com.mariospizza;
 import java.util.Scanner;
 
 public class GenericMenu {
-    private String menuHeader;
-    private String leadText;
-    private String[] menuItems;
+    private final String menuHeader;
+    private final String leadText;
+    private final String[] menuItems;
 
     /**
      * Array to keep track on different parts of the menu
-     * @param menuHeader
-     * @param leadText
-     * @param menuItems
+     * @param menuHeader Header for the menu
+     * @param leadText prompt for user input
+     * @param menuItems All the different menu options
      */
     public GenericMenu(String menuHeader, String leadText, String[] menuItems) {
         this.menuHeader = menuHeader;
@@ -19,7 +19,7 @@ public class GenericMenu {
     }
 
     /**
-     * Printing out menu
+     * Printing out the menu
      */
     public void printMenu() {
         String printString = menuHeader + "\n";

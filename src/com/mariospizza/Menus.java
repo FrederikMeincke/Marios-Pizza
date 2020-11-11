@@ -1,6 +1,6 @@
 package com.mariospizza;
 
-import javax.sound.midi.Soundbank;
+import java.util.NoSuchElementException;
 
 import static com.mariospizza.PizzaMenu.pizzaList;
 
@@ -51,11 +51,14 @@ public class Menus {
                     break;
                 case 7:
                     System.out.println("Find oldest order");
-                    System.out.println(OrderSystem.findOldestOrder().toString());
+                    try {
+                        System.out.println(OrderSystem.findOldestOrder().toString());
+                    } catch (NoSuchElementException e) {
+                        e.toString();
+                    }
                     break;
                 case 8:
                     System.out.println("Check statistics");
-                    //MyFileReader.loadCompletedOrders();
                     //MyStats.();
                     break;
                 case 9:

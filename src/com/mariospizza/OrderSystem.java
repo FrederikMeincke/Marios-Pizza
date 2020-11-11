@@ -2,7 +2,7 @@ package com.mariospizza;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.NoSuchElementException;
 
 public class OrderSystem {
     static ArrayList<Order> activeOrdersList = new ArrayList<>();
@@ -17,12 +17,13 @@ public class OrderSystem {
      * @return Order in activeOrdersList if it matches orderID else returns null
      */
     public static Order findOrder(int orderID) {
+
         for (Order activeOrder: activeOrdersList) {
             if (activeOrder.getOrderID() == orderID) {
                 return activeOrder;
             }
         }
-        return null; //TODO: Maybe add an exception for Order not found?
+        return null;
     }
 
     /**
@@ -53,7 +54,7 @@ public class OrderSystem {
         }
 
         if (oldestOrder == null) {
-            //TODO: throw exception????
+            throw new NoSuchElementException();
         }
 
         return oldestOrder;
@@ -81,7 +82,7 @@ public class OrderSystem {
     /**
      * puts the order in the completed orders list and then removes it from the active orders list
      *
-     * @param orderToComplete
+     * @param orderToComplete order to add to completedOrders and remove from activeOrders
      */
     public static void completeOrder(Order orderToComplete) {
         completedOrders.add(orderToComplete);
@@ -105,7 +106,7 @@ public class OrderSystem {
      * Menu option
      * Prints all active orders in OrderSystem with a number so you can input which one to remove
      *
-     * @param order
+     * @param order order to remove a pizza from
      */
     //This method looks like crap ngl should probably be rewritten
     public static void removePizzaFromOrder(Order order) {
@@ -123,7 +124,7 @@ public class OrderSystem {
     /**
      * prints all pizzas in current order
      *
-     * @param order
+     * @param order The order that is gonna be printed
      */
     public static void listCurrentOrder(Order order) {
         System.out.println("\nListing pizzas on current order:\n");
@@ -138,7 +139,7 @@ public class OrderSystem {
     /**
      * saves current order to active orders list and puts it in the ActiveOrders.txt file
      *
-     * @param order
+     * @param order The order to save
      */
     public static void saveCurrentOrder(Order order) {
         System.out.println("\nSaving order...");

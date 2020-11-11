@@ -8,8 +8,8 @@ public class Order {
     private int orderID; //unique id for every order
     static int counter = 0;
     private ArrayList<Pizza> orderPizzaList = new ArrayList<>();
-    private LocalDateTime dateTime;
-    private String dateTimeStr;
+    private final LocalDateTime dateTime;
+    private final String dateTimeStr;
 
     /**
      * Constructor
@@ -40,7 +40,7 @@ public class Order {
     }
 
     /**
-     *  adds an order to the active order list
+     *  Adds an order to the active order list
      *  Makes a copy of the a pizza object in the pizzaList
      *
      * @param pizzaMenuChoice which pizza is wanted
@@ -48,7 +48,6 @@ public class Order {
      */
     public void addPizza(int pizzaMenuChoice, int pizzaSizeChoice) {
         ArrayList<Pizza> pizzaList = PizzaMenu.pizzaList;
-        //Pizza newPizza = new Pizza();
         for(int i = 0; i < pizzaList.size(); i++) {
             if(pizzaList.get(i).getPizzaID() == pizzaMenuChoice) {
                 int pizzaID = pizzaList.get(i).getPizzaID();
@@ -66,8 +65,7 @@ public class Order {
     }
 
     /**
-     * Menu for changing an order.
-     * adding more pizzas or removing pizzas
+     * Menu for changing an order. Adding more pizzas or removing pizzas
      *
      */
     public void changeOrder() {
@@ -80,13 +78,9 @@ public class Order {
         orderChangeMenu.printMenu();
         switch (orderChangeMenu.readChoice()) {
             case 1:
-                //System.out.println("add some extra salami");
-                // ADD MORE PIZZA()
                 addPizza(Main.inputInt("Pizza number? "),Main.inputInt("Pizza size? "));
                 break;
             case 2:
-                //System.out.println("make deep pan");
-                // REMOVE A PIZZA()
                 OrderSystem.removePizzaFromOrder(this);
                 break;
             default:
@@ -95,42 +89,22 @@ public class Order {
         }
     }
 
-    /**
-     * Get order from out pizzalist
-     * @return
-     */
     public ArrayList<Pizza> getOrderPizzaList() {
         return orderPizzaList;
     }
 
-    /**
-     * Set order from the arraylist, to pizzalist
-     * @param orderPizzaList
-     */
     public void setOrderPizzaList(ArrayList<Pizza> orderPizzaList) {
         this.orderPizzaList = orderPizzaList;
     }
 
-    /**
-     * Get the order ID
-     * @return
-     */
     public int getOrderID() {
         return orderID;
     }
 
-    /**
-     * Set and orderID as an integer
-     * @param orderID
-     */
     public void setOrderID(int orderID) {
         this.orderID = orderID;
     }
 
-    /**
-     * Get Date and Time
-     * @return dateTime
-     */
     public LocalDateTime getDateTime() {
         return dateTime;
     }
