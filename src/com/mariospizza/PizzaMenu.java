@@ -44,6 +44,9 @@ public class PizzaMenu {
      * @param pizzaList
      */
     public static void formatPizzaMenu(ArrayList<Pizza> pizzaList) {
+        int menuNumberLength = 4;
+        int menuPizzaLineLength = 100;
+        int menuHeaderLineLength = 103;
 
         for(int i = 0; i < pizzaList.size(); i++) {
             String pizzaID = formatPizzaHeader(pizzaList.get(i).getPizzaID());
@@ -59,13 +62,13 @@ public class PizzaMenu {
 
             if(pizzaID != "") {
                 pizzaID += ". ";
-                String pizzaIDSpace = printSymbols(" ",pizzaID,4); // TODO: include this in pizzaID to reduce variables in StringFormat
+                String pizzaIDSpace = printSymbols(" ",pizzaID,menuNumberLength); // TODO: include this in pizzaID to reduce variables in StringFormat
                 String pizzaLine = pizzaID+pizzaIDSpace+pizzaName+pizzaDescription+priceNormal+priceDeep+priceFamily;
-                String pizzaDots = printSymbols(".", pizzaLine,100);
+                String pizzaDots = printSymbols(".", pizzaLine,menuPizzaLineLength);
                 System.out.printf("%s%s%s,%s%s%s%s%s\n",pizzaID,pizzaIDSpace,pizzaName,pizzaDescription,pizzaDots,priceNormal,priceDeep,priceFamily);
             } else {
                 String titleLine = pizzaName + "alm | " + "deep | " + "fam";
-                System.out.println("\n" + pizzaName + printSymbols(" ", titleLine,103)+ "Alm |" + "Deep| " + "Fam");
+                System.out.println("\n" + pizzaName + printSymbols(" ", titleLine,menuHeaderLineLength)+ "Alm |" + "Deep| " + "Fam");
             }
         }
     }
