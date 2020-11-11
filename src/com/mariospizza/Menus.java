@@ -59,7 +59,8 @@ public class Menus {
                     break;
                 case 8:
                     System.out.println("Check statistics");
-                    //MyStats.();
+                    MyStats.stats.mostPizzasSold();
+                    MyStats.stats.total();
                     break;
                 case 9:
                     menuRun = false;
