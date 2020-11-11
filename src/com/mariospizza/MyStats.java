@@ -7,9 +7,11 @@ public class MyStats {
     static MyStats stats = new MyStats();
 
     ArrayList<Order> completedOrders = OrderSystem.completedOrders;
-    int[] numbersOfPizzaSold;
     ArrayList<PizzaStat> statList = new ArrayList<>();
 
+    /**
+     * We needed a new object to store the counter information.
+     */
     public class PizzaStat {
         int id = -1;
         int counter = 0;
@@ -55,6 +57,10 @@ public class MyStats {
         }
         return revenue;
     }
+
+    /**
+     * Makes sure our statList is the same size as our PizzaMenu.pizzaList
+     */
     public void setupStatList() {
         statList.clear();
         statList.add(new PizzaStat(0));
@@ -63,6 +69,10 @@ public class MyStats {
         }
     }
 
+    /**
+     * Runs through our ArrayList and checks what pizza has been most popular in terms of unit sales.
+     * @return
+     */
     public String mostPizzasSold() {
         setupStatList();
         for(int i = 0; i < OrderSystem.completedOrders.size(); i++) {
@@ -86,6 +96,11 @@ public class MyStats {
         return mostSold;
     }
 
+    /**
+     * Finds the pizzaName in the PizzaMenu.pizzaList from the pizzaID.
+     * @param pizzaID
+     * @return
+     */
     public String scanPizzaMenu(int pizzaID) {
         ArrayList<Pizza> pizzaList = PizzaMenu.pizzaList;
         for(int i = 0; i < pizzaList.size(); i++) {
