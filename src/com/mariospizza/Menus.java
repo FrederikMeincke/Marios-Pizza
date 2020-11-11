@@ -26,7 +26,6 @@ public class Menus {
                     PizzaMenu.formatPizzaMenu(pizzaList);
                         break;
                 case 2:
-                    //MyFileReader.loadActiveOrders(); //TODO: maybe write something to a file
                     OrderSystem.checkActiveOrders();
                     break;
                 case 3:
@@ -48,12 +47,15 @@ public class Menus {
                             "What is the orderID of the Order to cancel?: ")));
                     break;
                 case 7:
+                    System.out.println("Find oldest order");
+                    System.out.println(OrderSystem.findOldestOrder().toString());
+                    break;
+                case 8:
                     System.out.println("Check statistics");
                     //MyFileReader.loadCompletedOrders();
                     //MyStats.();
-                    System.out.println(OrderSystem.findOldestOrder().toString()); //TODO: Remove this just here to test findOldestOrder method
                     break;
-                case 8:
+                case 9:
                     menuRun = false;
                     break;
                 default:
