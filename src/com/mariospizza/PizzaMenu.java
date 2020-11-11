@@ -62,7 +62,7 @@ public class PizzaMenu {
 
             if(pizzaID != "") {
                 pizzaID += ". ";
-                String pizzaIDSpace = printSymbols(" ",pizzaID,menuNumberLength); // TODO: include this in pizzaID to reduce variables in StringFormat
+                String pizzaIDSpace = printSymbols(" ",pizzaID,menuNumberLength);
                 String pizzaLine = pizzaID+pizzaIDSpace+pizzaName+pizzaDescription+priceNormal+priceDeep+priceFamily;
                 String pizzaDots = printSymbols(".", pizzaLine,menuPizzaLineLength);
                 System.out.printf("%s%s%s,%s%s%s%s%s\n",pizzaID,pizzaIDSpace,pizzaName,pizzaDescription,pizzaDots,priceNormal,priceDeep,priceFamily);

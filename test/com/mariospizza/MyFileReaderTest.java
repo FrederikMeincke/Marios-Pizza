@@ -66,7 +66,6 @@ class MyFileReaderTest {
         assertEquals(40,testPizzaList.get(1).getPriceNormal());
         assertEquals("testHeaderTest name3",testPizzaList.get(3).getPizzaName());
 
-        //TODO: fix description String so it contains spaces in both the real method and the test method.
     }
 
     @Test
