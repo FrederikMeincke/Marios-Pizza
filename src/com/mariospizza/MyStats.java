@@ -82,14 +82,22 @@ String MyBestChoice4
      * TRIPLE FOR LOOP LET'S GOOOOO
      */
     public void total() {
+        double moneeey = 0;
         for(int i = 0; i < completedOrders.size(); i++) {
             Order currentOrder = completedOrders.get(i);
 
             for(int j = 0; j < currentOrder.getOrderPizzaList().size(); j++) {
                 Pizza currentPizza = currentOrder.getOrderPizzaList().get(j);
+                double pizzaPrice;
                 int currentPizzaID = currentPizza.getPizzaID();
                 int currentPizzaSize = currentPizza.getPizzaSize();
-
+                if(currentPizzaSize == 1) {
+                    pizzaPrice = currentPizza.getPriceNormal();
+                } else if(currentPizzaSize == 2) {
+                    pizzaPrice = currentPizza.getPriceDeep();
+                } else if(currentPizzaSize == 3) {
+                    pizzaPrice = currentPizza.getPriceFamily();
+                }
             }
         }
     }
