@@ -162,6 +162,10 @@ public class Order {
         this.orderID = orderID;
     }
 
+    /**
+     * Get Date and Time
+     * @return
+     */
     public LocalDateTime getDateTime() {
         return dateTime;
     }
