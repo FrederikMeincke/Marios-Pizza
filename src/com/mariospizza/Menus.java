@@ -11,7 +11,8 @@ public class Menus {
         String headerText = "Mario's Pizzabar:\n";
         String leadText = "Choose an option: ";
         String[] menuItems = {"Show Pizza menu", "Check active orders",
-                "Add new order", "Change Order" ,"Complete Order", "Cancel Order", "Check statistics", "Exit"};
+                              "Add new order", "Change Order" ,"Complete Order", "Cancel Order", "Find Oldest Order",
+                              "Check Statistics", "Exit"};
         boolean menuRun = true;
         int menuChoice;
 

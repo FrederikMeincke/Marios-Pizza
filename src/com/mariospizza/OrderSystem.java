@@ -109,18 +109,12 @@ public class OrderSystem {
      */
     //This method looks like crap ngl should probably be rewritten
     public static void removePizzaFromOrder(Order order) {
-        Scanner scn = new Scanner(System.in); //TODO: maybe do Main.inputInt here
-        System.out.println("\nRemove a pizza from the current order:"); //TODO: listCurrentOrder() here?
-        for (int i = 1; i <= order.getOrderPizzaList().size(); i++) {
-            System.out.println(i + ". \n"
+        System.out.println("\nRemove a pizza from the current order:\n");
 
-                    + order.getOrderPizzaList().get(i - 1).toString());
-        }
+        listCurrentOrder(order);
 
-        System.out.println("Type the number of the pizza you want to delete");
-
-        int userchoice = -1; //TODO: Use Main.inputInt. input validation?
-        userchoice = scn.nextInt();
+        int userchoice = -1;
+        userchoice = Main.inputInt("Type the number of the pizza you want to delete: ");
 
         order.getOrderPizzaList().remove(userchoice - 1);
 
