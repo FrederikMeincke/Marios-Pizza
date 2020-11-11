@@ -1,11 +1,14 @@
 package com.mariospizza;
 
+import java.util.ArrayList;
+
 public class MyStats {
 
 
     /*
 Metoder til at udregne mest pop pizza
 Jeg skal vel have en getter. Getteren til at hente data som kan bruges til at lave statestik.
+
 
 
 Pseudo 0.2
@@ -71,8 +74,14 @@ String MyBestChoice4
 
 
  //TODO: Kigge på nogle beregninger til statistik
-
-
      */
+
+    ArrayList<Order> completedOrders = OrderSystem.completedOrders;
+    public void total() {
+        for(int i = 0; i < completedOrders.size(); i++) {
+
+        }
+    }
+
 
 }
