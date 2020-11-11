@@ -33,11 +33,8 @@ class PizzaMenuTest {
     void formatPizzaMenu() {
         // Receives an ArrayList<Pizza> that it then formats into Strings with information about each pizza and headers
         // and subsequently prints a String for each pizza and headers.
-        ArrayList<Pizza> testPizzaList = new ArrayList<>();
-        Pizza testPizza = new Pizza(5,"testPizza","testdescription",50,70,150);
-        testPizzaList.add(testPizza);
-        String formatPizzaMenuExpectedString = " 5. testPizza,testdescription,...........................................................50 | 70 | 150";
-
+        // Unfortunately we would have to make this method return a String in order to test it as we only work with variables
+        // that are local to the method itself.
     }
 
 }

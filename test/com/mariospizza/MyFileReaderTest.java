@@ -71,11 +71,23 @@ class MyFileReaderTest {
 
     @Test
     void loadOrderFile() {
-
+        // Load the correct text file and return the information as an ArrayList<Order>
+        // Does the ArrayList<Order> contain one order with the information 1 1 2?
+        ArrayList<Order> testOrderFile = testFileReader.loadOrderFile("TestOrderFile");
+        assertEquals(1,testOrderFile.get(0).getOrderID());
+        assertEquals(1,testOrderFile.get(0).getOrderPizzaList().get(0).getPizzaID());
+        assertEquals(2,testOrderFile.get(0).getOrderPizzaList().get(0).getPizzaSize());
     }
 
     @Test
     void processOrderList() {
+        // Receive a String that it then converts into an Order
+        // Example: 1 1 2
+        // The first token is the order id, second token is pizza id, and the third token is the pizza size
+        Order testOrder = testFileReader.processOrderList("1 1 2");
+        assertEquals(1,testOrder.getOrderID());
+        assertEquals(1,testOrder.getOrderPizzaList().get(0).getPizzaID()); // the first pizza should have id 1
+        assertEquals(2, testOrder.getOrderPizzaList().get(0).getPizzaSize());
 
     }
 
