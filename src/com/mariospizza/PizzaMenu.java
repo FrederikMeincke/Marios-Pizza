@@ -29,7 +29,7 @@ public class PizzaMenu {
      * @param number
      * @return
      */
-    public static String formatPizzaHeader(double number) { //TODO: refactor method name
+    public static String formatPizzaLine(double number) {
         if(number == 0) {
             return "";
         } else {
@@ -49,16 +49,16 @@ public class PizzaMenu {
         int menuHeaderLineLength = 103;
 
         for(int i = 0; i < pizzaList.size(); i++) {
-            String pizzaID = formatPizzaHeader(pizzaList.get(i).getPizzaID());
+            String pizzaID = formatPizzaLine(pizzaList.get(i).getPizzaID());
             String pizzaName = pizzaList.get(i).getPizzaName();
             String pizzaDescription = pizzaList.get(i).getPizzaDescription();
 
-            String priceNormal = formatPizzaHeader(pizzaList.get(i).getPriceNormal()) + " | ";
-            String priceDeep = formatPizzaHeader(pizzaList.get(i).getPriceDeep()) + " | ";
+            String priceNormal = formatPizzaLine(pizzaList.get(i).getPriceNormal()) + " | ";
+            String priceDeep = formatPizzaLine(pizzaList.get(i).getPriceDeep()) + " | ";
             if(priceDeep.equals(" | ")) {
                 priceDeep = "   | ";
             }
-            String priceFamily = formatPizzaHeader(pizzaList.get(i).getPriceFamily());
+            String priceFamily = formatPizzaLine(pizzaList.get(i).getPriceFamily());
 
             if(pizzaID != "") {
                 pizzaID += ". ";
