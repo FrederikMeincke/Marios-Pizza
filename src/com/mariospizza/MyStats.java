@@ -68,11 +68,11 @@ public class MyStats {
      */
     public String mostPizzasSold() {
         setupStatList();
-        for(int i = 0; i < OrderSystem.completedOrders.size(); i++) {
+        for(int i = 0; i < completedOrders.size(); i++) {
             System.out.println("son of a b");
-            for(int j = 1; j < OrderSystem.completedOrders.get(i).getOrderPizzaList().size(); j++) {
+            for(int j = 1; j < completedOrders.get(i).getOrderPizzaList().size(); j++) {
                 System.out.println("what");
-                if(OrderSystem.completedOrders.get(i).getOrderPizzaList().get(j-1).getPizzaID() == j) {
+                if(completedOrders.get(i).getOrderPizzaList().get(j-1).getPizzaID() == j) {
                     System.out.println("why");
                     statList.get(j).counter++;
                 }
