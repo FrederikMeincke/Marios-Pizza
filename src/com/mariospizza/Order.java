@@ -10,7 +10,6 @@ class Order {
     private ArrayList<Pizza> orderPizzaList = new ArrayList<>();
     private final LocalDateTime dateTime;
     private String dateTimeStr;
-    //private final LocalDateTime dateTimePickup;
     private String dateTimePickupStr;
 
     /**
@@ -28,7 +27,6 @@ class Order {
         this.orderID = counter;
         dateTime = LocalDateTime.now();
         dateTimeStr = dateTime.format(DateTimeFormatter.ofPattern("hh:mm:ss"));
-        //dateTimePickup = dateTime.plusHours(1);
         dateTimePickupStr = dateTime.plusHours(1).format(DateTimeFormatter.ofPattern("hh:mm:ss"));
     }
 
