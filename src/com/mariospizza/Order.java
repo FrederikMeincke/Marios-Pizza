@@ -11,6 +11,8 @@ class Order {
     private final LocalDateTime dateTime;
     //private final String dateTimeStr;
     private String dateTimeStr;
+    private final LocalDateTime dateTimePickup;
+    private final String dateTimePickupStr;
 
     /**
      * Constructor
@@ -27,6 +29,8 @@ class Order {
         this.orderID = counter;
         dateTime = LocalDateTime.now();
         dateTimeStr = dateTime.format(DateTimeFormatter.ofPattern("hh:mm:ss"));
+        dateTimePickup = dateTime.plusHours(1);
+        dateTimePickupStr = dateTimePickup.toString();
     }
 
     @Override
