@@ -41,9 +41,9 @@ class MyFileReader {
         pizzaName = pizzaName.substring(0,pizzaName.length()-1); //
 
         while(!input.hasNextDouble()) {
-            pizzaDescription += input.next(); // Scans through all the toppings on the pizza
+            pizzaDescription += input.next() + " "; // Scans through all the toppings on the pizza
         }
-        
+
         alm = input.nextDouble();
         deep = input.nextDouble();
         if(deep > minimumFamilyPrice) {
