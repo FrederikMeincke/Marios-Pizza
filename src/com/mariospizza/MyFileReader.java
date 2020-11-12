@@ -14,7 +14,6 @@ class MyFileReader {
      * @return
      */
     public Pizza processPizzaMenuLine(Scanner input) {
-        //int twoDigitsPlusDot = 3; // required length of String for the pizza number including the dot.
         String pizzaNumber = input.next(); // Includes "." but not spaces.
         String pizzaName = "";
         String pizzaDescription = "";
@@ -24,7 +23,6 @@ class MyFileReader {
         double minimumFamilyPrice = 100;
 
         if(!pizzaNumber.contains(".")) {
-            //return  null;
             if(!input.hasNext(".")){ // checks if the next token isn't a pizzaID
                 pizzaNumber += " " + input.next(); // for two-word headers
             }
@@ -45,7 +43,7 @@ class MyFileReader {
         while(!input.hasNextDouble()) {
             pizzaDescription += input.next(); // Scans through all the toppings on the pizza
         }
-        //pizzaDescription = pizzaDescription.substring(-1); // Removes "," at the end if necessary
+        
         alm = input.nextDouble();
         deep = input.nextDouble();
         if(deep > minimumFamilyPrice) {
