@@ -18,14 +18,14 @@ class MyFileWriter {
             for(int i = 0; i < orderList.size(); i++) {
                 int orderID = orderList.get(i).getOrderID();
                 String orderDate = orderList.get(i).getDateTimeStr();
+                String orderPickUpDate = orderList.get(i).getDateTimePickupStr();
                 String orderIDString = String.format("%d",orderID);
                 String pizzaList = "";
                 for(int j = 0; j < orderList.get(i).getOrderPizzaList().size(); j++) {
                     pizzaList += orderList.get(i).getOrderPizzaList().get(j).getPizzaID() + " " +
                             + orderList.get(i).getOrderPizzaList().get(j).getPizzaSize() + " ";
                 }
-                //output.println(orderIDString + " " + pizzaList);
-                output.println(orderIDString + " " + orderDate + " " + pizzaList);
+                output.println(orderIDString + " " + orderDate + " " + orderPickUpDate + " " + pizzaList);
             }
         } catch (IOException e) {
             System.out.println("File not found.");

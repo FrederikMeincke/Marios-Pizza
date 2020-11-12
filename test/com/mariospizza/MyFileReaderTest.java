@@ -85,7 +85,7 @@ class MyFileReaderTest {
         // The first token is the order id, second token is pizza id, and the third token is the pizza size
         // The dateTimeStr will be changed everytime we run the test textfile but we will solve this later.
         // TODO: Fix dateTimeStr inside the test textfile so that it is the same in this unit test.
-        Order testOrder = testFileReader.processOrderList("1 10:57:41 1 2");
+        Order testOrder = testFileReader.processOrderList("1 10:57:41 22:22:22 1 2");
         assertEquals(1,testOrder.getOrderID());
         assertEquals(1,testOrder.getOrderPizzaList().get(0).getPizzaID()); // the first pizza should have id 1
         assertEquals(2, testOrder.getOrderPizzaList().get(0).getPizzaSize());
