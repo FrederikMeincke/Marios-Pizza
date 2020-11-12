@@ -9,8 +9,8 @@ class Order {
     static int counter = 0;
     private ArrayList<Pizza> orderPizzaList = new ArrayList<>();
     private final LocalDateTime dateTime;
-    //private final String dateTimeStr;
     private String dateTimeStr;
+    private String dateTimePickupStr;
 
     /**
      * Constructor
@@ -27,6 +27,7 @@ class Order {
         this.orderID = counter;
         dateTime = LocalDateTime.now();
         dateTimeStr = dateTime.format(DateTimeFormatter.ofPattern("hh:mm:ss"));
+        dateTimePickupStr = dateTime.plusHours(1).format(DateTimeFormatter.ofPattern("hh:mm:ss"));
     }
 
     @Override
@@ -37,6 +38,7 @@ class Order {
             pizzaString += pizza.toString() + "\n";
         }
         return "OrderID:" + orderID +
+                "\nPick-Up Time: " + dateTimePickupStr +
                 "\nList of all pizzas in this order:\n" + pizzaString;
     }
 
@@ -116,5 +118,13 @@ class Order {
 
     public String getDateTimeStr() {
         return dateTimeStr;
+    }
+
+    public String getDateTimePickupStr() {
+        return dateTimePickupStr;
+    }
+
+    public void setDateTimePickupStr(String dateTimePickupStr) {
+        this.dateTimePickupStr = dateTimePickupStr;
     }
 }
