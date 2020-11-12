@@ -39,7 +39,7 @@ class MyFileReaderTest {
         }
         assertEquals("testHeader name2",testPizzaList.get(0).getPizzaName());
         assertEquals(5,testPizzaList.get(1).getPizzaID());
-        assertEquals("descrOne,descrTwo",testPizzaList.get(1).getPizzaDescription());
+        assertEquals("descrOne, descrTwo ",testPizzaList.get(1).getPizzaDescription());
         assertEquals(40,testPizzaList.get(1).getPriceNormal());
         assertEquals("testHeaderTest name3",testPizzaList.get(3).getPizzaName());
 
@@ -62,7 +62,7 @@ class MyFileReaderTest {
         ArrayList<Pizza> testPizzaList = testFileReader.loadPizzaMenu("TestFile");
         assertEquals("testHeader name2",testPizzaList.get(0).getPizzaName());
         assertEquals(5,testPizzaList.get(1).getPizzaID());
-        assertEquals("descrOne,descrTwo",testPizzaList.get(1).getPizzaDescription());
+        assertEquals("descrOne, descrTwo ",testPizzaList.get(1).getPizzaDescription());
         assertEquals(40,testPizzaList.get(1).getPriceNormal());
         assertEquals("testHeaderTest name3",testPizzaList.get(3).getPizzaName());
 
