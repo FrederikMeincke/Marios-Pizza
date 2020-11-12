@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-public class Order {
+class Order {
     private int orderID; //unique id for every order
     static int counter = 0;
     private ArrayList<Pizza> orderPizzaList = new ArrayList<>();

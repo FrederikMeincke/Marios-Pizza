@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
-public class MyFileWriter {
+class MyFileWriter {
 
     /**
      * Saved active orders in an arraylist and file.txt

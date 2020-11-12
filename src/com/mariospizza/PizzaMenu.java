@@ -2,7 +2,7 @@ package com.mariospizza;
 
 import java.util.ArrayList;
 
-public class PizzaMenu {
+class PizzaMenu {
     static MyFileReader fileReader = new MyFileReader();
     static ArrayList<Pizza> pizzaList = fileReader.loadPizzaMenu("PizzaMenuClean");
 

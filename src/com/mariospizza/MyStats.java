@@ -2,7 +2,7 @@ package com.mariospizza;
 
 import java.util.ArrayList;
 
-public class MyStats {
+class MyStats {
 
     static MyStats stats = new MyStats();
 
@@ -12,7 +12,7 @@ public class MyStats {
     /**
      * We needed a new object to store the counter information.
      */
-    public class PizzaStat {
+    class PizzaStat {
         int id = -1;
         int counter = 0;
 

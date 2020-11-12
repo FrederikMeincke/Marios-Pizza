@@ -9,12 +9,12 @@ public class Menus {
     /**
      * Main Menu build - While loop, Switch and case.
      */
-    public static void mainMenu() {
+    static void mainMenu() {
         String headerText = "Mario's Pizzabar:\n";
         String leadText = "Choose an option: ";
         String[] menuItems = {"Show Pizza menu", "Check active orders",
-                              "Add new order", "Change Order" ,"Complete Order", "Cancel Order", "Find Oldest Order",
-                              "Check Statistics", "Exit"};
+                "Add new order", "Change Order", "Complete Order", "Cancel Order", "Find Oldest Order",
+                "Check Statistics", "Exit"};
         boolean menuRun = true;
         int menuChoice;
 
@@ -27,7 +27,7 @@ public class Menus {
 
                 case 1:
                     PizzaMenu.formatPizzaMenu(pizzaList);
-                        break;
+                    break;
                 case 2:
                     OrderSystem.checkActiveOrders();
                     break;
@@ -35,7 +35,7 @@ public class Menus {
                     addNewOrderMenu();
                     break;
                 case 4:
-                    if(OrderSystem.activeOrdersList.size() != 0) {
+                    if (OrderSystem.activeOrdersList.size() != 0) {
                         OrderSystem.findOrder(Main.inputInt("Order ID: ")).changeOrder();
                     } else {
                         System.out.println("No orders available to change at this time. ");

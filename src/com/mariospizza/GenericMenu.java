@@ -1,7 +1,7 @@
 package com.mariospizza;
 import java.util.Scanner;
 
-public class GenericMenu {
+class GenericMenu {
     private final String menuHeader;
     private final String leadText;
     private final String[] menuItems;

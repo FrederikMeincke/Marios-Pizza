@@ -18,7 +18,7 @@ public class OrderSystem {
      */
     public static Order findOrder(int orderID) {
 
-        for (Order activeOrder: activeOrdersList) {
+        for (Order activeOrder : activeOrdersList) {
             if (activeOrder.getOrderID() == orderID) {
                 return activeOrder;
             }
@@ -28,9 +28,10 @@ public class OrderSystem {
 
     /**
      * Looks at the date & time for all orders and finds the oldest one. Useful for deciding which order to make next
+     *
      * @return oldestOrder in the active orderList
      */
-    public static Order findOldestOrder() {
+    static Order findOldestOrder() {
         Order oldestOrder;
         Order checkOrder;
         Order tmpOrder;
@@ -65,7 +66,7 @@ public class OrderSystem {
      * Prints all elements in the active orders list
      */
     public static void checkActiveOrders() {
-        for (Order order: activeOrdersList) {
+        for (Order order : activeOrdersList) {
             System.out.println("\n" + order.toString());
         }
     }
@@ -87,8 +88,8 @@ public class OrderSystem {
     public static void completeOrder(Order orderToComplete) {
         completedOrders.add(orderToComplete);
         activeOrdersList.remove(orderToComplete);
-        fileWriter.updateOrderFile(completedOrders,"CompletedOrders");
-        fileWriter.updateOrderFile(activeOrdersList,"ActiveOrders");
+        fileWriter.updateOrderFile(completedOrders, "CompletedOrders");
+        fileWriter.updateOrderFile(activeOrdersList, "ActiveOrders");
     }
 
     /**
@@ -98,7 +99,7 @@ public class OrderSystem {
      */
     public static void addPizzaToOrder(Order order) {
         System.out.println("\nAdding a pizza to current order:");
-        order.addPizza(Main.inputInt("Add pizza #"),Main.inputInt(
+        order.addPizza(Main.inputInt("Add pizza #"), Main.inputInt(
                 "What size? 1: Normal, 2: Deep Pan, 3: Family:"));
     }
 
@@ -144,7 +145,7 @@ public class OrderSystem {
     public static void saveCurrentOrder(Order order) {
         System.out.println("\nSaving order...");
         activeOrdersList.add(order);
-        fileWriter.updateOrderFile(activeOrdersList,"ActiveOrders");
+        fileWriter.updateOrderFile(activeOrdersList, "ActiveOrders");
         System.out.println("Order Saved.");
     }
 }

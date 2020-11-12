@@ -1,6 +1,6 @@
 package com.mariospizza;
 
-public class Pizza {
+class Pizza {
     int pizzaID; //number you use to order the pizza
     String pizzaName;
     String pizzaDescription;
