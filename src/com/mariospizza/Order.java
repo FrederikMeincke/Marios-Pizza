@@ -9,7 +9,8 @@ public class Order {
     static int counter = 0;
     private ArrayList<Pizza> orderPizzaList = new ArrayList<>();
     private final LocalDateTime dateTime;
-    private final String dateTimeStr;
+    //private final String dateTimeStr;
+    private String dateTimeStr;
 
     /**
      * Constructor
@@ -107,5 +108,13 @@ public class Order {
 
     public LocalDateTime getDateTime() {
         return dateTime;
+    }
+
+    public void setDateTimeStr(String dateTimeStr) {
+        this.dateTimeStr = dateTimeStr;
+    }
+
+    public String getDateTimeStr() {
+        return dateTimeStr;
     }
 }

@@ -92,10 +92,12 @@ public class MyFileReader {
         Order order = new Order();
         Scanner input = new Scanner(line);
         int orderID = input.nextInt();
+        String dateTimeStr = input.next();
         int pizzaID = -1;
         int pizzaSize = -1;
 
         order.setOrderID(orderID);
+        order.setDateTimeStr(dateTimeStr);
         while(input.hasNextInt()) {
             pizzaID = input.nextInt();
             pizzaSize = input.nextInt();

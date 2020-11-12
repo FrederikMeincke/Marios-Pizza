@@ -33,24 +33,17 @@ public class MyStats {
             Order currentOrder = completedOrders.get(i);
 
             for(int j = 0; j < currentOrder.getOrderPizzaList().size(); j++) {
-                int currentPizzaID = currentOrder.getOrderPizzaList().get(j).getPizzaID(); //TODO: FIX
                 Pizza currentPizza = currentOrder.getOrderPizzaList().get(j);
-                Pizza menuPizza = null;
-                for(int y = 0; y < PizzaMenu.pizzaList.size(); y++) {
-                    if(currentPizzaID == PizzaMenu.pizzaList.get(y).getPizzaID()) {
-                        menuPizza = PizzaMenu.pizzaList.get(y);
-                    }
-                }
 
                 double pizzaPrice = 0;
 
                 int currentPizzaSize = currentPizza.getPizzaSize();
                 if(currentPizzaSize == 1) {
-                    pizzaPrice = menuPizza.getPriceNormal();
+                    pizzaPrice = currentPizza.getPriceNormal();
                 } else if(currentPizzaSize == 2) {
-                    pizzaPrice = menuPizza.getPriceDeep();
+                    pizzaPrice = currentPizza.getPriceDeep();
                 } else if(currentPizzaSize == 3) {
-                    pizzaPrice = menuPizza.getPriceFamily();
+                    pizzaPrice = currentPizza.getPriceFamily();
                 }
                 revenue += pizzaPrice;
             }
@@ -76,12 +69,16 @@ public class MyStats {
     public String mostPizzasSold() {
         setupStatList();
         for(int i = 0; i < OrderSystem.completedOrders.size(); i++) {
-            for(int j = 0; j < OrderSystem.completedOrders.get(i).getOrderPizzaList().size(); j++) {
-                if(OrderSystem.completedOrders.get(i).getOrderPizzaList().get(j).getPizzaID() == j+1) {
-                    statList.get(j+1).counter++;
+            System.out.println("son of a b");
+            for(int j = 1; j < OrderSystem.completedOrders.get(i).getOrderPizzaList().size(); j++) {
+                System.out.println("what");
+                if(OrderSystem.completedOrders.get(i).getOrderPizzaList().get(j-1).getPizzaID() == j) {
+                    System.out.println("why");
+                    statList.get(j).counter++;
                 }
             }
         }
+        System.out.println("test: " + statList.get(2).counter);
 
         int numberMostPizzaSold = -1;
         String nameMostPizzaSold = "";
