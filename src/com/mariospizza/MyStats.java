@@ -69,16 +69,14 @@ public class MyStats {
     public String mostPizzasSold() {
         setupStatList();
         for(int i = 0; i < completedOrders.size(); i++) {
-            System.out.println("son of a b");
-            for(int j = 1; j < completedOrders.get(i).getOrderPizzaList().size(); j++) {
-                System.out.println("what");
-                if(completedOrders.get(i).getOrderPizzaList().get(j-1).getPizzaID() == j) {
-                    System.out.println("why");
-                    statList.get(j).counter++;
+            for(int j = 0; j < completedOrders.get(i).getOrderPizzaList().size(); j++) {
+                for(int y = 1; y < PizzaMenu.pizzaList.size(); y++) {
+                    if(completedOrders.get(i).getOrderPizzaList().get(j).getPizzaID() == PizzaMenu.pizzaList.get(y).getPizzaID()) {
+                        statList.get(y).counter++;
+                    }
                 }
             }
         }
-        System.out.println("test: " + statList.get(2).counter);
 
         int numberMostPizzaSold = -1;
         String nameMostPizzaSold = "";
