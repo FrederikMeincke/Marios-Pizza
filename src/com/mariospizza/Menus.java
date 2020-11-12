@@ -55,6 +55,8 @@ public class Menus {
                         System.out.println(OrderSystem.findOldestOrder().toString());
                     } catch (NoSuchElementException e) {
                         e.toString();
+                    } catch (IndexOutOfBoundsException iob) {
+                        iob.toString();
                     }
                     break;
                 case 8:
